@@ -35,37 +35,33 @@ label(Label) :-
 		 *	 MATCH WITH AGROVOC	*
 		 *******************************/
 
-% AgroVoc downloaded as file_only_english
-agrovoc('file:///home/mvs246/src/ClioPatria/edesign/CPB_Microtax/agrovoc_20110223_v_1_3_onlyEN.rdf').
-
-
 % Find AgroVoc concepts by searching for their preferred and their
 % alternative label.
 agro_label(Label,AgroConcept):-
-	agrovoc(AgroVoc),
-	( rdf(AgroConcept,skos:prefLabel,literal(lang(en,Label)), AgroVoc)
-	;   rdf(AgroConcept,skos:altLabel,literal(lang(en,Label)), AgroVoc)
-	).
+	(   rdf(AgroConcept,skos:prefLabel,literal(lang(en,Label)))
+	;   rdf(AgroConcept,skos:altLabel,literal(lang(en,Label)))
+	),
+	rdf(AgroConcept, skos:inScheme, 'http://aims.fao.org/aos/agrovoc').
 
 
 % For translating AgroVoc concept-URI back to AgroVoc label, use this
 % function instead of "agro_label", to avoid redundant results.
 agro_pref_label(Label,AgroConcept):-
-	agrovoc(AgroVoc),
-	rdf(AgroConcept,skos:prefLabel,literal(lang(en,Label)),AgroVoc).
+	rdf(AgroConcept,skos:prefLabel,literal(lang(en,Label))),
+	rdf(AgroConcept, skos:inScheme, 'http://aims.fao.org/aos/agrovoc').
 
 
 % Preprocess label (stem+tokenize) and find matching AgroVoc concepts
 agro_candidate(Label, AgroConcept) :-
-	agrovoc(AgroVoc),
 	tokenize_atom(Label, Tokens),
 	member(Token, Tokens),
 	atom(Token),
 	rdf_find_literals(stem(Token), Literals),
 	member(Literal, Literals),
-	(   rdf(AgroConcept,skos:prefLabel,literal(lang(en,Literal)), AgroVoc)
-	;   rdf(AgroConcept,skos:altLabel,literal(lang(en,Literal)), AgroVoc)
-	).
+	(   rdf(AgroConcept,skos:prefLabel,literal(lang(en,Literal)))
+	;   rdf(AgroConcept,skos:altLabel,literal(lang(en,Literal)))
+	),
+	rdf(AgroConcept, skos:inScheme, 'http://aims.fao.org/aos/agrovoc').
 
 
 % For a given cell label calculate isubdistance with respect to a
