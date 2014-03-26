@@ -5,7 +5,7 @@
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/turtle)).
 :- use_module(library(thread)).
-:- use_module(argv_dict).
+:- use_module(lib/argv_dict).
 :- use_module(lib/rdf_load_any).
 :- ensure_loaded(roadmap).
 :- initialization main.
