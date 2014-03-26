@@ -2,7 +2,16 @@
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdf_litindex)).
 :- use_module(library(aggregate)).
+:- if(exists_source(library(ods/table))).
+:- use_module(library(ods/sheet)).
+:- use_module(library(ods/recognise)).
+:- use_module(library(ods/table)).
+:- use_module(library(ods/datasource)).
+:- use_module(library(ods/data)).
+:- use_module(labels).
+:- else.
 :- ensure_loaded(plsheet/test).
+:- endif.
 
 :- rdf_register_prefix(sheet, 'http://vu.nl/sheet/').
 :- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
