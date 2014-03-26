@@ -5,7 +5,6 @@
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/turtle)).
 :- use_module(library(thread)).
-:- use_module(library(apply)).
 :- use_module(argv_dict).
 :- use_module(lib/rdf_load_any).
 :- ensure_loaded(roadmap).
@@ -14,6 +13,7 @@
 main :-
 	argv_dict(Options, Sheets),
 	start_tmon(Options),
+	set_config(Options),
 	sheet_concepts(Sheets, Options).
 
 sheet_concepts(_Sheets, Options) :-
@@ -45,15 +45,52 @@ usage :-
 	format(user_error, 'Usage: ~w [option ...] sheet~n', [Prog]),
 	format(user_error, 'Options:~n', []),
 	format(user_error, '  --in-scheme=URI     Only consider concepts in SKOS scheme~n', []),
+	format(user_error, '  --graph=URI         Only consider concepts in Graph~n', []),
+	format(user_error, '  --list-graphs       List graphs after loading ontologies~n', []),
 	format(user_error, '  --ontology=src      Load ontologies from source~n', []),
-	format(user_error, '  --tmon		  Show actvity window~n', []),
-	format(user_error, '  --pl		  Start toplevel~n', []),
+	format(user_error, '  --tmon              Show actvity window~n', []),
+	format(user_error, '  --pl                Start toplevel~n', []),
 	format(user_error, '  --trace             Run debugger~n', []).
 
+%%	set_config(+Options) is det.
+%
+%	Update config/2 from provided options.
+
+:- dynamic config/2.			% in roadmap.pl
+
+set_config(Options) :-
+	retractall(config(_, _)),
+	ignore(update_config(in_scheme, Options.get('in-scheme'))),
+	ignore(update_config(graph,     Options.get('graph'))).
+
+update_config(Which, What) :-
+	(   is_list(Which)
+	->  forall(member(W, What), assertz(config(Which, W)))
+	;   assertz(config(Which, What))
+	).
+
+
+%%	load_ontologies(+Options) is det.
+%
+%	Load the specified ontologies.
+
 load_ontologies(Options) :-
-	_{ontology:Ontology} :< Options, !,
-	rdf_load_any(Ontology).
-load_ontologies(_).
+	(   _{ontology:Ontology} :< Options
+	->  rdf_load_any(Ontology)
+	;   true
+	),
+	(   _{'list-graphs':true} :< Options
+	->  list_graphs
+	;   true
+	).
+
+list_graphs :-
+	format(user_error, '# Loaded ontologies:~n'),
+	forall(rdf_graph(G), list_graph(G)).
+
+list_graph(G) :-
+	rdf_statistics(triples_by_graph(G, Count)),
+	format(user_error, '# ~w ~`.t ~60|~D~n', [G, Count]).
 
 load_sheets([Sheet]) :- !,
 	ods_unload,
