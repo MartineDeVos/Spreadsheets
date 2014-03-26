@@ -85,7 +85,7 @@ load_ontologies(Options) :-
 	).
 
 list_graphs :-
-	format(user_error, '# Loaded ontologies:~n'),
+	format(user_error, '# Loaded ontologies:~n', []),
 	forall(rdf_graph(G), list_graph(G)).
 
 list_graph(G) :-
