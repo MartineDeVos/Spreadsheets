@@ -155,7 +155,7 @@ block_label_ancestor(Block,Label,Ancestor):-
 
 % Find all unique ancestors associated with the labels in a block
 block_ancestors(Block,AncestorSet):-
-	block(Block,_,_),
+	block(Block,string,_),
 	findall(Ancestor,
 		block_label_ancestor(Block,_Label,Ancestor),
 		AncestorList),
@@ -176,7 +176,7 @@ block_descendants(Block,Ancestor,Descendants,NumDesc):-
 % Select the block ancestor with the highest number of descendants in
 % that same block
 block_best_ancestor(Block,BestAncestor):-
-	block(Block,_,_),
+	block(Block,string,_),
 	findall(NumDesc-Ancestor,
 		block_descendants(Block,Ancestor,_,NumDesc)
 	       ,Pairs2),
