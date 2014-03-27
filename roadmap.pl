@@ -2,10 +2,36 @@
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/rdf_litindex)).
 :- use_module(library(aggregate)).
+:- if(exists_source(library(ods/table))).
+:- use_module(library(ods/sheet)).
+:- use_module(library(ods/recognise)).
+:- use_module(library(ods/table)).
+:- use_module(library(ods/datasource)).
+:- use_module(library(ods/data)).
+:- use_module(labels).
+:- else.
 :- ensure_loaded(plsheet/test).
+:- endif.
 
 :- rdf_register_prefix(sheet, 'http://vu.nl/sheet/').
 :- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
+
+:- dynamic
+	config/2.
+
+config(in_scheme, 'http://aims.fao.org/aos/agrovoc').
+
+%%	candidate_concept(+Resource) is semidet.
+%
+%	True if Resource is a candidate concept
+
+candidate_concept(S) :-
+	(   config(in_scheme, Scheme)
+	*-> rdf(S, skos:inScheme, Scheme)
+	;   config(graph, Graph)
+	*-> rdf(S, skos:prefLabel, _, Graph)
+	;   true
+	), !.
 
 
 		 /*******************************
@@ -41,14 +67,14 @@ agro_label(Label,AgroConcept):-
 	(   rdf(AgroConcept,skos:prefLabel,literal(lang(en,Label)))
 	;   rdf(AgroConcept,skos:altLabel,literal(lang(en,Label)))
 	),
-	rdf(AgroConcept, skos:inScheme, 'http://aims.fao.org/aos/agrovoc').
+	candidate_concept(AgroConcept).
 
 
 % For translating AgroVoc concept-URI back to AgroVoc label, use this
 % function instead of "agro_label", to avoid redundant results.
 agro_pref_label(Label,AgroConcept):-
 	rdf(AgroConcept,skos:prefLabel,literal(lang(en,Label))),
-	rdf(AgroConcept, skos:inScheme, 'http://aims.fao.org/aos/agrovoc').
+	candidate_concept(AgroConcept).
 
 
 % Preprocess label (stem+tokenize) and find matching AgroVoc concepts
@@ -61,7 +87,7 @@ agro_candidate(Label, AgroConcept) :-
 	(   rdf(AgroConcept,skos:prefLabel,literal(lang(en,Literal)))
 	;   rdf(AgroConcept,skos:altLabel,literal(lang(en,Literal)))
 	),
-	rdf(AgroConcept, skos:inScheme, 'http://aims.fao.org/aos/agrovoc').
+	candidate_concept(AgroConcept).
 
 
 % For a given cell label calculate isubdistance with respect to a
