@@ -221,16 +221,32 @@ assert_select_concept(Label,SelectConcept) :-
 assert_select_concept(Label,SelectConcept) :-
 	rdf_assert(SelectConcept, sheet:selectAgroConceptOf, literal(Label), sheet_labels).
 
+multiple_block_ancestors(Label,BlockAncestor1,BlockAncestor2):-
+	rdf(Ancestor1, sheet:blockAncestorOf, literal(Label), sheet_labels),
+	rdf(Ancestor2, sheet:blockAncestorOf, literal(Label), sheet_labels),
+	\+ Ancestor1 == Ancestor2,
+	agro_pref_label(BlockAncestor1,Ancestor1),
+	agro_pref_label(BlockAncestor2,Ancestor2).
 
 
+assert_roadmap:-
+	rdf_retractall(_,_,_,sheet_labels),
+	assert_agro_concepts,
+	assert_agro_ancestors,
+	assert_block_ancestors,
+	assert_select_concepts.
 
 
-%assert_best_concept(Label,BestConcept):-
-%	rdf(sheet:searched_labels, sheet:searched_bestConcept, literal(Label)), !,
-%	rdf(BestConcept, sheet:bestConcept, literal(Label)).
-%assert_best_concept(Label,BestConcept):-
-%	forall(label_best_concept(Label,BestConcept),
-%	       rdf_assert(BestConcept, sheet:bestConcept, literal(Label), sheet_labels)),
-%	rdf_assert(sheet:searched_labels, sheet:searched_bestConcept, literal(Label), sheet_labels),
-%	rdf(BestConcept, sheet:bestConcept, literal(Label)).
+label_inside_DS(Label,Label2):-
+	cell_value(Sheet,X,Y,Label),
+	cell_property(Sheet,X,Y, block(Block)),
+	block(Block,_,DS),
+	ds_inside(DS,X2,Y2),
+	\+ (X2 == X, Y2 == Y),
+	cell_value(Sheet, X2, Y2, Label2).
+
+siblings(Label,SiblingSet):-
+	findall(S,label_inside_DS(Label,S),SiblingList),
+	sort(SiblingList,SiblingSet).
+
 
