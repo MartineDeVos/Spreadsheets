@@ -1,0 +1,10 @@
+/* Generated file
+   Keep track of installed config files
+*/
+
+file('debug.pl','/home/mvs246/src/ClioPatria/ClioPatria/config-available',1384864114).
+file('config.pl','/home/mvs246/src/ClioPatria/ClioPatria/config-available',1384864114).
+file('store.pl','/home/mvs246/src/ClioPatria/ClioPatria/config-available',1384864114).
+file('network.pl','/home/mvs246/src/ClioPatria/ClioPatria/config-available',1384864114).
+file('zlib.pl','/home/mvs246/src/ClioPatria/ClioPatria/config-available',1384864114).
+file('localhost.pl','/home/mvs246/src/ClioPatria/ClioPatria/config-available',1384864114).

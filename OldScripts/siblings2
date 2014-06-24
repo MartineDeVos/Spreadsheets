@@ -1,0 +1,19 @@
+mother(tim, anna).
+mother(anna, fanny).
+mother(daniel, fanny).
+mother(celine, gertrude).
+father(tim, bernd).
+father(anna, ephraim).
+father(daniel, ephraim).
+father(celine, daniel).
+
+parent(X,Y) :- mother(X,Y).
+parent(X,Y) :- father(X,Y).
+
+ancestor(X, Y) :- parent(X, Y).
+ancestor(X, Y) :- parent(X, Z), ancestor(Z, Y).
+
+ancestor(X,Y,father(X)) :- father(X,Y).
+ancestor(X,Y,mother(X)) :- mother(X,Y).
+ancestor(X,Y,father(Z2)) :- father(Z,Y), ancestor(X,Z,Z2).
+ancestor(X,Y,mother(Z2)) :- mother(Z,Y), ancestor(X,Z,Z2).

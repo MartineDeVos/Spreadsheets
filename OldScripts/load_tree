@@ -1,0 +1,2 @@
+rdf(R, skos:broader, B, R)
+rdf_assert(Resource,skos:broader,Broader,Resource)

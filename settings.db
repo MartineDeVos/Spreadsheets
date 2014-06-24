@@ -1,0 +1,7 @@
+﻿/*  Saved settings
+    Date: Fri Dec 13 09:48:55 2013
+*/
+
+
+%	Enable CORS for the listed domains.  Use [*] for all domains
+setting(http:cors, [*]).

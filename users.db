@@ -1,0 +1,2 @@
+assert(user(admin,[realname('Administrator'),password('$1$vKTstIzN$z2C0IcMQD2KvDTK3pjq/V/'),allow([read(_,_),write(_,_),admin(_)])])).
+assert(user(anonymous,[realname('Define rights for not-logged in users'),allow([read(_,_)])])).

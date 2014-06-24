@@ -1,0 +1,3 @@
+/* RDF Database is in use */
+
+locked([time(1403607521),pid(3818),host('mvs246-Latitude-E6220')]).
