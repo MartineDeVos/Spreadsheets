@@ -23,15 +23,16 @@ get_om_symbol(Symbol,OMUnit):-
 
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
-	rdf(OMUnit,om:symbol,literal(Symbol),OM),!.
+	rdf(OMUnit,om:symbol,literal(Symbol),OM),
+	rdf(_,om:unit_of_measure,OMUnit,OM),!.
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
-	rdf(OMUnit,om:alternative_symbol,literal(Symbol),OM).
-
+	rdf(OMUnit,om:alternative_symbol,literal(Symbol),OM),
+	rdf(_,om:unit_of_measure,OMUnit,OM).
 
 unit_description_match(Symbol,OMUnit):-
 	omVoc(OM),
-        rdf(OMUnit,rdfs:label,literal(Symbol),OM),
+        rdf(OMUnit,rdfs:label,literal(lang(en,Symbol)),OM),
 	rdf(_,om:unit_of_measure,OMUnit,OM).
 
 		 /*******************************
