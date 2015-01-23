@@ -6,7 +6,7 @@
 
 :- rdf_register_prefix(sheet, 'http://vu.nl/sheet/').
 :- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
-
+:- rdf_register_prefix(agro,'http://aims.fao.org/aos/agrovoc/').
 
 		 /*******************************
 		 *	CELL LABELS	*
@@ -248,5 +248,11 @@ label_inside_DS(Label,Label2):-
 siblings(Label,SiblingSet):-
 	findall(S,label_inside_DS(Label,S),SiblingList),
 	sort(SiblingList,SiblingSet).
+
+block_ancestor_num_labels(BlockAncestor,NumLabels):-
+	rdf(S,sheet:blockAncestorOf,_),
+	aggregate_all(count,L,rdf(S,sheet:blockAncestorOf,literal(L)),NumLabels),
+	agro_pref_label(BlockAncestor,S).
+
 
 

@@ -117,7 +117,7 @@ assert_ds(DS, Type) :-
 largest_unit_slice(Block, Slice) :-
 	block(Block,_,_),
 	findall(Size-Slice,
-		(   unit_slice_cell(Block,Slice,_,_),
+		(   unit_cell_slice(Block,_,_,Slice),
 		    ds_cell_count(Slice, Size)
 		), Pairs),
 	sort(Pairs, Unique),
@@ -138,23 +138,44 @@ unit_cell(Block,X,Y,Symbol,OMUnit):-
 	cell_value(Sheet,X,Y,Label),
 	om_label(Label,Symbol,OMUnit).
 
+text_cell(Block,X,Y,Label,AgroConcept):-
+	block(Block,_,DS),
+	ds_inside(DS, X, Y),
+	ds_sheet(DS, Sheet),
+	cell_value(Sheet,X,Y,Label),
+	label_agro_concept(Label,_, AgroConcept).
 
-unit_slice_cell(Block,Slice,X,Y):-
+% Check whether suggested slice contains more mappings to OM than AGROVOC,
+ds_map_check(Block,cell_range(Sheet, SX,SY, EX,EY)):-
+	aggregate_all(count,X-Y,
+		      (ds_inside(cell_range(Sheet, SX,SY, EX,EY),X,Y),
+		       unit_cell(Block,X,Y,_,_)),
+		      UnitMap),
+	aggregate_all(count,X-Y,
+		      (ds_inside(cell_range(Sheet, SX,SY, EX,EY),X,Y),
+		       text_cell(Block,X,Y,_,_)),
+		      TextMap),
+	UnitMap > TextMap,
+	UnitMap > 1.
+
+% Find unit slices within a block, starting from unit cell candidates
+% A slice is a unit slice when it has  more mappings to OM than AGROVOC
+% A unit slice is either horizontally or vertically oriented
+unit_cell_slice(Block,X,Y,ColSlice):-
 	unit_cell(Block,X,Y,_,_),
 	cell_property(Sheet,X,Y, block(Block)),
 	block(Block,_,DS),
 	ds_column_slice(DS,_,cell_range(Sheet,X,SY, X,EY)),
-	aggregate_all(count,Y2,
-		      (between(SY,EY,Y2), unit_cell(Sheet,X,Y2,_,_)),
-		      UnitInCol),
+	ds_map_check(Block,cell_range(Sheet,X,SY, X,EY)),
+	ColSlice = cell_range(Sheet,X,SY, X,EY).
+
+unit_cell_slice(Block,X,Y,RowSlice):-
+	unit_cell(Block,X,Y,_,_),
+	cell_property(_,X,Y, block(Block)),
+	block(Block,_,DS),
 	ds_row_slice(DS,_,cell_range(Sheet,SX,Y, EX,Y)),
-	aggregate_all(count,X2,
-		      (between(SX,EX,X2), unit_cell(Sheet,X2,Y,_,_)),
-		      UnitInRow),
-	(   UnitInRow > UnitInCol
-	->  Slice = cell_range(Sheet, SX,Y, EX,Y)
-	;   Slice = cell_range(Sheet, X,SY, X,EY)
-	).
+	ds_map_check(Block,cell_range(Sheet, SX,Y, EX,Y)),
+	RowSlice = cell_range(Sheet, SX,Y, EX,Y).
 
 
 
@@ -193,7 +214,6 @@ assert_OM_units:-
 	forall(unit_label(Label),
 		forall(om_label(Label,_,OMUnit),
 		       assert_OM_unit(Label,OMUnit))).
-
 assert_OM_unit(Label,OMUnit):-
 	rdf(OMUnit, sheet:omUnitOf, literal(Label),sheet_labels), !.
 assert_OM_unit(Label,OMUnit):-
@@ -203,6 +223,8 @@ assert_OM_unit(Label,OMUnit):-
 		 /*******************************
 	         *  ASSERT QUANTITY CONCEPTS	*
 		 *******************************/
+% Select quantities from a general application area, i.e. application
+% area that does not use other areas. NB: In this case: space_and_time
 label_quantity(Label,OMQuantity):-
 	omVoc(OM),
 	rdf(OMUnit, sheet:omUnitOf, literal(Label),sheet_labels),
@@ -224,140 +246,34 @@ assert_label_quantity(Label,OMQuantity):-
 	rdf_assert(OMQuantity, sheet:omQuantityOf, literal(Label),sheet_labels).
 
 
-		 /*******************************
-	         *  ASSERT APPLICATION AREA	*
-		 *******************************/
-label_quantity_area(Label,OMQuantity,OMArea):-
-	omVoc(OM),
-	rdf(OMQuantity, sheet:omQuantityOf, literal(Label),sheet_labels),
-	rdf(OMArea,om:quantity,OMQuantity,OM).
-
-%unique_label_area(Label,OMArea):-
-%	unit_label(Label),
-%	findall(A,label_quantity_area(Label,_,A),AList),
-%	sort(AList,OMAreas),
-%	member(OMArea,OMAreas).
-
-assert_label_areas:-
-	forall(unit_label(Label),
-		forall(label_quantity_area(Label,_,OMArea),
-		       assert_label_area(Label,OMArea))).
-
-assert_label_area(Label,OMArea):-
-	rdf(OMArea, sheet:omAreaOf, literal(Label),sheet_labels), !.
-assert_label_area(Label,OMArea):-
-	rdf_assert(OMArea, sheet:omAreaOf, literal(Label),sheet_labels).
-
-sheet_areas(OMAreas):-
-	findall(A,rdf(A, sheet:omAreaOf,_,sheet_labels),AList),
-	sort(AList,OMAreas).
-
-
-area_label_coverage(OMArea,NumLabels):-
-	aggregate_all(count,
-	      (	  unit_cell_label(_,_,_,Label),
-		  rdf(OMArea, sheet:omAreaOf,literal(Label),sheet_labels)),
-	      NumLabels).
-
-best_area(BestArea,Pairs2):-
-	sheet_areas(OMAreas),
-	findall(NumLabels-OMArea,
-		(    member(OMArea,OMAreas),
-		     area_label_coverage(OMArea,NumLabels)
-		),
-		Pairs0),
-	keysort(Pairs0,Pairs1),
-	reverse(Pairs1,Pairs2),
-	max_member(_-BestArea,Pairs2).
-
-
 assert_units:-
 	assert_OM_units,
-	assert_label_quantities,
-	assert_label_areas.
-
-%
-%best_area(OMArea):-
-%	sheet_areas(OMAreas),
-%	aggregate_all(max(NumLabels),
-%		      (	  member(OMArea,OMAreas),
-%			  area_label_coverage(OMArea,NumLabels)),
-%		      MaxLabels),
-%	area_label_coverage(OMArea,MaxLabels).
+	assert_label_quantities.
 
 
-% Find a two cells in a unit block that have different symbols,
-% but are associated to the same quantity
-% block_shared_quantity(Block,Symbol,Symbol2,OMQuantity):-
-%	block(Block,unit,_),
-%	unit_cell(Block,X,Y,Symbol,OMUnit),
-%	unit_cell(Block,X2,Y2,Symbol2,OMUnit2),
-%	\+ (X2 == X, Y2 == Y),
-%	\+ Symbol2 == Symbol,
-%	rdf(OMQuantity,om:unit_of_measure,OMUnit),
-%	rdf(OMQuantity,om:unit_of_measure,OMUnit2).
-%
-%block_shared_quantity(Block,Symbol,Symbol2,OMQuantity):-
-%	block(Block,unit,_),
-%	unit_cell(Block,X,Y,Symbol,OMUnit),
-%	unit_cell(Block,X2,Y2,Symbol2,OMUnit2),
-%	\+ (X2 == X, Y2 == Y),
-%	\+ Symbol2 == Symbol,
-%	rdf(OMQuantity1,om:unit_of_measure,OMUnit),
-%	rdf(OMQuantity2,om:unit_of_measure,OMUnit2).
+		 /*******************************
+		  *	      REST             *
+		 *******************************/
 
 
 
-%quantity_unit(Block,Ancestor,Descendants,NumDesc):-
-%	block_ancestors(Block,AncestorSet),
-%	member(Ancestor, AncestorSet),
-%	findall(Label,
-%		block_label_ancestor(Block,Label,Ancestor),
-%		DescList),
-%	sort(DescList,Descendants),
-%	length(Descendants,NumDesc).
-%
-%block_best_quantity(Block,BestAncestor):-
-%	block(Block,unit,_),
-%	findall(NumDesc-Ancestor,
-%		block_descendants(Block,Ancestor,_,NumDesc)
-%	       ,Pairs2),
-%	keysort(Pairs2,Pairs1),
-%	reverse(Pairs1,Pairs),
-%	max_member(_-BestAncestor,Pairs).
-
-%block_slice(Block,Slice):-
-%	findall(B-S,
-%	       block_slice_cell(B,S,_,_),
-%	       BSList),
-%	sort(BSList,BSSet),
-%	member([Block-Slice],BSSet).
+unit_block_label(Block,Label):-
+	block(Block,unit,DS),
+	ds_inside(DS,X,Y),
+	ds_sheet(DS, Sheet),
+	cell_value(Sheet,X,Y,Label).
 
 
+all_unit_block_labels(LabelSet):-
+	findall(Label,
+		unit_block_label(_,Label),
+		List),
+	sort(List,LabelSet).
+
+false_unit_label(Block,FalseLabel):-
+	all_unit_block_labels(LabelSet),
+	member(FalseLabel,LabelSet),
+	\+unit_label(FalseLabel),
+	unit_block_label(Block,FalseLabel).
 
 
-%cell_in_colslice( cell_range(Sheet, CX,SY, CX,EY),X,Y):-
-%	cell_property(Sheet,X,Y, block(Block)),
-%	block(Block,_,DS),
-%	ds_column_slice(DS,_Offset,cell_range(Sheet,CX,SY, CX,EY)),
-%	between(SY, EY, Y),
-%	CX is X.
-%
-%cell_in_rowslice( cell_range(Sheet, SX,RY, EX,RY),X,Y):-
-%	cell_property(Sheet,X,Y, block(Block)),
-%	block(Block,_,DS),
-%	ds_row_slice(DS,_Offset,cell_range(Sheet, SX,RY, EX,RY)),
-%	between(SX, EX, X),
-%	RY is Y.
-%
-%colslice_sibling(cell_range(Sheet, CX,SY, CX,EY),X,Y,Y2):-
-%	cell_in_colslice( cell_range(Sheet, CX,SY, CX,EY),X,Y),
-%	between(SY, EY, Y2),
-%	\+ Y2 == Y,
-%	unit_cell(Sheet,X,Y2,_OMUnit).
-%
-%rowslice_sibling(cell_range(Sheet, SX,RY, EX,RY),X,X2,Y):-
-%	cell_in_rowslice( cell_range(Sheet, SX,RY, EX,RY),X,Y),
-%	between(SX, EX, X2),
-%	\+ X2 == X,
-%	unit_cell(Sheet,X2,Y,_OmConcept).

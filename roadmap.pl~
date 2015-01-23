@@ -6,7 +6,7 @@
 
 :- rdf_register_prefix(sheet, 'http://vu.nl/sheet/').
 :- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
-
+:- rdf_register_prefix(agro,'http://aims.fao.org/aos/agrovoc/').
 
 		 /*******************************
 		 *	CELL LABELS	*
@@ -237,12 +237,22 @@ assert_roadmap:-
 	assert_select_concepts.
 
 
-%assert_best_concept(Label,BestConcept):-
-%	rdf(sheet:searched_labels, sheet:searched_bestConcept, literal(Label)), !,
-%	rdf(BestConcept, sheet:bestConcept, literal(Label)).
-%assert_best_concept(Label,BestConcept):-
-%	forall(label_best_concept(Label,BestConcept),
-%	       rdf_assert(BestConcept, sheet:bestConcept, literal(Label), sheet_labels)),
-%	rdf_assert(sheet:searched_labels, sheet:searched_bestConcept, literal(Label), sheet_labels),
-%	rdf(BestConcept, sheet:bestConcept, literal(Label)).
+label_inside_DS(Label,Label2):-
+	cell_value(Sheet,X,Y,Label),
+	cell_property(Sheet,X,Y, block(Block)),
+	block(Block,_,DS),
+	ds_inside(DS,X2,Y2),
+	\+ (X2 == X, Y2 == Y),
+	cell_value(Sheet, X2, Y2, Label2).
+
+siblings(Label,SiblingSet):-
+	findall(S,label_inside_DS(Label,S),SiblingList),
+	sort(SiblingList,SiblingSet).
+
+block_ancestor_num_labels(BlockAncestor,NumLabels):-
+	rdf(S,sheet:blockAncestorOf,_),
+	aggregate_all(count,L,rdf(S,sheet:blockAncestorOf,literal(L)),NumLabels),
+	agro_pref_label(BlockAncestor,S).
+
+
 
