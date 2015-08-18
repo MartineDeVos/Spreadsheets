@@ -1,1 +1,0 @@
-[Biodiesel,Biogas,Capital,Coal,Efficiency,Electricity,Ethanol,Ethylene,Heat,Houses,Hydrogen,Inputs,Land,Netherlands,Plastics,Production,Sets,Steel,Uranium,area,biomass,costs,data,demand,energy,environment,groundwater,industry,infrastructure,residues,storage,technology,transport,water]
