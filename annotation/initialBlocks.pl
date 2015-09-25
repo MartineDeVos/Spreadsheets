@@ -211,36 +211,36 @@ ds_within(cell_range(Sheet, SX1,SY1, EX1,EY1),
 
 
 % ds_top_aligned(+Sheet,+Body,+Context)
-% true if Body and Context have the same width and
-% if there are not more than 1 row separating the two
+% true if Body and Context have almost (diff max 2 cols) the same width
+% and if there is max 1 row separating the two
 ds_top_aligned(Sheet,Body,Context):-
 	Body    = cell_range(Sheet, SX1, SY1, EX1,_),
 	Context = cell_range(Sheet, SX2, _, EX2, EY2),
-	SX1=:=SX2,
-	EX1=:=EX2,
+	SX1 - SX2 =< 3,
+	EX2 - EX1 =< 3,
 	SY1 > EY2,
 	SY1 - EY2 =< 2.
 
 % ds_left_aligned(+Sheet,+Body,+Context)
-% true if Body and Context have the same height and
-% if there are not more than 1 column separating the two
+% true if Body and Context have almost (diff max 2 rows) the same height
+% and if there are max 1 column separating the two
 ds_left_aligned(Sheet,Body,Context):-
 	Body    = cell_range(Sheet, SX1, SY1, _,EY1),
 	Context = cell_range(Sheet, _, SY2, EX2, EY2),
-	SY1=:= SY2,
-	EY1 =:= EY2,
+	SY1 - SY2 =< 3,
+	EY2 - EY1 =< 3,
 	SX1 > EX2,
 	SX1 - EX2 =< 2.
 
 
 % ds_right_aligned(+Sheet,+Body,+Context)
-% true if Body and Context have the same height and
-% if there are not more than 1 colum separating the two
+% true if Body and Context have almost (diff max 2 rows) the same height
+% and if there are max 1 column separating the two
 ds_right_aligned(Sheet,Body,Context):-
 	Body    = cell_range(Sheet, _, SY1, EX1,EY1),
 	Context = cell_range(Sheet, SX2, SY2, _, EY2),
-	SY1=:= SY2,
-	EY1 =:= EY2,
+	SY1 - SY2 =< 3,
+	EY2 - EY1 =< 3,
 	SX2 > EX1,
 	SX2 - EX1 =< 2.
 
