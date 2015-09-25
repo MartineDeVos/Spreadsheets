@@ -58,7 +58,6 @@ blocks_by_size(Sheet,Type,BySize):-
 	keysort(Unique,BySize).
 
 
-
 % label_inside_block(+Sheet,+DS)
 % true when there is a cell with a string
 label_inside_ds(Sheet,DS):-
@@ -174,7 +173,6 @@ block_intersect(Sheet,Type,DS,Intersect):-
 	ds_sheet(IntersectDS,Sheet),
         block(Intersect,Type,IntersectDS),
 	ds_intersection(DS,IntersectDS,_).
-
 
 % ds_close_vertical(+DS, +Close)
 % true when close block is max 1 row apart from DS
