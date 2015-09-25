@@ -119,8 +119,8 @@ assert_context(Sheet):-
 
 assert_context_block(Sheet,DS):-
 	context_candidate(Sheet,DS,Candidate),
-	align_body(Sheet,Candidate),
-	assert_context_block2(Sheet,Candidate).
+	tailor_context(Sheet,Candidate,Tailored),
+	assert_context_block2(Sheet,Tailored).
 assert_context_block(_,_).
 
 assert_context_block2(Sheet,Candidate):-
@@ -130,16 +130,19 @@ assert_context_block2(Sheet,Candidate):-
 	ds_id(Candidate,Id,block),
 	assert_block(block(Id,context,Candidate)).
 
-% align_body(+Sheet,-Body,-Context)
-% a context block is positioned top, left or side of the body
-% and has either the same width or the same height
-align_body(Sheet,Context):-
-	ds_sheet(Body,Sheet),
+% tailor_context(+Sheet,+Context,-Tailored)
+% Align context block with table body, and force width (top-aligned)
+% or height (left/right aligned) of contxt to be the same as the body
+tailor_context(Sheet,Context,Tailored):-
 	block(_,body,Body),
-	ds_sheet(Context,Sheet),
-	(  ds_top_aligned(Sheet,Body,Context);
-	   ds_left_aligned(Sheet,Body,Context);
-	   ds_right_aligned(Sheet,Body,Context)
+	Body    = cell_range(Sheet, SX1, SY1, EX1, EY1),
+	Context = cell_range(Sheet, SX2, SY2, EX2, EY2),
+	(   ds_top_aligned(Sheet,Body,Context)
+	->  Tailored = cell_range(Sheet, SX1, SY2, EX1, EY2)
+	;   ds_left_aligned(Sheet,Body,Context)
+	->     Tailored = cell_range(Sheet, SX2, SY1, EX2, EY1)
+	;   ds_right_aligned(Sheet,Body,Context)
+	->     Tailored = cell_range(Sheet, SX2, SY1, EX2, EY1)
 	).
 
 context_candidate(Sheet,DS,Candidate):-
