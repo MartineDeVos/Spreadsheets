@@ -101,17 +101,67 @@ text_cell(Block,X,Y,Label,Concept):-
 	label_domain_concept(Label,_, Concept).
 
 
-		 /*******************************
-		 *  2. ANNOTATE QUANTITY BLOCKS	*
+		 /***********************************************
+		 *  2+3 ANNOTATE QUANTITY EN PHENOMENON BLOCKS	*
 
-		 *******************************/
-% Start from context blocks
-% IF aligned with unit block THEN quantity block (assumption)
-% ELIF # quantity cells in block (of q-u of q match) >
-% compare with domain match or quant threshold
+		 ***********************************************/
+% Recognize QuantityBlocks among ContextBlocks, and annotate them
+% accordingly. The remaining ContextBlocks are annotated as
+% PhenomenonBlocks. NB: Check for empty blocks (result of merging text
+% blocks + removing unit slices)
+assert_quantity_ds :-
+	forall(block(Block,context,_), assert_quantity_ds(Block)),
+	forall(block(Block,context,DS), assert_ds(DS, phenomenon)).
+
+assert_quantity_ds(Block) :-
+	block(Block,context,DS),
+	quantity_ds(DS),!,
+	assert_ds(DS, quantity),
+	retract_block(Block).
+assert_quantity_ds(_).
 
 
+% A QuantityBlock is either aligned with a UnitBlock,
+% or contains a minimum rate of quantity cells.
+quantity_ds(QuantityDS):-
+	block(_,context,QuantityDS),
+	(   aligned_unit_ds(_,_,QuantityDS)
+	;   quantity_cell_rate(QuantityDS)
+	).
 
+% If a context block is located horizontally or vertially aligned with
+% the UnitBlock and the TableBody, than this is a QuantityBlock
+% (assumption).
+aligned_unit_ds(BodyDS,UnitDS,QuantityDS):-
+	block(_,body,BodyDS),
+	block(_,unit,UnitDS),
+	block(_,context,QuantityDS),
+	(   (ds_top_aligned(Sheet,UnitDS,QuantityDS),
+	     ds_top_aligned(Sheet,BodyDS,UnitDS))
+	;   (ds_right_aligned(Sheet,BodyDS,UnitDS),
+	     ds_left_aligned(Sheet,BodyDS,QuantityDS))
+	;   (ds_left_aligned(Sheet,BodyDS,UnitDS),
+	     ds_left_aligned(Sheet,UnitDS,QuantityDS))
+	 ).
+
+% Determine whether number of quantity cells relative to totall cells in
+% a DS is above a certain (0.3) threshold.
+quantity_cell_rate(DS):-
+	aggregate_all(count,X-Y,
+		      quantity_cell(DS,X,Y),
+		      QuantityCount),
+	ds_cell_count(DS, Cells),
+	QuantityCount/Cells > 0.3.
+
+% Quantity cells either match quantity-unit grammar, or can be matched
+% to a Quantity concept from the OM vocabulary
+quantity_cell(DS,X,Y):-
+	ds_inside(DS, X, Y),
+	ds_sheet(DS, Sheet),
+	cell_value(Sheet,X,Y,Label),
+	(   quantity_unit_label(Label,_,_)
+	;   label_quantity_concept(Label,_,_)
+	).
 
 
 		 /*******************************
@@ -122,7 +172,7 @@ omVoc('http://www.wurvoc.org/vocabularies/om-1.8/').
 
 % A unit symbol may match with either the preferred symbol of an OMUnit,
 % the alternative symbol or the description.
-get_om_symbol(Symbol,OMUnit):-
+get_unit_symbol(Symbol,OMUnit):-
 	\+ atom_number(Symbol,_),
 	(  unit_symbol_match(Symbol,OMUnit)
 	;  unit_description_match(Symbol,OMUnit)
