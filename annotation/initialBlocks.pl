@@ -105,6 +105,7 @@ max_close_block(Sheet,Type,DS,Close):-
 		 /*******************************
 		 *	  CONTEXT BLOCKS	*
 		 *******************************/
+
 % From an initial (largest) string block, build and assert context
 % blocks,i.e., string blocks surrounding the table body
 % NB:all string blocks that are inside or intersecting with the

@@ -4,13 +4,14 @@
 
 
 :- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
-
+:- rdf_register_prefix(val,'http://www.foodvoc.org/page/Valerie/').
 
 
 % Start from initial classification: body and context blocks
-% The context blocks are further classified into 1) unit block,
-% 2) a. combined Quantity-Unit block, b. Quantity block,
-% 3) Phenomenon block.
+% The context blocks are further classified into
+% 1) Unit blocks,
+% 2) Quantity blocks,
+% 3) Phenomenon blocks.
 
 
 
@@ -21,14 +22,17 @@
 % Recognize unit blocks in context blocks. Context blocks may consist
 % entirely of units, or partly. If partly, the unit part is separately
 % annotated and substracted from the original context block
+remove_unit_slices :-
+	forall(block(Block,context,_), remove_unit_slices(Block)).
+
 remove_unit_slices(Block) :-
-	block(Block,Type,DS),
+	block(Block,context,DS),
 	largest_unit_slice(Block, Slice), !,
 	ds_subtract(Slice, DS, Rest),
 	retract_block(Block),
 	assert_ds(Slice, unit),
 	forall(member(_Where-RestDS, Rest),
-	       assert_ds(RestDS, Type)).
+	       assert_ds(RestDS, context)).
 remove_unit_slices(_).
 
 assert_ds(DS, Type) :-
@@ -190,8 +194,12 @@ term_codes([H|T]) --> [H], { \+ code_type(H, white) },
 term_codes(T).
 term_codes([]) --> [].
 
+% A unit always contains a symbol that can be matched with an OM
+% concept, and may also contain brackets, a prefix (indicating th size
+% of the unit) and a separator (e.g. a slash or an exponent).
 unit(Symbol,OMUnit) -->
 	bracket_open(T), !,
+	pre_fix,
 	symbol(Symbol,OMUnit),
 	bracket_close(T).
 unit(Symbol,OMUnit) -->
@@ -223,101 +231,17 @@ post_term -->[].
 post_term --> term.
 
 
-		 /*******************************
-	         *    ASSERT UNIT CONCEPTS      *
-		 *******************************/
-unit_cell_label(Block,X,Y,Label):-
-	unit_cell(Block,X,Y,_,_),
-	block(Block,_,DS),
-	ds_inside(DS, X, Y),
-	ds_sheet(DS, Sheet),
-	cell_value(Sheet,X,Y,Label).
-
-unit_label(Label):-
-	findall(Label, unit_cell_label(_,_,_,Label), Labels),
-	sort(Labels, Unique),
-	member(Label, Unique).
-
-
-count([],_,0).
-count([X|T],X,Y):- count(T,X,Z), Y is 1+Z.
-count([X1|T],X,Z):- X1\=X,count(T,X,Z).
-
-countall(List,X,C):-
-    sort(List,List1),
-    member(X,List1),
-    count(List,X,C).
-
-
-unit_label_occurrence(Label,Occurrence):-
-	findall(Label, unit_cell_label(_,_,_,Label), Labels),
-	countall(Labels,Label,Occurrence).
-
-
-assert_OM_units:-
-	forall(unit_label(Label),
-		forall(om_label(Label,_,OMUnit),
-		       assert_OM_unit(Label,OMUnit))).
-assert_OM_unit(Label,OMUnit):-
-	rdf(OMUnit, sheet:omUnitOf, literal(Label),sheet_labels), !.
-assert_OM_unit(Label,OMUnit):-
-	rdf_assert(OMUnit, sheet:omUnitOf, literal(Label),sheet_labels).
-
-
-		 /*******************************
-	         *  ASSERT QUANTITY CONCEPTS	*
-		 *******************************/
-% Select quantities from a general application area, i.e. application
-% area that does not use other areas. NB: In this case: space_and_time
-label_quantity(Label,OMQuantity):-
-	omVoc(OM),
-	rdf(OMUnit, sheet:omUnitOf, literal(Label),sheet_labels),
-	rdf(OMQuantity,om:unit_of_measure,OMUnit,OM).
-
-unique_label_quantity(Label,OMQuantity):-
-	findall(Q,label_quantity(Label,Q),QList),
-	sort(QList,OMQuantities),
-	member(OMQuantity,OMQuantities).
-
-assert_label_quantities:-
-	forall(unit_label(Label),
-		forall(unique_label_quantity(Label,OMQuantity),
-		       assert_label_quantity(Label,OMQuantity))).
-
-assert_label_quantity(Label,OMQuantity):-
-	rdf(OMQuantity, sheet:omQuantityOf, literal(Label),sheet_labels), !.
-assert_label_quantity(Label,OMQuantity):-
-	rdf_assert(OMQuantity, sheet:omQuantityOf, literal(Label),sheet_labels).
-
-
-assert_units:-
-	assert_OM_units,
-	assert_label_quantities.
-
-
-		 /*******************************
-		  *	      REST             *
-		 *******************************/
 
 
 
-unit_block_label(Block,Label):-
-	block(Block,unit,DS),
-	ds_inside(DS,X,Y),
-	ds_sheet(DS, Sheet),
-	cell_value(Sheet,X,Y,Label).
 
 
-all_unit_block_labels(LabelSet):-
-	findall(Label,
-		unit_block_label(_,Label),
-		List),
-	sort(List,LabelSet).
 
-false_unit_label(Block,FalseLabel):-
-	all_unit_block_labels(LabelSet),
-	member(FalseLabel,LabelSet),
-	\+unit_label(FalseLabel),
-	unit_block_label(Block,FalseLabel).
+
+
+
+
+
+
 
 
