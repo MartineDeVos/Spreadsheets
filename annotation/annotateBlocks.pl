@@ -98,7 +98,7 @@ text_cell(Block,X,Y,Label,Concept):-
 	ds_inside(DS, X, Y),
 	ds_sheet(DS, Sheet),
 	cell_value(Sheet,X,Y,Label),
-	label_domain_concept(Label,_, Concept).
+	label_dist_domainconcept(Label,_, Concept).
 
 
 		 /***********************************************
@@ -109,16 +109,33 @@ text_cell(Block,X,Y,Label,Concept):-
 % accordingly. The remaining ContextBlocks are annotated as
 % PhenomenonBlocks. NB: Check for empty blocks (result of merging text
 % blocks + removing unit slices)
-assert_quantity_ds :-
-	forall(block(Block,context,_), assert_quantity_ds(Block)),
-	forall(block(Block,context,DS), assert_ds(DS, phenomenon)).
+assert_quantity_phenomenon_blocks:-
+	assert_quantity_ds,
+	assert_phenomenon_ds.
 
-assert_quantity_ds(Block) :-
+assert_quantity_ds :-
+	forall(block(Block,context,_), assert_quantity_ds2(Block)).
+
+assert_quantity_ds2(Block) :-
 	block(Block,context,DS),
 	quantity_ds(DS),!,
 	assert_ds(DS, quantity),
 	retract_block(Block).
-assert_quantity_ds(_).
+assert_quantity_ds2(_).
+
+assert_phenomenon_ds:-
+	forall(block(Block,context,_), assert_phenomenon_ds2(Block)).
+
+% NB Check whether the block is not empty (i.e., at least one cell
+% with content)
+assert_phenomenon_ds2(Block) :-
+	block(Block,context,DS),
+	ds_sheet(DS,Sheet),
+	ds_inside(DS, X, Y),
+	cell_value(Sheet,X,Y,_),!,
+        assert_ds(DS, phenomenon),
+	retract_block(Block).
+assert_phenomenon_ds2(_).
 
 
 % A QuantityBlock is either aligned with a UnitBlock,
@@ -193,6 +210,42 @@ unit_description_match(Symbol,OMUnit):-
 	rdf(_,om:unit_of_measure,OMUnit,OM).
 
 
+% Find all possible matching Quantity concepts for a Label and
+% sort them based on best match (highest isub, NB minimum isub is 0.7).
+label_quantity_concept(Label, Distance, Quantity) :-
+	findall(C, quantity_candidate(Label, C), Candidates0),
+	sort(Candidates0, Candidates),
+	map_list_to_pairs(quantity_isub_distance(Label), Candidates, Pairs),
+	keysort(Pairs, SortedPairs),
+	reverse(SortedPairs, BestFirst),
+	member(Distance-Quantity, BestFirst),
+	Distance > 0.7.
+
+% For a given cell label calculate isubdistance with respect to a
+% vocabulary concept, select the best match (max isub).
+quantity_isub_distance(Label, Concept,  MaxDistance) :-
+	aggregate_all(max(Distance),
+		      ( quantity_concept(DomainLabel, Concept),
+			isub(Label, DomainLabel, true, Distance)
+		      ),
+		      MaxDistance).
+
+% Preprocess label (stem+tokenize) and find matching OM quantity
+% concepts
+quantity_candidate(Label, Quantity) :-
+	tokenize_atom(Label, Tokens),
+	member(Token, Tokens),
+	atom(Token),
+	rdf_find_literals(stem(Token), Literals),
+	member(Literal, Literals),
+	quantity_concept(Literal,Quantity).
+
+quantity_concept(Label,Quantity):-
+	rdf(Quantity,rdfs:subClassOf,om:'Quantity'),
+	rdf(Quantity,rdfs:label,literal(lang(en,Label))).
+quantity_concept(Label,Quantity):-
+	rdf(Quantity,om:unit_of_measure,_),
+	rdf(Quantity,rdfs:label,literal(lang(en,Label))).
 
 		 /*******************************
 		 *	    UNIT GRAMMAR	*
@@ -229,9 +282,12 @@ bracket_close(r) --> ")".
 bracket_close(s) --> "]".
 
 % Unit labels always contains a unit with a symbol that can be matched
-% with an OM concept. Before the unit only one term is allowed.
+% with an OM concept, and may also contain brackets, a prefix
+% (indicating th size of the unit) and a separator (e.g. a slash or an
+% exponent).
 unit_label(Symbol,OMUnit) -->
 	pre_term,unit(Symbol,OMUnit),post_term.
+
 
 pre_term -->[].
 pre_term --> term,white,whites.
@@ -244,11 +300,8 @@ term_codes([H|T]) --> [H], { \+ code_type(H, white) },
 term_codes(T).
 term_codes([]) --> [].
 
-% A unit always contains a symbol that can be matched with an OM
-% concept, and may also contain brackets, a prefix (indicating th size
-% of the unit) and a separator (e.g. a slash or an exponent).
 unit(Symbol,OMUnit) -->
-	bracket_open(T), !,
+	bracket_open(T),!,
 	pre_fix,
 	symbol(Symbol,OMUnit),
 	bracket_close(T).
@@ -265,7 +318,7 @@ symbol(Symbol,OMUnit)-->
 om_symbol(Symbol,OMUnit)-->
 	symbol_codes(Codes),
 	{ atom_codes(Symbol,Codes),
-	  get_om_symbol(Symbol,OMUnit)
+	  get_unit_symbol(Symbol,OMUnit)
 	  }.
 
 sep --> \+ [_].

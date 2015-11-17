@@ -1,13 +1,6 @@
 :- ensure_loaded("../plsheet/test").
 
 
-% Run once per ods file to derive initial separation of float and string blocks
-init(File):-
-	unload_file(File),
-	retractall(block(_,_,_)),
-	load(File),
-	segment.
-
 
 		 /*******************************
 		 *	     TABLE BODY		*
@@ -154,12 +147,12 @@ context_candidate(_,DS,DS).
 merge_string_blocks(Sheet,DS,Union):-
 	max_close_block(Sheet,string,DS,Adjacent),
 	ds_union(DS,Adjacent,Union),
-	\+float_inside_ds(Sheet,Union).
+	\+number_inside_ds(Sheet,Union).
 
-float_inside_ds(Sheet,DS):-
+number_inside_ds(Sheet,DS):-
 	ds_inside(DS, X, Y),
 	cell_value(Sheet,X,Y,Value),
-	float(Value).
+	number(Value).
 
 
 
@@ -209,12 +202,13 @@ ds_within(cell_range(Sheet, SX1,SY1, EX1,EY1),
 	EY2 =< EY1.
 
 
-% ds_top_aligned(+Sheet,+Body,+Context)
+% ds_top_aligned(+Sheet,+DS1,+DS2)
 % true if Body and Context have almost (diff max 2 cols) the same width
 % and if there is max 1 row separating the two
-ds_top_aligned(Sheet,Body,Context):-
-	Body    = cell_range(Sheet, SX1, SY1, EX1,_),
-	Context = cell_range(Sheet, SX2, _, EX2, EY2),
+ds_top_aligned(Sheet,DS1,DS2):-
+	DS1   = cell_range(Sheet, SX1, SY1, EX1,_),
+	DS2   = cell_range(Sheet, SX2, _, EX2, EY2),
+	SX1 >= SX2,
 	SX1 - SX2 =< 3,
 	EX2 - EX1 =< 3,
 	SY1 > EY2,
