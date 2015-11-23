@@ -28,3 +28,5 @@ annotated_term(Sheet,Type,Label,ConceptName):-
 	sheet_block_label(Sheet, _, Type, Label),
 	rdf(Concept,_, literal(Label),sheet_labels),
 	domain_pref_label(Concept,ConceptName).
+
+

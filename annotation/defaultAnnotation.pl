@@ -2,36 +2,84 @@
 :- rdf_register_prefix(val,'http://www.foodvoc.org/page/Valerie/').
 
 
+		 /********************************
+	          *   DEFAULT II: ANNOTATE TERMS *
+		  *******************************/
+% Annotate all (NB: also comments) spreadsheet terms by using
+% string matching and unit/quantity grammar. Terms are
+% annotated with sets of concepts. assumption is that the overlap
+% between the vocs is negligible, so terms are either annotated with a
+% set of OM or a set of Valerie concepts.
+
+assert_default2_units:-
+	forall(cell_value(_,_,_,Label),
+		forall(om_label(Label,_,Unit),
+		       assert_default2_unit(Label,Unit))).
+assert_default2_unit(Label,Unit):-
+	rdf(Unit, sheet:unitOf, literal(Label),default2_annotation), !.
+assert_default2_unit(Label,Unit):-
+	rdf_assert(Unit, sheet:unitOf, literal(Label),default2_annotation).
+
+
+assert_default2_quantities:-
+	forall(cell_value(_,_,_,Label),
+		forall(unique_label_quantity(Label,OMQuantity),
+		       assert_default2_quantity(Label,OMQuantity))).
+
+assert_default2_quantity(Label,OMQuantity):-
+	rdf(OMQuantity, sheet:quantityOf, literal(Label),default2_annotation), !.
+assert_default2_quantity(Label,OMQuantity):-
+	rdf_assert(OMQuantity, sheet:quantityOf, literal(Label),default2_annotation).
+
+
+assert_default2_domainterms:-
+	forall(cell_value(_,_,_,Label),
+	       forall(label_dist_domainconcept(Label,_,Concept),
+		    assert_default2_domainterm(Label,Concept))).
+
+assert_default2_domainterm(Label,Concept):-
+	rdf(Concept, sheet:domainConceptOf, literal(Label),default2_annotation), !.
+assert_default2_domainterm(Label,Concept):-
+	rdf_assert(Concept, sheet:domainConceptOf, literal(Label),default2_annotation).
+
+
+
 
 		 /********************************
-	          *   ANNOTATE TERMS *
+	          *   DEFAULT I: ANNOTATE TERMS *
 		  *******************************/
 % Annotate all (NB: also comments) spreadsheet terms by using
 % string matching. Terms are annotated with sets of concepts. assumption
-% is that the overlap between the vocs is negligible, so terms are eithr
-% annotated with a set of OM or a set of Valerie concepts.
+% is that the overlap between the vocs is negligible, so terms are
+% either annotated with a set of OM or a set of Valerie concepts.
 
-assert_default_domain:-
+assert_default1_domain:-
 	forall(cell_value(_,_,_,Label),
 	       forall(label_dist_domainconcept(Label,_,Concept),
-		    assert_default_concept(Label,Concept))).
+		    assert_default1_domainconcept(Label,Concept))).
 
-assert_default_om:-
+assert_default1_domainconcept(Label,Concept):-
+	rdf(Concept, sheet:domainConceptOf, literal(Label),default1_annotation), !.
+assert_default1_domainconcept(Label,Concept):-
+	rdf_assert(Concept, sheet:domainConceptOf, literal(Label), default1_annotation).
+
+
+assert_default1_om:-
 	forall(cell_value(_,_,_,Label),
 	       forall(label_dist_omconcept(Label,_,Concept),
-		    assert_default_concept(Label,Concept))).
+		    assert_default1_omconcept(Label,Concept))).
 
-assert_default_concept(Label,Concept):-
-	rdf(Concept, sheet:conceptOf, literal(Label),default1_annotation), !.
-assert_default_concept(Label,Concept):-
-	rdf_assert(Concept, sheet:conceptOf, literal(Label), default1_annotation).
+assert_default1_omconcept(Label,Concept):-
+	rdf(Concept, sheet:omConceptOf, literal(Label),default1_annotation), !.
+assert_default1_omconcept(Label,Concept):-
+	rdf_assert(Concept, sheet:omConceptOf, literal(Label), default1_annotation).
 
 
 
 
 
 		 /********************************
-	          *   DEFAULT OM MATCHING *
+	          *   DEFAULT I OM MATCHING *
 		  *******************************/
 
 % Find all possible matching vocabulary concepts for a cell label and
@@ -80,11 +128,13 @@ omVoc('http://www.wurvoc.org/vocabularies/om-1.8/').
 		 /********************************
 	          *   CALCULATE OVERLAP *
 		  *******************************/
-
-annotation_overlap(Label,OMConcept,ValConcept):-
+% Label that is annotated with both an OM and a Valerie concept
+annotation_overlap(Label,OMConcept,ValConcept,Graph):-
 	cell_value(_,_,_,Label),
-	label_dist_domainconcept(Label,_, ValConcept),
-	label_dist_omconcept(Label,_, OMConcept).
+	rdf(ValConcept,_,literal(Label),Graph),
+	rdf(ValConcept,_,_,'http://www.foodvoc.org/page/Valerie/'),
+	rdf(OMConcept,_,literal(Label),Graph),
+	rdf(OMConcept,_,_,'http://www.wurvoc.org/vocabularies/om-1.8/').
 
 
 overlap_om_valerie(Label,OMConcept,ValConcept):-
