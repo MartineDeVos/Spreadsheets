@@ -17,8 +17,9 @@ prefix(vann, 'http://purl.org/vocab/vann/').
 prefix(graphviz, 'http://www.graphviz.org/').
 prefix(cpack, 'http://cliopatria.swi-prolog.org/schema/cpack#').
 prefix(sheet, 'http://vu.nl/sheet/').
-prefix(om, 'http://www.wurvoc.org/vocabularies/om-1.8/').
 prefix(cedar, 'http://cedar.example.org/ns#').
 prefix(agro, 'http://aims.fao.org/aos/agrovoc/').
 prefix(dctypes, 'http://purl.org/dc/dcmitype/').
 prefix(dcam, 'http://purl.org/dc/dcam/').
+prefix(val, 'http://www.foodvoc.org/page/Valerie/').
+prefix(om, 'http://www.ontology-of-units-of-measure.org/vocabularies/om-2/').

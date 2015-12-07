@@ -3,15 +3,20 @@
 :- ensure_loaded(annotateTerms).
 
 
-:- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
-:- rdf_register_prefix(val,'http://www.foodvoc.org/page/Valerie/').
-
+:- rdf_register_prefix(om,'http://www.ontology-of-units-of-measure.org/vocabularies/om-2/').
 
 % Start from initial classification: body and context blocks
 % The context blocks are further classified into
 % 1) Unit blocks,
 % 2) Quantity blocks,
 % 3) Phenomenon blocks.
+
+
+context_block(Unique) :-
+	findall(Block, block(Block,context,_), Blocks),
+	sort(Blocks, Set),
+	member(Unique, Set).
+
 
 
 
@@ -23,7 +28,7 @@
 % entirely of units, or partly. If partly, the unit part is separately
 % annotated and substracted from the original context block
 remove_unit_slices :-
-	forall(block(Block,context,_), remove_unit_slices(Block)).
+	forall(context_block(Block), remove_unit_slices(Block)).
 
 remove_unit_slices(Block) :-
 	block(Block,context,DS),
@@ -114,7 +119,7 @@ assert_quantity_phenomenon_blocks:-
 	assert_phenomenon_ds.
 
 assert_quantity_ds :-
-	forall(block(Block,context,_), assert_quantity_ds2(Block)).
+	forall(context_block(Block), assert_quantity_ds2(Block)).
 
 assert_quantity_ds2(Block) :-
 	block(Block,context,DS),
@@ -124,7 +129,7 @@ assert_quantity_ds2(Block) :-
 assert_quantity_ds2(_).
 
 assert_phenomenon_ds:-
-	forall(block(Block,context,_), assert_phenomenon_ds2(Block)).
+	forall(context_block(Block), assert_phenomenon_ds2(Block)).
 
 % NB Check whether the block is not empty (i.e., at least one cell
 % with content)
@@ -185,7 +190,7 @@ quantity_cell(DS,X,Y):-
 		 *         OM MATCHING         *
 		 *******************************/
 
-omVoc('http://www.wurvoc.org/vocabularies/om-1.8/').
+omVoc('file:///home/mvs246/Dropbox/WORK/Analyses/Vocabularies/OM-2.0.rdf').
 
 % A unit symbol may match with either the preferred symbol of an OMUnit,
 % the alternative symbol or the description.
@@ -198,11 +203,11 @@ get_unit_symbol(Symbol,OMUnit):-
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
 	rdf(OMUnit,om:symbol,literal(Symbol),OM),
-	rdf(_,om:unit_of_measure,OMUnit,OM),!.
+	rdf(OMUnit,rdf:type,om:'Unit',OM),!.
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
-	rdf(OMUnit,om:alternative_symbol,literal(Symbol),OM),
-	rdf(_,om:unit_of_measure,OMUnit,OM).
+	rdf(OMUnit,om:alternativeSymbol,literal(Symbol),OM),
+	rdf(OMUnit,rdf:type,om:'Unit',OM).
 
 unit_description_match(Symbol,OMUnit):-
 	omVoc(OM),
@@ -240,12 +245,15 @@ quantity_candidate(Label, Quantity) :-
 	member(Literal, Literals),
 	quantity_concept(Literal,Quantity).
 
+% A Quantity concept in OM can be recognized as a subclass a subclass
+% of om:'Quantity' or as a concept with the property om:commonlyHasUnit.
 quantity_concept(Label,Quantity):-
 	rdf(Quantity,rdfs:subClassOf,om:'Quantity'),
 	rdf(Quantity,rdfs:label,literal(lang(en,Label))).
 quantity_concept(Label,Quantity):-
-	rdf(Quantity,om:unit_of_measure,_),
+	rdf(Quantity,om:commonlyHasUnit,_),
 	rdf(Quantity,rdfs:label,literal(lang(en,Label))).
+
 
 		 /*******************************
 		 *	    UNIT GRAMMAR	*

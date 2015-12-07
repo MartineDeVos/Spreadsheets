@@ -1,5 +1,17 @@
-:- rdf_register_prefix(om,'http://www.wurvoc.org/vocabularies/om-1.8/').
+:- rdf_register_prefix(om,'http://www.ontology-of-units-of-measure.org/vocabularies/om-2/').
 :- rdf_register_prefix(val,'http://www.foodvoc.org/page/Valerie/').
+
+
+
+string_label(S,X,Y,Label) :-
+	cell_value(S,X,Y,Label),
+	atom(Label).
+
+
+unique_string_label(S,X,Y,Unique) :-
+	findall(Label,string_label(S,X,Y,Label),Labels),
+	sort(Labels, Set),
+	member(Unique, Set).
 
 
 		 /********************************
@@ -12,7 +24,7 @@
 % set of OM or a set of Valerie concepts.
 
 assert_default2_units:-
-	forall(cell_value(_,_,_,Label),
+	forall(unique_string_label(_,_,_,Label),
 		forall(om_label(Label,_,Unit),
 		       assert_default2_unit(Label,Unit))).
 assert_default2_unit(Label,Unit):-
@@ -22,7 +34,7 @@ assert_default2_unit(Label,Unit):-
 
 
 assert_default2_quantities:-
-	forall(cell_value(_,_,_,Label),
+	forall(unique_string_label(_,_,_,Label),
 		forall(unique_label_quantity(Label,OMQuantity),
 		       assert_default2_quantity(Label,OMQuantity))).
 
@@ -33,7 +45,7 @@ assert_default2_quantity(Label,OMQuantity):-
 
 
 assert_default2_domainterms:-
-	forall(cell_value(_,_,_,Label),
+	forall(unique_string_label(_,_,_,Label),
 	       forall(label_dist_domainconcept(Label,_,Concept),
 		    assert_default2_domainterm(Label,Concept))).
 
@@ -54,7 +66,7 @@ assert_default2_domainterm(Label,Concept):-
 % either annotated with a set of OM or a set of Valerie concepts.
 
 assert_default1_domain:-
-	forall(cell_value(_,_,_,Label),
+	forall(unique_string_label(_,_,_,Label),
 	       forall(label_dist_domainconcept(Label,_,Concept),
 		    assert_default1_domainconcept(Label,Concept))).
 
@@ -65,7 +77,7 @@ assert_default1_domainconcept(Label,Concept):-
 
 
 assert_default1_om:-
-	forall(cell_value(_,_,_,Label),
+	forall(unique_string_label(_,_,_,Label),
 	       forall(label_dist_omconcept(Label,_,Concept),
 		    assert_default1_omconcept(Label,Concept))).
 
@@ -121,7 +133,7 @@ label_om_concept(Label,Concept):-
 	;   rdf(Concept,om:symbol,literal(Label),OM)
 	;   rdf(Concept,om:alternative_symbol,literal(Label),OM)).
 
-omVoc('http://www.wurvoc.org/vocabularies/om-1.8/').
+omVoc('http://www.ontology-of-units-of-measure.org/vocabularies/om-2/').
 
 
 
