@@ -30,9 +30,11 @@ context_block(Unique) :-
 remove_unit_slices :-
 	forall(context_block(Block), remove_unit_slices(Block)).
 
+% A unit block may consist of one cell, only if the unit slice is the
+% same (size) as the original block
 remove_unit_slices(Block) :-
 	block(Block,context,DS),
-	largest_unit_slice(Block, Slice), !,
+	largest_unit_slice(Block, Slice),!,
 	ds_subtract(Slice, DS, Rest),
 	retract_block(Block),
 	assert_ds(Slice, unit),
@@ -75,7 +77,7 @@ unit_cell_slice(Block,X,Y,RowSlice):-
 	RowSlice = cell_range(Sheet, SX,Y, EX,Y).
 
 % Check whether suggested slice contains more mappings to OM than
-% to the domain ontology.
+% to the domain ontology.The slice may consist of a single unit cell
 ds_map_check(Block,cell_range(Sheet, SX,SY, EX,EY)):-
 	aggregate_all(count,X-Y,
 		      (ds_inside(cell_range(Sheet, SX,SY, EX,EY),X,Y),
@@ -95,15 +97,23 @@ unit_cell(Block,X,Y,Symbol,OMUnit):-
 	ds_inside(DS, X, Y),
 	ds_sheet(DS, Sheet),
 	cell_value(Sheet,X,Y,Label),
-	om_label(Label,Symbol,OMUnit),
-	\+ quantity_unit_label(Label,Symbol,OMUnit).
+	common_unit(Label,Symbol,OMUnit),
+	\+ quantity_unit_label(Label,_,_).
+
+common_unit(Label,Symbol,Unit):-
+	unit_label(Label,Symbol,Unit),
+	rdf(Quantity,om:commonlyHasUnit,Unit),
+	(   rdf(om:commonApplicationArea, om:usesQuantity, Quantity) ->true
+	;   rdf(om:mechanics, om:usesQuantity, Quantity) ->true
+	;   rdf(om:chemicalPhysics, om:usesQuantity, Quantity) ->true
+	;   rdf(om:economics, om:usesQuantity, Quantity)).
 
 text_cell(Block,X,Y,Label,Concept):-
 	block(Block,_,DS),
 	ds_inside(DS, X, Y),
 	ds_sheet(DS, Sheet),
 	cell_value(Sheet,X,Y,Label),
-	label_dist_domainconcept(Label,_, Concept).
+	label_dist_domainconcept(Label,_,0.85,Concept).
 
 
 		 /***********************************************
@@ -148,6 +158,7 @@ assert_phenomenon_ds2(_).
 quantity_ds(QuantityDS):-
 	block(_,context,QuantityDS),
 	(   aligned_unit_ds(_,_,QuantityDS)
+	->  true
 	;   quantity_cell_rate(QuantityDS)
 	).
 
@@ -177,12 +188,14 @@ quantity_cell_rate(DS):-
 
 % Quantity cells either match quantity-unit grammar, or can be matched
 % to a Quantity concept from the OM vocabulary
+% Isub for block reognition is high (comparable to default annotation)
 quantity_cell(DS,X,Y):-
 	ds_inside(DS, X, Y),
 	ds_sheet(DS, Sheet),
 	cell_value(Sheet,X,Y,Label),
 	(   quantity_unit_label(Label,_,_)
-	;   label_quantity_concept(Label,_,_)
+	-> true
+	;   label_quantity_concept(Label,_,0.85,_)
 	).
 
 
@@ -203,28 +216,52 @@ get_unit_symbol(Symbol,OMUnit):-
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
 	rdf(OMUnit,om:symbol,literal(Symbol),OM),
-	rdf(OMUnit,rdf:type,om:'Unit',OM),!.
+	rdf(OMUnit,rdf:type,Type,OM),
+	rdf_reachable(Type, rdfs:subClassOf, om:'Unit'), !.
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
 	rdf(OMUnit,om:alternativeSymbol,literal(Symbol),OM),
-	rdf(OMUnit,rdf:type,om:'Unit',OM).
+	rdf(OMUnit,rdf:type,Type,OM),
+	rdf_reachable(Type, rdfs:subClassOf, om:'Unit').
+unit_symbol_match(Symbol,OMUnit):-
+	omVoc(OM),
+	rdf(OMUnit,om:unofficialAbbreviation,literal(Symbol),OM),
+	rdf(OMUnit,rdf:type,Type,OM),
+	rdf_reachable(Type, rdfs:subClassOf, om:'Unit').
+
 
 unit_description_match(Symbol,OMUnit):-
 	omVoc(OM),
         rdf(OMUnit,rdfs:label,literal(lang(en,Symbol)),OM),
-	rdf(_,om:unit_of_measure,OMUnit,OM).
+	rdf(OMUnit,rdf:type,Type,OM),
+	rdf_reachable(Type, rdfs:subClassOf, om:'Unit').
+unit_description_match(Symbol,OMUnit):-
+	omVoc(OM),
+        rdf(OMUnit,om:unofficialAbbreviation,literal(Symbol),OM),
+	rdf(OMUnit,rdf:type,Type,OM),
+	rdf_reachable(Type, rdfs:subClassOf, om:'Unit').
 
+% Checking for prefix is not needed, as OM vocabulary contains
+% many prefixed units (i.e., symbol with prefix included).
+prefix_match(PrefixSymbol,UnitSymbol):-
+	rdf(Unit,om:symbol,literal(UnitSymbol)),
+	rdf(Unit,rdf:type,Type),
+	rdf_reachable(Type, rdfs:subClassOf, om:'Unit'),
+	rdf(Unit,om:hasPrefix,Prefix),
+	rdf(Prefix,om:symbol,literal(PrefixSymbol)),!.
+prefix_match(_,_).
 
 % Find all possible matching Quantity concepts for a Label and
-% sort them based on best match (highest isub, NB minimum isub is 0.7).
-label_quantity_concept(Label, Distance, Quantity) :-
-	findall(C, quantity_candidate(Label, C), Candidates0),
+% sort them based on best match (highest isub).
+label_quantity_concept(Label, Distance, Threshold, Quantity) :-
+	translate_term(Label,Translated),
+	findall(C, quantity_candidate(Translated, C), Candidates0),
 	sort(Candidates0, Candidates),
-	map_list_to_pairs(quantity_isub_distance(Label), Candidates, Pairs),
+	map_list_to_pairs(quantity_isub_distance(Translated), Candidates, Pairs),
 	keysort(Pairs, SortedPairs),
 	reverse(SortedPairs, BestFirst),
 	member(Distance-Quantity, BestFirst),
-	Distance > 0.7.
+	Distance > Threshold.
 
 % For a given cell label calculate isubdistance with respect to a
 % vocabulary concept, select the best match (max isub).
@@ -245,40 +282,47 @@ quantity_candidate(Label, Quantity) :-
 	member(Literal, Literals),
 	quantity_concept(Literal,Quantity).
 
-% A Quantity concept in OM can be recognized as a subclass a subclass
+% A Quantity concept in OM can be recognized as a subclass
 % of om:'Quantity' or as a concept with the property om:commonlyHasUnit.
 quantity_concept(Label,Quantity):-
-	rdf(Quantity,rdfs:subClassOf,om:'Quantity'),
-	rdf(Quantity,rdfs:label,literal(lang(en,Label))).
+	omVoc(OM),
+        rdf(Quantity,rdfs:label,literal(lang(en,Label)),OM),
+	rdf_reachable(Quantity, rdfs:subClassOf, om:'Quantity'),!.
 quantity_concept(Label,Quantity):-
-	rdf(Quantity,om:commonlyHasUnit,_),
-	rdf(Quantity,rdfs:label,literal(lang(en,Label))).
+	omVoc(OM),
+        rdf(Quantity,om:unofficialLabel,literal(Label),OM),
+	rdf_reachable(Quantity, rdfs:subClassOf, om:'Quantity'),!.
+quantity_concept(Label,Quantity):-
+	omVoc(OM),
+	rdf(Quantity,om:unofficialAbbreviation,literal(Label),OM),
+	rdf_reachable(Quantity, rdfs:subClassOf, om:'Quantity'),!.
+quantity_concept(Label,Quantity):-
+	rdf(Quantity,rdfs:label,literal(lang(en,Label))),
+	rdf(Quantity,om:commonlyHasUnit,_).
 
 
 		 /*******************************
 		 *	    UNIT GRAMMAR	*
 		 *******************************/
 
-quantity_unit_label(Label,Symbol,OMUnit):-
+quantity_unit_label(Label,UnitSymbol,Unit):-
 	atom_codes(Label,Codes),
-	phrase(quantity_unit_label(Symbol,OMUnit),Codes,[]).
+	phrase(quantity_unit_label(UnitSymbol,Unit),Codes,[]).
 
-om_label(Label,Symbol,OMUnit):-
+unit_label(Label,UnitSymbol,Unit):-
 	atom_codes(Label,Codes),
-	phrase(unit_label(Symbol,OMUnit),Codes,[]).
+	length(Codes,Length),
+	Length < 11,
+	phrase(unit(UnitSymbol,Unit),Codes,[]).
 
 
 % Combined quantity-unit labels always (assumption) contain a unit
 % symbol, i.e., a unit symbol that can be matched with an OM concept,
 % between brackets. Before the brackets is at least one term.
-quantity_unit_label(Symbol,OMUnit) -->
-	pre_unit,bracket_open(T),unit_label(Symbol,OMUnit),bracket_close(T).
+quantity_unit_label(UnitSymbol,Unit) -->
+	pre_unit,bracketed_unit(UnitSymbol,Unit).
 
-pre_unit --> pre_unit_codes(Codes),
-	{atom_codes(Term,Codes),
-	 atom(Term),
-	 length(Codes,Length),
-	 Length > 0}.
+pre_unit --> pre_unit_codes([_|_]).
 
 pre_unit_codes([H|T]) --> [H],pre_unit_codes(T).
 pre_unit_codes([]) --> [].
@@ -293,53 +337,67 @@ bracket_close(s) --> "]".
 % with an OM concept, and may also contain brackets, a prefix
 % (indicating th size of the unit) and a separator (e.g. a slash or an
 % exponent).
-unit_label(Symbol,OMUnit) -->
-	pre_term,unit(Symbol,OMUnit),post_term.
+unit(UnitSymbol,Unit) -->bracketed_unit(UnitSymbol,Unit).
+unit(UnitSymbol,Unit) -->unbracketed_unit(UnitSymbol,Unit).
 
 
-pre_term -->[].
-pre_term --> term,white,whites.
+%term -->term_codes(_Codes).
 
-term -->term_codes(Codes),
-	{atom_codes(Term,Codes),
-	 atom(Term)}.
+% term_codes([H|T]) --> [H], { \+ code_type(H, white) }, !,
+% term_codes(T). term_codes([]) --> [].
 
-term_codes([H|T]) --> [H], { \+ code_type(H, white) },
-term_codes(T).
-term_codes([]) --> [].
 
-unit(Symbol,OMUnit) -->
+bracketed_unit(UnitSymbol,Unit) -->
 	bracket_open(T),!,
-	pre_fix,
-	symbol(Symbol,OMUnit),
-	bracket_close(T).
-unit(Symbol,OMUnit) -->
-	pre_fix,symbol(Symbol,OMUnit),sep.
+	symbol(UnitSymbol,Unit),
+	(   bracket_close(T)
+	->  []
+	;   sep(_),
+	    symbol_codes(_),
+	    bracket_close(T)
+	).
 
-pre_fix -->[].
-pre_fix -->[C], { code_type(C, alpha) }.
+unbracketed_unit(UnitSymbol,Unit) -->
+	symbol(UnitSymbol,Unit),
+	(   sep,!
+	->  []
+	;   sep(_),
+	    symbol_codes(_),
+	    sep
+	    ).
 
+%pre_fix(_) -->[].
+%pre_fix(C) --> [C], {pre_fix(C)}.
+%pre_fix(C) :- code_type(C, alpha).
 
-symbol(Symbol,OMUnit)-->
-	om_symbol(Symbol,OMUnit).
+symbol(UnitSymbol,Unit)-->
+	skip_symbols,
+	om_symbol(UnitSymbol,Unit).
 
-om_symbol(Symbol,OMUnit)-->
+skip_symbols --> [].
+skip_symbols --> symbol_codes_non_greedy([_|_]), sep(_), !, skip_symbols.
+
+om_symbol(UnitSymbol,Unit)-->
 	symbol_codes(Codes),
-	{ atom_codes(Symbol,Codes),
-	  get_unit_symbol(Symbol,OMUnit)
-	  }.
+	{ atom_codes(UnitSymbol,Codes),
+	  get_unit_symbol(UnitSymbol,Unit)
+	 }, !.
 
-sep --> \+ [_].
+sep --> \+ [_], !.
 sep, [C] --> [C], {sep_code(C)}.
+
+sep(C) --> [C], {sep_code(C)}.
 
 sep_code(C) :- \+ code_type(C, alpha).
 
+symbol_codes_non_greedy([]) --> [].
+symbol_codes_non_greedy([H|T]) -->[H], symbol_codes_non_greedy(T).
 
 symbol_codes([H|T]) --> [H],symbol_codes(T).
 symbol_codes([]) --> [].
 
-post_term -->[].
-post_term --> term.
+%post_term -->[].
+%post_term --> term.
 
 
 

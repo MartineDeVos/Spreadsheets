@@ -1,421 +1,566 @@
-%my_t_mapping(literal('#',skos:,,ground_truth).
-my_t_mapping(literal('(g/kg)',skos:ex,om:'MassFraction',ground_truth).%[mass fraction]
-%my_t_mapping(literal('-',skos:,,ground_truth).
-my_t_mapping(literal('0 - 60 cm',skos:clo,om:centimetre,ground_truth).%[centimetre]
-my_t_mapping(literal('0-Conc [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('0-Conc-Linear [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('0-Conc-Quad [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('0-Delta-conc',skos:clo,om:'AmountOfSubstanceConcentration',ground_truth).%[amount of substance concentration]
-my_t_mapping(literal('1-0',skos:,,ground_truth).
-my_t_mapping(literal('1-0 -Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('1-Conc [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('1-Conc-Linear [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('1-Conc-Quad [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('1-Delta-conc',skos:,,ground_truth).
-my_t_mapping(literal('12 pl',skos:,,ground_truth).
-my_t_mapping(literal('19 juni',skos:rel,"http://www.wurvoc.org/VALTO/summer",ground_truth).%[summer]
-my_t_mapping(literal('2-0',skos:,,ground_truth).
-my_t_mapping(literal('2-0 -Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('2-1',skos:,,ground_truth).
-my_t_mapping(literal('2-1 -Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('2-Conc [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('2-Conc-Linear [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('2-Conc-Quad [ppm=cm3/m3]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('2-Delta-conc',skos:,om:'AmountOfSubstanceConcentration',ground_truth).%[amount of substance concentration]
-%my_t_mapping(literal('2004-05-06T09:00:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-05-06T10:15:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-05-06T13:00:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-05-14T14:00:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-05-19T14:30:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-06-15T09:00:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-06-15T13:00:00',skos:,,ground_truth).
-%my_t_mapping(literal('2004-06-16T10:00:00',skos:,,ground_truth).
-my_t_mapping(literal('Air filled porosity [m3 gas/m3 bulk soil]',skos:clo,'http://www.wurvoc.org/VAL/d43a5366-e4f4-4c18-af6c-7be69d29f685',ground_truth).%[soil porosity]
-my_t_mapping(literal('Air filled porosity [m3 gas/m3 bulk soil]',skos:clo,om:'VolumeFraction',ground_truth).%[volume fraction]
-my_t_mapping(literal('Air pressure [mBar]',skos:bro,om:'Pressure',ground_truth).%[pressure]
-my_t_mapping(literal('Air temp [°C]',skos:bro,om:'Temperature',ground_truth).%[temperature]
-my_t_mapping(literal('Ammonia(%)',skos:bro,om:'AmountOfSubstanceFraction',ground_truth).%[amount of substance fraction]
-my_t_mapping(literal('Ammonia(%)',skos:clo,'http://www.wurvoc.org/VALTO/cb44306b-8036-49ae-9ba8-910fb876dbe6',ground_truth).%[ammonia]
-my_t_mapping(literal('Ammonia(kg)',skos:bro,om:'Mass',ground_truth).%[mass]
-my_t_mapping(literal('Ammonia(kg)',skos:clo,'http://www.wurvoc.org/VALTO/cb44306b-8036-49ae-9ba8-910fb876dbe6',ground_truth).%[ammonia]
-my_t_mapping(literal('Apr',skos:rel,"http://www.wurvoc.org/VALTO/spring",ground_truth).%[spring]
-my_t_mapping(literal('Arable',skos:rel,'http://www.wurvoc.org/VAL/e28ca671-8fe9-420e-8667-4c5738b185f9',ground_truth).%[arable farming]
-my_t_mapping(literal('Arable Cropping',skos:clo,'http://www.wurvoc.org/VAL/d1bd8f74-742b-41e9-80e4-501adffe7864',ground_truth).%[arable crop]
-my_t_mapping(literal('Arable Cropping',skos:clo,'http://www.wurvoc.org/VAL/e28ca671-8fe9-420e-8667-4c5738b185f9',ground_truth).%[arable farming]
-my_t_mapping(literal('Area',skos:ex,om:'Area',ground_truth).%[area]
-my_t_mapping(literal('Area 0',skos:clo,om:'Area',ground_truth).%[area]
-my_t_mapping(literal('Area 1',skos:clo,om:'Area',ground_truth).%[area]
-my_t_mapping(literal('Area 2',skos:clo,om:'Area',ground_truth).%[area]
-my_t_mapping(literal('Area(ha)',skos:clo,om:'Area',ground_truth).%[area]
-my_t_mapping(literal('Aug',skos:rel,"http://www.wurvoc.org/VALTO/summer",ground_truth).%[summer]
-my_t_mapping(literal('Average of N-opn_tot',skos:rel,om:'Mass',ground_truth).%[mass]??
-my_t_mapping(literal('Average of totaal ORG -N',skos:rel,om:'Mass',ground_truth).%[mass]??
-my_t_mapping(literal('BEST',skos:,,ground_truth).
-my_t_mapping(literal('BEST -Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Bare Fallow',skos:,,ground_truth).
-my_t_mapping(literal('Baseline',skos:,,ground_truth).
-my_t_mapping(literal('Beans',skos:,,ground_truth).
-my_t_mapping(literal('Bed',skos:,,ground_truth).
-my_t_mapping(literal('Bed_ WDVI',skos:,,ground_truth).
-my_t_mapping(literal('Beef',skos:,,ground_truth).
-my_t_mapping(literal('Beef Cows and Heifers',skos:,,ground_truth).
-my_t_mapping(literal('Beef FYM',skos:,,ground_truth).
-my_t_mapping(literal('Beef Heifers in Calf ( 2 years + )',skos:,,ground_truth).
-my_t_mapping(literal('Beef Heifers in Calf ( < 2 years )',skos:,,ground_truth).
-my_t_mapping(literal('Beef Slurry',skos:,,ground_truth).
-my_t_mapping(literal('Ber. N-opn',skos:,,ground_truth).
-my_t_mapping(literal('Biodiversity(Score)',skos:,,ground_truth).
-my_t_mapping(literal('Blad',skos:,,ground_truth).
-my_t_mapping(literal('Blad.opp',skos:,,ground_truth).
-my_t_mapping(literal('Boars',skos:,,ground_truth).
-my_t_mapping(literal('Breeding Birds',skos:,,ground_truth).
-my_t_mapping(literal('Broilers',skos:,,ground_truth).
-my_t_mapping(literal('Bulls ( 2 years + )',skos:,,ground_truth).
-my_t_mapping(literal('Campbell b par',skos:,,ground_truth).
-my_t_mapping(literal('Cattle & Sheep FYM(%)',skos:,,ground_truth).
-my_t_mapping(literal('Cattle ( 1 - 2 years )',skos:,,ground_truth).
-my_t_mapping(literal('Cattle ( 2 years + )',skos:,,ground_truth).
-my_t_mapping(literal('Cattle ( < 1 year) & Calves',skos:,,ground_truth).
-my_t_mapping(literal('Cattle Slurry(%)',skos:,,ground_truth).
-my_t_mapping(literal('Chamber surface [m2]',skos:,,ground_truth).
-my_t_mapping(literal('Chamber vol/area [m]',skos:,,ground_truth).
-my_t_mapping(literal('Chamber volume [m3]',skos:,,ground_truth).
-my_t_mapping(literal('Clay [%]',skos:,,ground_truth).
-my_t_mapping(literal('Corrected fluxes C [kg C ha-1 d-1]',skos:,,ground_truth).
-my_t_mapping(literal('Corrected fluxes N [kg N ha-1 d-1]',skos:,,ground_truth).
-my_t_mapping(literal('Count',skos:,,ground_truth).
-my_t_mapping(literal('Cows and Heifers',skos:,,ground_truth).
-my_t_mapping(literal('Cropping',skos:,,ground_truth).
-my_t_mapping(literal('Dairy',skos:,,ground_truth).
-my_t_mapping(literal('Dairy Cows and Heifers',skos:,,ground_truth).
-my_t_mapping(literal('Dairy FYM',skos:,,ground_truth).
-my_t_mapping(literal('Dairy Heifers in Calf ( 2 years + )',skos:,,ground_truth).
-my_t_mapping(literal('Dairy Heifers in Calf ( < 2 years )',skos:,,ground_truth).
-my_t_mapping(literal('Dairy Slurry',skos:,,ground_truth).
-my_t_mapping(literal('Data',skos:,,ground_truth).
-my_t_mapping(literal('Date',skos:,,ground_truth).
-my_t_mapping(literal('Dec',skos:,,ground_truth).
-my_t_mapping(literal('Dirty Water(%)',skos:,,ground_truth).
-my_t_mapping(literal('Drain Sediment',skos:,,ground_truth).
-my_t_mapping(literal('Droge stof',skos:,,ground_truth).
-my_t_mapping(literal('Energy Use(Score)',skos:,,ground_truth).
-my_t_mapping(literal('Estimated underestimation - HM',skos:,,ground_truth).
-my_t_mapping(literal('Estimated underestimation - Linear',skos:,,ground_truth).
-my_t_mapping(literal('FYM (t)',skos:,,ground_truth).
-my_t_mapping(literal('Feb',skos:,,ground_truth).
-my_t_mapping(literal('Fertilisers Applied',skos:,,ground_truth).
-my_t_mapping(literal('Fixed Cost(£)',skos:,,ground_truth).
-my_t_mapping(literal('Flux [kg C ha-1 d-1]',skos:,,ground_truth).
-my_t_mapping(literal('Flux [kg N ha-1 d-1]',skos:,,ground_truth).
-my_t_mapping(literal('Fodder Crops',skos:,,ground_truth).
-my_t_mapping(literal('Gas diffusivity (free air) [m2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Gegevens eindoogst',skos:,,ground_truth).
-my_t_mapping(literal('Gilts Not Yet in Pig',skos:,,ground_truth).
-my_t_mapping(literal('Gilts in Pig & Barren Sows',skos:,,ground_truth).
-my_t_mapping(literal('Grass',skos:,,ground_truth).
-my_t_mapping(literal('Grassland',skos:,,ground_truth).
-my_t_mapping(literal('Groundwater Recharge',skos:,,ground_truth).
-my_t_mapping(literal('HM',skos:,,ground_truth).
-my_t_mapping(literal('HM -Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Heifers in Calf ( 2 years + )',skos:,,ground_truth).
-my_t_mapping(literal('Heifers in Calf ( < 2 years )',skos:,,ground_truth).
-my_t_mapping(literal('Heifers in Calf ( < 2 years)',skos:,,ground_truth).
-my_t_mapping(literal('Henry\'s Law coeff. [m3_gas m-3_water]',skos:,,ground_truth).
-my_t_mapping(literal('IR en Gr',skos:,,ground_truth).
-my_t_mapping(literal('Imported Manure',skos:,,ground_truth).
-my_t_mapping(literal('Indoor Pigs',skos:,,ground_truth).
-my_t_mapping(literal('Jan',skos:,,ground_truth).
-my_t_mapping(literal('Jul',skos:rel,"http://www.wurvoc.org/VALTO/summer",ground_truth).%[summer]
-my_t_mapping(literal('Jun',skos:rel,"http://www.wurvoc.org/VALTO/summer",ground_truth).%[summer]
-my_t_mapping(literal('KHT (req\'d to calculate KH) [m3_gas m-3_water]',skos:,,ground_truth).
-my_t_mapping(literal('Knol',skos:,,ground_truth).
-my_t_mapping(literal('LAI',skos:,,ground_truth).
-my_t_mapping(literal('Labda',skos:,,ground_truth).
-my_t_mapping(literal('Lambs ( < 1 year)',skos:,,ground_truth).
-my_t_mapping(literal('Layers ( Caged )',skos:,,ground_truth).
-my_t_mapping(literal('Layers ( Uncaged )',skos:,,ground_truth).
-my_t_mapping(literal('Livestock',skos:,,ground_truth).
-my_t_mapping(literal('MCD',skos:,,ground_truth).
-my_t_mapping(literal('MCD-Conc [ppm=cm3/m3]',skos:,,ground_truth).
-my_t_mapping(literal('MDC',skos:,,ground_truth).
-my_t_mapping(literal('MDF',skos:,,ground_truth).
-my_t_mapping(literal('MDF-Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Maize',skos:,,ground_truth).
-my_t_mapping(literal('Managed as Slurry (%)',skos:,,ground_truth).
-my_t_mapping(literal('Manure Received',skos:,,ground_truth).
-my_t_mapping(literal('Manure Values',skos:,,ground_truth).
-my_t_mapping(literal('Mar',skos:rel,"http://www.wurvoc.org/VALTO/spring",ground_truth).%[spring]
-my_t_mapping(literal('May',skos:rel,"http://www.wurvoc.org/VALTO/spring",ground_truth).%[spring]
-my_t_mapping(literal('Methane(%)',skos:,,ground_truth).
-my_t_mapping(literal('Methane(kg)',skos:,,ground_truth).
-my_t_mapping(literal('Method Name',skos:,,ground_truth).
-my_t_mapping(literal('Methods Implemented',skos:,,ground_truth).
-my_t_mapping(literal('Model',skos:,,ground_truth).
-my_t_mapping(literal('Molar weight [g/mol]',skos:,,ground_truth).
-my_t_mapping(literal('N - mg/kg',skos:,,ground_truth).
-my_t_mapping(literal('N Totaal',skos:,,ground_truth).
-my_t_mapping(literal('N(kg/ha)',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3 opn.',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3 opn_bl',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3 opn_kn',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3 opn_st',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3 opn_tot',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3 opn_wor',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3_bl',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3_kn',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3_st',skos:,,ground_truth).
-my_t_mapping(literal('N-NO3_wor',skos:,,ground_truth).
-my_t_mapping(literal('N-N_NO3 kg/ha',skos:,,ground_truth).
-my_t_mapping(literal('N-Opn.',skos:,,ground_truth).
-my_t_mapping(literal('N-gift kg/ha',skos:,,ground_truth).
-my_t_mapping(literal('N-knol',skos:,,ground_truth).
-my_t_mapping(literal('N-min',skos:,,ground_truth).
-my_t_mapping(literal('N-min kg/ha',skos:,,ground_truth).
-my_t_mapping(literal('N-opn_bl',skos:,,ground_truth).
-my_t_mapping(literal('N-opn_bl+st',skos:,,ground_truth).
-my_t_mapping(literal('N-opn_kn',skos:,,ground_truth).
-my_t_mapping(literal('N-opn_st',skos:,,ground_truth).
-my_t_mapping(literal('N-opn_tot',skos:,,ground_truth).
-my_t_mapping(literal('N-opn_wor',skos:,,ground_truth).
-my_t_mapping(literal('N-opname',skos:,,ground_truth).
-my_t_mapping(literal('N-tot',skos:,,ground_truth).
-my_t_mapping(literal('N-tot_bl',skos:,,ground_truth).
-my_t_mapping(literal('N-tot_kn',skos:,,ground_truth).
-my_t_mapping(literal('N-tot_st',skos:,,ground_truth).
-my_t_mapping(literal('N-tot_wor',skos:,,ground_truth).
-my_t_mapping(literal('N-trap',skos:,,ground_truth).
-my_t_mapping(literal('Nitrate(%)',skos:,,ground_truth).
-my_t_mapping(literal('Nitrate(kg)',skos:,,ground_truth).
-my_t_mapping(literal('Nitrous Oxide(%)',skos:,,ground_truth).
-my_t_mapping(literal('Nitrous Oxide(kg)',skos:,,ground_truth).
-my_t_mapping(literal('Nov',skos:,,ground_truth).
-my_t_mapping(literal('Number of Methods',skos:,,ground_truth).
-my_t_mapping(literal('Oct',skos:,,ground_truth).
-my_t_mapping(literal('Orchards',skos:,,ground_truth).
-my_t_mapping(literal('Other',skos:,,ground_truth).
-my_t_mapping(literal('Other Cattle',skos:,,ground_truth).
-my_t_mapping(literal('Other Cattle ( 1 - 2 years )',skos:,,ground_truth).
-my_t_mapping(literal('Other Cattle ( 2 years + )',skos:,,ground_truth).
-my_t_mapping(literal('Other Cattle ( < 1 year) & Calves',skos:,,ground_truth).
-my_t_mapping(literal('Other Crops',skos:,,ground_truth).
-my_t_mapping(literal('Other Pigs ( 20 - 50kg )',skos:,,ground_truth).
-my_t_mapping(literal('Other Pigs ( 50 - 80kg )',skos:,,ground_truth).
-my_t_mapping(literal('Other Pigs ( 80 - 110kg )',skos:,,ground_truth).
-my_t_mapping(literal('Other Pigs ( < 20kg )',skos:,,ground_truth).
-my_t_mapping(literal('Other Pigs ( > 110kg )',skos:,,ground_truth).
-my_t_mapping(literal('Other Poultry',skos:,,ground_truth).
-my_t_mapping(literal('Outdoor Pigs',skos:,,ground_truth).
-my_t_mapping(literal('P2O5(kg/ha)',skos:,,ground_truth).
-my_t_mapping(literal('PPPs(% Typical)',skos:,,ground_truth).
-my_t_mapping(literal('Parent mat density [g cm-3]',skos:,,ground_truth).
-my_t_mapping(literal('Peas',skos:,,ground_truth).
-my_t_mapping(literal('Permanent Pasture',skos:,,ground_truth).
-my_t_mapping(literal('Pesticides(%)',skos:,,ground_truth).
-my_t_mapping(literal('Pesticides(Units)',skos:,,ground_truth).
-my_t_mapping(literal('Phosphorus(%)',skos:,,ground_truth).
-my_t_mapping(literal('Phosphorus(kg)',skos:,,ground_truth).
-my_t_mapping(literal('Pig',skos:,,ground_truth).
-my_t_mapping(literal('Pig FYM',skos:,,ground_truth).
-my_t_mapping(literal('Pig FYM(%)',skos:,,ground_truth).
-my_t_mapping(literal('Pig Slurry',skos:,,ground_truth).
-my_t_mapping(literal('Pig Slurry(%)',skos:,,ground_truth).
-my_t_mapping(literal('Porosity [m3 pores/m3 bulk soil]',skos:,,ground_truth).
-my_t_mapping(literal('Position',skos:,,ground_truth).
-my_t_mapping(literal('Potatoes',skos:,,ground_truth).
-my_t_mapping(literal('Poultry',skos:,,ground_truth).
-my_t_mapping(literal('Poultry Muck',skos:,,ground_truth).
-my_t_mapping(literal('Poultry Muck (t)',skos:,,ground_truth).
-my_t_mapping(literal('Poultry Muck(%)',skos:,,ground_truth).
-my_t_mapping(literal('Preferential Flow',skos:,,ground_truth).
-my_t_mapping(literal('Pullet',skos:,,ground_truth).
-my_t_mapping(literal('Rotational Grassland',skos:,,ground_truth).
-my_t_mapping(literal('Rough',skos:,,ground_truth).
-my_t_mapping(literal('Rough Grazing',skos:,,ground_truth).
-my_t_mapping(literal('SLA',skos:,,ground_truth).
-my_t_mapping(literal('STD',skos:,,ground_truth).
-my_t_mapping(literal('SWC-dry weight [g water/g dry soil]',skos:,,ground_truth).
-my_t_mapping(literal('Sampling interval [h]',skos:,,ground_truth).
-my_t_mapping(literal('Scenario',skos:,,ground_truth).
-my_t_mapping(literal('Sediment Loss',skos:,,ground_truth).
-my_t_mapping(literal('Sediment(%)',skos:,,ground_truth).
-my_t_mapping(literal('Sediment(kg)',skos:,,ground_truth).
-my_t_mapping(literal('Sep',skos:,,ground_truth).
-my_t_mapping(literal('Set',skos:,,ground_truth).
-my_t_mapping(literal('Set Aside',skos:,,ground_truth).
-my_t_mapping(literal('Sheep',skos:,,ground_truth).
-my_t_mapping(literal('Sheep FYM',skos:,,ground_truth).
-my_t_mapping(literal('Sigma',skos:,,ground_truth).
-my_t_mapping(literal('Sim. Time 0 conc. [mg C m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. Time 0 conc. [mg N m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. Time 1 conc. [mg C m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. Time 1 conc. [mg N m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. Time 2 conc. [mg C m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. Time 2 conc. [mg N m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. pre-deployment conc. [mg_C m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. pre-deployment conc. [mg_N m-3_air]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. pre-deployment conc. [ppm]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. pre-deployment flux (fo) [mg C m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Sim. pre-deployment flux (fo) [mg N m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Slurry (t)',skos:,,ground_truth).
-my_t_mapping(literal('Soft Fruit',skos:,,ground_truth).
-my_t_mapping(literal('Soil bulk density [g cm-3]',skos:,,ground_truth).
-my_t_mapping(literal('Soil gas diffusivity [m3 m-1 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('Soil temp [°C]',skos:,,ground_truth).
-my_t_mapping(literal('Sows in Pig & Other Sows',skos:,,ground_truth).
-my_t_mapping(literal('Spring Barley',skos:,,ground_truth).
-my_t_mapping(literal('StdDevp of N-opn_tot',skos:,,ground_truth).
-my_t_mapping(literal('StdDevp of totaal ORG -N',skos:,,ground_truth).
-my_t_mapping(literal('Steng',skos:,,ground_truth).
-my_t_mapping(literal('Stengel',skos:,,ground_truth).
-my_t_mapping(literal('Storage coeff. [m3 gas m-3 bulk_soil]',skos:,,ground_truth).
-my_t_mapping(literal('Sugar Beet',skos:,,ground_truth).
-my_t_mapping(literal('Surface Runoff',skos:,,ground_truth).
-my_t_mapping(literal('Surface Sediment',skos:,,ground_truth).
-my_t_mapping(literal('T1',skos:,,ground_truth).
-my_t_mapping(literal('T2',skos:,,ground_truth).
-my_t_mapping(literal('T3',skos:,,ground_truth).
-my_t_mapping(literal('TT',skos:,,ground_truth).
-my_t_mapping(literal('Tau',skos:,,ground_truth).
-my_t_mapping(literal('Totaal',skos:,,ground_truth).
-my_t_mapping(literal('Total',skos:,,ground_truth).
-my_t_mapping(literal('Total Cost(£)',skos:,,ground_truth).
-my_t_mapping(literal('Total Drainage',skos:,,ground_truth).
-my_t_mapping(literal('Totale',skos:,,ground_truth).
-my_t_mapping(literal('Treatment',skos:,,ground_truth).
-my_t_mapping(literal('Turkeys',skos:,,ground_truth).
-my_t_mapping(literal('Underestimation',skos:,,ground_truth).
-my_t_mapping(literal('V 12 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 20 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 22 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 26 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 3 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 30 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 5 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 7 Blad',skos:,,ground_truth).
-my_t_mapping(literal('V 8 Blad',skos:,,ground_truth).
-my_t_mapping(literal('Variable Cost(£)',skos:,,ground_truth).
-my_t_mapping(literal('Vegetables (Brassica)',skos:,,ground_truth).
-my_t_mapping(literal('Vegetables (Brassicas)',skos:,,ground_truth).
-my_t_mapping(literal('Vegetables (Other)',skos:,,ground_truth).
-my_t_mapping(literal('Volume to Mass coef [g/m3]',skos:,,ground_truth).
-my_t_mapping(literal('WDVI',skos:,,ground_truth).
-my_t_mapping(literal('WDVI * 1.966',skos:,,ground_truth).
-my_t_mapping(literal('Water Use(Score)',skos:,,ground_truth).
-my_t_mapping(literal('Water filled porosity [m3 H2O/m3 bulk soil]',skos:,,ground_truth).
-my_t_mapping(literal('Winter Barley (Feed)',skos:,,ground_truth).
-my_t_mapping(literal('Winter Barley (Malting)',skos:,,ground_truth).
-my_t_mapping(literal('Winter OSR',skos:,,ground_truth).
-my_t_mapping(literal('Winter Wheat (Feed)',skos:,,ground_truth).
-my_t_mapping(literal('Winter Wheat (Milling)',skos:,,ground_truth).
-my_t_mapping(literal('WithPriors',skos:,,ground_truth).
-my_t_mapping(literal('Wood',skos:,,ground_truth).
-my_t_mapping(literal('Woodland',skos:,,ground_truth).
-my_t_mapping(literal('Wortel',skos:,,ground_truth).
-my_t_mapping(literal('Wortels',skos:,,ground_truth).
-my_t_mapping(literal('a',skos:,,ground_truth).
-my_t_mapping(literal('a-Calibration',skos:,,ground_truth).
-my_t_mapping(literal('a-Calibration-Linear',skos:,,ground_truth).
-my_t_mapping(literal('a-Calibration-Quadratic',skos:,,ground_truth).
-my_t_mapping(literal('b',skos:,,ground_truth).
-my_t_mapping(literal('b-Calibration',skos:,,ground_truth).
-my_t_mapping(literal('b-Calibration-Linear',skos:,,ground_truth).
-my_t_mapping(literal('b-Calibration-Quadratic',skos:,,ground_truth).
-my_t_mapping(literal('ber. met',skos:,,ground_truth).
-my_t_mapping(literal('ber. met groen',skos:,,ground_truth).
-my_t_mapping(literal('berekend',skos:,,ground_truth).
-my_t_mapping(literal('bl + st',skos:,,ground_truth).
-my_t_mapping(literal('bl+st+kn+wo',skos:,,ground_truth).
-my_t_mapping(literal('bl.opp/bl.dr.',skos:,,ground_truth).
-my_t_mapping(literal('blad',skos:,,ground_truth).
-my_t_mapping(literal('blad opp',skos:,,ground_truth).
-my_t_mapping(literal('blad opp.',skos:,,ground_truth).
-my_t_mapping(literal('blad_%ds',skos:,,ground_truth).
-my_t_mapping(literal('blad_dr',skos:,,ground_truth).
-my_t_mapping(literal('blad_ve',skos:,,ground_truth).
-my_t_mapping(literal('blade_length',skos:,,ground_truth).
-my_t_mapping(literal('blade_width',skos:,,ground_truth).
-my_t_mapping(literal('bodem',skos:,,ground_truth).
-my_t_mapping(literal('bovengr',skos:,,ground_truth).
-my_t_mapping(literal('bovengr.',skos:,,ground_truth).
-my_t_mapping(literal('c',skos:,,ground_truth).
-my_t_mapping(literal('c-Calibration-Quadratic',skos:,,ground_truth).
-my_t_mapping(literal('cm2',skos:,,ground_truth).
-my_t_mapping(literal('cm2/gr',skos:,,ground_truth).
-my_t_mapping(literal('cm2/m2',skos:,,ground_truth).
-my_t_mapping(literal('datetime',skos:,,ground_truth).
-my_t_mapping(literal('datum',skos:,,ground_truth).
-my_t_mapping(literal('density2',skos:,,ground_truth).
-my_t_mapping(literal('dln (req\'d to calculate KH)',skos:,,ground_truth).
-my_t_mapping(literal('dr gew',skos:,,ground_truth).
-my_t_mapping(literal('ds %',skos:,,ground_truth).
-my_t_mapping(literal('excl',skos:,,ground_truth).
-my_t_mapping(literal('gas accumulatio curve',skos:,,ground_truth).
-my_t_mapping(literal('gehele plant',skos:,,ground_truth).
-my_t_mapping(literal('gew',skos:,,ground_truth).
-my_t_mapping(literal('gr/kg',skos:,,ground_truth).
-my_t_mapping(literal('gr/m2',skos:,,ground_truth).
-my_t_mapping(literal('ha',skos:,,ground_truth).
-my_t_mapping(literal('herh',skos:,,ground_truth).
-my_t_mapping(literal('in de bodem',skos:,,ground_truth).
-my_t_mapping(literal('in de knol',skos:,,ground_truth).
-my_t_mapping(literal('in gr',skos:,,ground_truth).
-my_t_mapping(literal('indoor',skos:,,ground_truth).
-my_t_mapping(literal('internode_length',skos:,,ground_truth).
-my_t_mapping(literal('kg N',skos:,,ground_truth).
-my_t_mapping(literal('kg/ha',skos:,,ground_truth).
-my_t_mapping(literal('knol',skos:,,ground_truth).
-my_t_mapping(literal('knol_%ds',skos:,,ground_truth).
-my_t_mapping(literal('knol_dr',skos:,,ground_truth).
-my_t_mapping(literal('knol_ve',skos:,,ground_truth).
-my_t_mapping(literal('knollen',skos:,,ground_truth).
-my_t_mapping(literal('lab getal',skos:,,ground_truth).
-my_t_mapping(literal('labda_red',skos:,,ground_truth).
-my_t_mapping(literal('lambda [h m4_soil m-6_gas]',skos:,,ground_truth).
-my_t_mapping(literal('lup',skos:,,ground_truth).
-my_t_mapping(literal('met formule',skos:,,ground_truth).
-my_t_mapping(literal('monster',skos:,,ground_truth).
-my_t_mapping(literal('oogst',skos:,,ground_truth).
-my_t_mapping(literal('opbr kg/ha',skos:,,ground_truth).
-my_t_mapping(literal('opbrengst',skos:,,ground_truth).
-my_t_mapping(literal('opp',skos:,,ground_truth).
-my_t_mapping(literal('organisch N',skos:,,ground_truth).
-my_t_mapping(literal('outdoor',skos:,,ground_truth).
-my_t_mapping(literal('pH',skos:,,ground_truth).
-my_t_mapping(literal('phytomer#',skos:,,ground_truth).
-my_t_mapping(literal('poottijd',skos:,,ground_truth).
-my_t_mapping(literal('poottijdstip',skos:,,ground_truth).
-my_t_mapping(literal('proef nr',skos:,,ground_truth).
-my_t_mapping(literal('red edge',skos:,,ground_truth).
-my_t_mapping(literal('sheath_length',skos:,,ground_truth).
-my_t_mapping(literal('sla',skos:,,ground_truth).
-my_t_mapping(literal('slope',skos:,,ground_truth).
-my_t_mapping(literal('slope -Flux [mg m-2 h-1]',skos:,,ground_truth).
-my_t_mapping(literal('steng_%ds',skos:,,ground_truth).
-my_t_mapping(literal('steng_dr',skos:,,ground_truth).
-my_t_mapping(literal('steng_ve',skos:,,ground_truth).
-my_t_mapping(literal('stengel',skos:,,ground_truth).
-my_t_mapping(literal('sub-monster',skos:,,ground_truth).
-my_t_mapping(literal('t-toed.',skos:,,ground_truth).
-my_t_mapping(literal('time 0 [h]',skos:,,ground_truth).
-my_t_mapping(literal('time 2 [h]',skos:,,ground_truth).
-my_t_mapping(literal('time1 [h]',skos:,,ground_truth).
-my_t_mapping(literal('tot N-gift',skos:,,ground_truth).
-my_t_mapping(literal('tot_dr',skos:,,ground_truth).
-my_t_mapping(literal('totaal',skos:,,ground_truth).
-my_t_mapping(literal('totaal ORG -N',skos:,,ground_truth).
-my_t_mapping(literal('totale',skos:,,ground_truth).
-my_t_mapping(literal('uit refl.(gr)',skos:,,ground_truth).
-my_t_mapping(literal('van sub',skos:,,ground_truth).
-my_t_mapping(literal('veldnr',skos:,,ground_truth).
-my_t_mapping(literal('vers',skos:,,ground_truth).
-my_t_mapping(literal('vers gew',skos:,,ground_truth).
-my_t_mapping(literal('versgew',skos:,,ground_truth).
-my_t_mapping(literal('voor',skos:,,ground_truth).
-my_t_mapping(literal('wort_%ds',skos:,,ground_truth).
-my_t_mapping(literal('wort_dr',skos:,,ground_truth).
-my_t_mapping(literal('wort_ve',skos:,,ground_truth).
-my_t_mapping(literal('wortels',skos:,,ground_truth).
-my_t_mapping(literal('xxxx',skos:,,ground_truth).
-my_t_mapping(literal('xxxxx',skos:,,ground_truth).
-my_t_mapping(literal('xxxxxx'skos:,,ground_truth).
+manual_mapping(literal('#'),skos:exactMatch,om:'Number',ground_truth).%[number]
+manual_mapping(literal('(g/kg)'),skos:exactMatch,om:gramPerKilogram,ground_truth).%[gram per kilogram]
+%manual_mapping(literal('-'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('0 - 60 cm'),skos:closeMatch,om:centimetre,ground_truth).%[centimetre]
+manual_mapping(literal('0-Conc [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('0-Conc-Linear [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('0-Conc-Quad [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('0-Delta-conc'),skos:relatedMatch,om:'VolumeFraction',ground_truth).%[change in volume fraction]
+%manual_mapping(literal('1-0'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('1-0 -Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('1-Conc [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('1-Conc-Linear [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('1-Conc-Quad [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('1-Delta-conc'),skos:relatedMatch,om:'VolumeFraction',ground_truth).%[change in volume fraction]
+%manual_mapping(literal('12 pl'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('19 juni'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/summer',ground_truth).%[summer]
+%manual_mapping(literal('2-0'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('2-0 -Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+%manual_mapping(literal('2-1'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('2-1 -Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('2-Conc [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('2-Conc-Linear [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('2-Conc-Quad [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('2-Delta-conc'),skos:relatedMatch,om:'VolumeFraction',ground_truth).%[change in volume fraction]
+%manual_mapping(literal('2004-05-06T09:00:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-05-06T10:15:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-05-06T13:00:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-05-14T14:00:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-05-19T14:30:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-06-15T09:00:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-06-15T13:00:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('2004-06-16T10:00:00'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('Air filled porosity [m3 gas/m3 bulk soil]'),skos:closeMatch,'http://www.wurvoc.org/VAL/d43a5366-e4f4-4c18-af6c-7be69d29f685',ground_truth).%[soil porosity]
+manual_mapping(literal('Air filled porosity [m3 gas/m3 bulk soil]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('Air pressure [mBar]'),skos:broadMatch,om:'Pressure',ground_truth).%[pressure]
+manual_mapping(literal('Air temp [°C]'),skos:broadMatch,om:'Temperature',ground_truth).%[temperature]
+manual_mapping(literal('Ammonia(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Ammonia(%)'),skos:closeMatch,'http://www.wurvoc.org/VALTO/cb44306b-8036-49ae-9ba8-910fb876dbe6',ground_truth).%[ammonia]
+manual_mapping(literal('Ammonia(kg)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Ammonia(kg)'),skos:closeMatch,'http://www.wurvoc.org/VALTO/cb44306b-8036-49ae-9ba8-910fb876dbe6',ground_truth).%[ammonia]
+manual_mapping(literal('Apr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/spring',ground_truth).%[spring]
+manual_mapping(literal('Arable'),skos:relatedMatch,'http://www.wurvoc.org/VAL/e28ca671-8fe9-420e-8667-4c5738b185f9',ground_truth).%[arable farming]
+manual_mapping(literal('Arable Cropping'),skos:closeMatch,'http://www.wurvoc.org/VAL/d1bd8f74-742b-41e9-80e4-501adffe7864',ground_truth).%[arable crop]
+manual_mapping(literal('Arable Cropping'),skos:closeMatch,'http://www.wurvoc.org/VAL/e28ca671-8fe9-420e-8667-4c5738b185f9',ground_truth).%[arable farming]
+manual_mapping(literal('Area'),skos:exactMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Area 0'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Area 1'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Area 2'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Area (ha)'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Aug'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/summer',ground_truth).%[summer]
+manual_mapping(literal('Average of N-opn_tot'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Average of N-opn_tot'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('Average of totaal ORG -N'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Average of totaal ORG -N'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/organic_nitrogen',ground_truth).%[organic nitrogen]
+%manual_mapping(literal('BEST'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('BEST -Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Bare Fallow'),skos:broadMatch,'http://www.wurvoc.org/VAL#fallow',ground_truth).%[fallow]
+manual_mapping(literal('Bare Fallow'),skos:relatedMatch,'http://www.wurvoc.org/VAL/ce60151f-0ca4-4b01-b8f6-8c01340fc643',ground_truth).%[bare soil]
+manual_mapping(literal('Baseline'),skos:broadMatch,'http://www.wurvoc.org/VALTO/scenario',ground_truth).%[scenario]
+manual_mapping(literal('Beans'),skos:closeMatch,'http://www.wurvoc.org/VAL/d77df453-7a35-4af2-b957-c5f96d601e45',ground_truth).%[bean]
+manual_mapping(literal('Bed'),skos:closeMatch,'http://www.wurvoc.org/VAL/c259922b-fea3-4e7d-9bf5-3ab29c07dcda',ground_truth).%[seedbed]
+manual_mapping(literal('Bed_ WDVI'),skos:relatedMatch,'http://www.wurvoc.org/VAL/c259922b-fea3-4e7d-9bf5-3ab29c07dcda',ground_truth).%[seedbed]
+manual_mapping(literal('Beef'),skos:exactMatch, 'http://www.wurvoc.org/VALTO/beef',ground_truth).%[beef]
+manual_mapping(literal('Beef Cows and Heifers'),skos:broadMatch,'http://www.wurvoc.org/VALTO/beef_cattle',ground_truth).%[beef cattle]
+manual_mapping(literal('Beef Cows and Heifers'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/cow',ground_truth).%[cow]
+manual_mapping(literal('Beef FYM'),skos:broadMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Beef FYM'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/beef_cattle',ground_truth).%[beef cattle]
+manual_mapping(literal('Beef Heifers in Calf ( 2 years + )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/beef_cattle',ground_truth).%[beef cattle]
+manual_mapping(literal('Beef Heifers in Calf ( < 2 years )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/beef_cattle',ground_truth).%[beef cattle]
+manual_mapping(literal('Beef Slurry'),skos:broadMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Beef Slurry'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/beef_cattle',ground_truth).%[beef cattle]
+manual_mapping(literal('Ber. N-opn'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Ber. N-opn'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('Biodiversity(Score)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/65985691-7b5d-4d4e-b1fa-6f4ec27375bc',ground_truth).%[biodiversity]
+manual_mapping(literal('Biodiversity(Score)'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Blad'),skos:exactMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('Blad.opp'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('Blad.opp'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Boars'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Breeding Birds'),skos:closeMatch,'http://www.wurvoc.org/VALTO/breeding_bird',ground_truth).%[breeding bird]
+manual_mapping(literal('Broilers'),skos:broadMatch,'http://www.wurvoc.org/VALTO/chicken',ground_truth).%[chicken]
+manual_mapping(literal('Bulls ( 2 years + )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Campbell b par'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Cattle & Sheep FYM (%)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Cattle & Sheep FYM (%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Cattle ( 1 - 2 years )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Cattle ( 2 years + )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Cattle ( < 1 year) & Calves'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Cattle Slurry (%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Cattle Slurry (%)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Cattle Slurry (%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Chamber surface [m2]'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('Chamber vol/area [m]'),skos:closeMatch,om:'Height',ground_truth).%[height]
+manual_mapping(literal('Chamber volume [m3]'),skos:closeMatch,om:'Volume',ground_truth).%[volume]
+manual_mapping(literal('Clay [%]'),skos:relatedMatch,'http://www.wurvoc.org/VAL/aa097948-397a-4b2f-a3de-73197fc45df4',ground_truth).%[clay loam]
+manual_mapping(literal('Clay [%]'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Corrected fluxes C [kg C ha-1 d-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Corrected fluxes N [kg N ha-1 d-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Count'),skos:relatedMatch,om:'Number',ground_truth).%[number]
+manual_mapping(literal('Cows and Heifers'),skos:broadMatch,'http://www.wurvoc.org/VALTO/beef_cattle',ground_truth).%[beef cattle]
+manual_mapping(literal('Cropping'),skos:relatedMatch,'http://www.wurvoc.org/VAL/0cbe7410-d31b-4fac-b6ad-c31e4775aea2',ground_truth).%[crop]
+manual_mapping(literal('Cropping'),skos:broadMatch,'http://www.wurvoc.org/VAL/19d3a75d-05eb-4723-b17e-26e2ce993e8e',ground_truth).%[agriculture]
+manual_mapping(literal('Dairy'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dairy_cattle',ground_truth).%[dairy cattle]
+manual_mapping(literal('Dairy Cows and Heifers'),skos:broadMatch,'http://www.wurvoc.org/VALTO/dairy_cattle',ground_truth).%[dairy cattle]
+manual_mapping(literal('Dairy FYM'),skos:broadMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Dairy FYM'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dairy_cattle',ground_truth).%[dairy cattle]
+manual_mapping(literal('Dairy Heifers in Calf ( 2 years + )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/dairy_cattle',ground_truth).%[dairy cattle]
+manual_mapping(literal('Dairy Heifers in Calf ( < 2 years )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/dairy_cattle',ground_truth).%[dairy cattle]
+manual_mapping(literal('Dairy Slurry'),skos:broadMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Dairy Slurry'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dairy_cattle',ground_truth).%[dairy cattle]
+%manual_mapping(literal('Data'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('Date'),skos:exactMatch,om:'Date',ground_truth).
+manual_mapping(literal('Dec'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/winter',ground_truth).%[winter]
+manual_mapping(literal('Dirty Water (%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Dirty Water (%)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/beb72565-77a8-47cb-9baa-e4f05a3d0b52',ground_truth).%[waste water]
+manual_mapping(literal('Drain Sediment'),skos:relatedMatch,om:'MassFlow',ground_truth).%[mass flow]
+manual_mapping(literal('Drain Sediment'),skos:broadMatch,'http://www.wurvoc.org/VAL/959e1111-ba57-4bd0-a876-7e32151ea7e3',ground_truth).%[sediment]
+manual_mapping(literal('Droge stof'),skos:exactMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('Droge stof'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Energy Use(Score)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/6a808752-3db1-4630-8099-6135cbd0dcaa',ground_truth).%[energy]
+manual_mapping(literal('Energy Use(Score)'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Estimated underestimation - HM'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Estimated underestimation - Linear'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('FYM (t)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/eae6009f-bcaa-4338-a755-cce4dd914296',ground_truth).%[farm yard manure]
+manual_mapping(literal('FYM (t)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Feb'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/winter',ground_truth).%[winter]
+manual_mapping(literal('Fertilisers Applied'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('Fertilisers Applied'),skos:relatedMatch,'http://www.wurvoc.org/VAL/2f4e0d8b-dcf1-4fb2-bb6f-b1e346810c93',ground_truth).%[fertiliser]
+manual_mapping(literal('Fixed Cost(£)'),skos:broadMatch,om:'Cost',ground_truth).%[cost]
+manual_mapping(literal('Flux [kg C ha-1 d-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Flux [kg N ha-1 d-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Fodder Crops'),skos:exactMatch,'http://www.wurvoc.org/VALTO/fodder_crop',ground_truth).%[fodder crop]
+manual_mapping(literal('Gas diffusivity (free air) [m2 h-1]'),skos:relatedMatch,om:'ThermalDiffusivity',ground_truth).
+manual_mapping(literal('Gilts Not Yet in Pig'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Gilts in Pig & Barren Sows'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Grass'),skos:relatedMatch,'http://www.wurvoc.org/VAL/6a030cbb-fa73-411f-ac08-6f8456ba39a9',ground_truth).%[grass]
+manual_mapping(literal('Grass'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/permanent_grassland',ground_truth).%[permanent grassland]
+manual_mapping(literal('Grassland'),skos:relatedMatch,'http://www.wurvoc.org/VAL/6a030cbb-fa73-411f-ac08-6f8456ba39a9',ground_truth).%[grass]
+manual_mapping(literal('Grassland'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/permanent_grassland',ground_truth).%[permanent grassland]
+manual_mapping(literal('Grassland'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/short_term_grassland',ground_truth).%[short term grassland]
+manual_mapping(literal('Groundwater Recharge'),skos:exactMatch,'http://www.wurvoc.org/VAL/5e5e1c1d-4882-4f0e-870d-b7883a1142ff',ground_truth).%[groundwater recharge]
+manual_mapping(literal('Groundwater Recharge'),skos:relatedMatch,om:'VolumetricFlowRate',ground_truth).%[volumetric flow rate]
+%manual_mapping(literal('HM'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).%[Hutchinson and Mosier method]
+manual_mapping(literal('HM -Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Heifers in Calf ( 2 years + )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Heifers in Calf ( < 2 years )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Heifers in Calf ( < 2 years)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Henry\'s Law coeff. [m3_gas m-3_water]'),skos:relatedMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+%manual_mapping(literal('IR en Gr'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).%[]
+manual_mapping(literal('Imported Manure'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Imported Manure'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Indoor Pigs'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Jan'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/winter',ground_truth).%[winter]
+manual_mapping(literal('Jul'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/summer',ground_truth).%[summer]
+manual_mapping(literal('Jun'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/summer',ground_truth).%[summer]
+manual_mapping(literal('KHT (req\'d to calculate KH) [m3_gas m-3_water]'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Knol'),skos:closeMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('LAI'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Labda'),skos:exactMatch,om:'Wavelength',ground_truth).%[wavelength]
+manual_mapping(literal('Lambs ( < 1 year)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/sheep',ground_truth).%[sheep]
+manual_mapping(literal('Layers ( Caged )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/chicken',ground_truth).%[chicken]
+manual_mapping(literal('Layers ( Uncaged )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/chicken',ground_truth).%[chicken]
+manual_mapping(literal('Livestock'),skos:exactMatch,'http://www.wurvoc.org/VALTO/100c8936-4812-4b02-a89c-6f9d737667b9',ground_truth).%[livestock]
+%manual_mapping(literal('MCD'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('MCD-Conc [ppm=cm3/m3]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+%manual_mapping(literal('MDC'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).%[median diurnal cycle]
+%manual_mapping(literal('MDF'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).%[minimum detectable flux]
+manual_mapping(literal('MDF-Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Maize'),skos:closeMatch,'http://www.wurvoc.org/VAL/1f4c5c63-7746-40ed-8493-6f43a40fb325',ground_truth).%[maize crop]
+manual_mapping(literal('Managed as Slurry (%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Managed as Slurry (%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Manure Received'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Manure Received'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Manure Values'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Mar'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/spring',ground_truth).%[spring]
+manual_mapping(literal('May'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/spring',ground_truth).%[spring]
+manual_mapping(literal('Methane(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Methane(%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/1bf4d556-b8e4-4482-8665-0c6f037c2db9',ground_truth).%[methane]
+manual_mapping(literal('Methane(kg)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/1bf4d556-b8e4-4482-8665-0c6f037c2db9',ground_truth).%[methane]
+manual_mapping(literal('Methane(kg)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Method Name'),skos:relatedMatch,'http://www.wurvoc.org/VAL/4c12e02e-c00b-44da-8aad-d737ace30bc1',ground_truth).%[experiment]
+manual_mapping(literal('Methods Implemented'),skos:relatedMatch,'http://www.wurvoc.org/VAL/4c12e02e-c00b-44da-8aad-d737ace30bc1',ground_truth).%[experiment]
+manual_mapping(literal('Model'),skos:exactMatch,'http://www.wurvoc.org/VALTO/model',ground_truth).%[model]
+manual_mapping(literal('Molar weight [g/mol]'),skos:closeMatch,om:'MolarMass',ground_truth).%[molar mass]
+manual_mapping(literal('N - mg/kg'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N - mg/kg'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N Totaal'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N Totaal'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N (kg/ha)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N (kg/ha)'),skos:broadMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-NO3'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-NO3 opn.'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-NO3 opn.'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3 opn_bl'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-NO3 opn_bl'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3 opn_kn'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-NO3 opn_kn'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3 opn_st'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-NO3 opn_st'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3 opn_tot'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-NO3 opn_tot'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3 opn_wor'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-NO3 opn_wor'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-NO3_bl'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-NO3_bl'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-NO3_kn'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-NO3_kn'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-NO3_st'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-NO3_st'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-NO3_wor'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-NO3_wor'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-N_NO3 kg/ha'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-N_NO3 kg/ha'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-Opn.'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-Opn.'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-gift kg/ha'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-gift kg/ha'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-knol'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-knol'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-min'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-min'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-min kg/ha'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-min kg/ha'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opn_bl'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opn_bl'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opn_bl+st'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opn_bl+st'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opn_kn'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opn_kn'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opn_st'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opn_st'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opn_tot'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opn_tot'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opn_wor'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opn_wor'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-opname'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('N-opname'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-tot'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-tot'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-tot_bl'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-tot_bl'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-tot_kn'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-tot_kn'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-tot_st'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-tot_st'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('N-tot_wor'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('N-tot_wor'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('N-trap'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('Nitrate(%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/d05d8d59-7e36-4da9-90c1-f0432ccd0126',ground_truth).%[nitrate]
+manual_mapping(literal('Nitrate(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Nitrate(kg)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/d05d8d59-7e36-4da9-90c1-f0432ccd0126',ground_truth).%[nitrate]
+manual_mapping(literal('Nitrate(kg)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Nitrous Oxide(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Nitrous Oxide(%)'),skos:relatedMatch,'http://www.wurvoc.org/VAL#nitrous_oxide',ground_truth).%[nitrous oxide]
+manual_mapping(literal('Nitrous Oxide(kg)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Nitrous Oxide(kg)'),skos:relatedMatch,'http://www.wurvoc.org/VAL#nitrous_oxide',ground_truth).%[nitrous oxide]
+manual_mapping(literal('Nov'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/autumn',ground_truth).%[autumn]
+manual_mapping(literal('Number of Methods'),skos:relatedMatch,'http://www.wurvoc.org/VAL/4c12e02e-c00b-44da-8aad-d737ace30bc1',ground_truth).%[experiment]
+manual_mapping(literal('Oct'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/autumn',ground_truth).%[autumn]
+manual_mapping(literal('Orchards'),skos:closeMatch,'http://www.wurvoc.org/VALTO/orchard',ground_truth).%[orchard]
+manual_mapping(literal('Other'),skos:relatedMatch,'http://www.wurvoc.org/VAL/cbdb1c53-e849-4a10-bb3f-0f1dcf79f254',ground_truth).%[land use]
+manual_mapping(literal('Other Cattle'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Other Cattle ( 1 - 2 years )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Other Cattle ( 2 years + )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Other Cattle ( < 1 year) & Calves'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cattle',ground_truth).%[cattle]
+manual_mapping(literal('Other Crops'),skos:broadMatch,'http://www.wurvoc.org/VAL/0cbe7410-d31b-4fac-b6ad-c31e4775aea2',ground_truth).%[crop]
+manual_mapping(literal('Other Pigs ( 20 - 50kg )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Other Pigs ( 50 - 80kg )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Other Pigs ( 80 - 110kg )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Other Pigs ( < 20kg )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Other Pigs ( > 110kg )'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Other Poultry'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/poultry_farming',ground_truth).%[poultry farming]
+manual_mapping(literal('Outdoor Pigs'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('P2O5 (kg/ha)'),skos:broadMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('P2O5 (kg/ha)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/ed3f7031-ef6a-40f1-9328-bffe40d2ecc3',ground_truth).%[phosporus]
+manual_mapping(literal('PPPs (% Typical)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/phosphoric_fertiliser',ground_truth).%[phosphoric fertiliser]
+manual_mapping(literal('PPPs (% Typical)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Parent mat density [g cm-3]'),skos:broadMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('Peas'),skos:closeMatch,'http://www.wurvoc.org/VAL#pea',ground_truth).%[pea]
+manual_mapping(literal('Permanent Pasture'),skos:closeMatch,'http://www.wurvoc.org/VALTO/permanent_grassland',ground_truth).%[permanent grassland]
+manual_mapping(literal('Pesticides(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Pesticides(%)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/24cb9b7a-3205-4e8d-86ff-a2a55a6c4293',ground_truth).%[pesticide]
+manual_mapping(literal('Pesticides(Units)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/24cb9b7a-3205-4e8d-86ff-a2a55a6c4293',ground_truth).%[pesticide]
+manual_mapping(literal('Pesticides(Units)'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Phosphorus(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Phosphorus(%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/ed3f7031-ef6a-40f1-9328-bffe40d2ecc3',ground_truth).%[phosporus]
+manual_mapping(literal('Phosphorus(kg)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Phosphorus(kg)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/ed3f7031-ef6a-40f1-9328-bffe40d2ecc3',ground_truth).%[phosporus]
+manual_mapping(literal('Pig'),skos:exactMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Pig FYM'),skos:broadMatch,'http://www.wurvoc.org/VAL/eae6009f-bcaa-4338-a755-cce4dd914296',ground_truth).%[farm yard manure]
+manual_mapping(literal('Pig FYM'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Pig FYM (%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Pig FYM (%)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/eae6009f-bcaa-4338-a755-cce4dd914296',ground_truth).%[farm yard manure]
+manual_mapping(literal('Pig Slurry'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Pig Slurry'),skos:broadMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Pig Slurry(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Pig Slurry(%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Pig Slurry(%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Porosity [m3 pores/m3 bulk soil]'),skos:broadMatch,'http://www.wurvoc.org/VAL/d43a5366-e4f4-4c18-af6c-7be69d29f685',ground_truth).%[soil porosity]
+manual_mapping(literal('Porosity [m3 pores/m3 bulk soil]'),skos:broadMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+%manual_mapping(literal('Position'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('Potatoes'),skos:closeMatch,'http://www.wurvoc.org/VALTO/potato',ground_truth).%[potato]
+manual_mapping(literal('Poultry'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/poultry_farming',ground_truth).%[poultry farming]
+manual_mapping(literal('Poultry Muck'),skos:closeMatch,'http://www.wurvoc.org/VALTO/414bf1ef-a827-4133-bf33-98851387792d',ground_truth).%[poultry manure]
+manual_mapping(literal('Poultry Muck (t)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Poultry Muck (%)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/414bf1ef-a827-4133-bf33-98851387792d',ground_truth).%[poultry manure]
+manual_mapping(literal('Poultry Muck (%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Preferential Flow'),skos:relatedMatch,om:'VolumetricFlowRate',ground_truth).%[volumetric flow rate]
+manual_mapping(literal('Pullet'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/poultry_farming',ground_truth).%[poultry farming]
+manual_mapping(literal('Rotational Grassland'),skos:broadMatch,'http://www.wurvoc.org/VALTO/short_term_grassland',ground_truth).%[short term grassland]
+%manual_mapping(literal('Rough'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('Rough Grazing'),skos:broadMatch,'http://www.wurvoc.org/VALTO/grazing',ground_truth).%[grazing]
+manual_mapping(literal('SLA'),skos:broadMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('SLA'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+%manual_mapping(literal('STD'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('SWC-dry weight [g water/g dry soil]'),skos:relatedMatch,'http://www.wurvoc.org/VAL/c44737ef-515e-4a35-a87c-aac475e2dc48',ground_truth).%[soil water balance]
+manual_mapping(literal('SWC-dry weight [g water/g dry soil]'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Sampling interval [h]'),skos:relatedMatch,'http://www.wurvoc.org/VAL/3c322b5b-f38d-4a87-b737-91bd6c3dbaba',ground_truth).%[sampling]
+manual_mapping(literal('Sampling interval [h]'),skos:broadMatch,om:'Duration',ground_truth).%[duration]
+manual_mapping(literal('Scenario'),skos:exactMatch,'http://www.wurvoc.org/VALTO/scenario',ground_truth).%[scenario]
+manual_mapping(literal('Sediment Loss'),skos:relatedMatch,om:'MassFlow',ground_truth).%[mass flow]
+manual_mapping(literal('Sediment Loss'),skos:relatedMatch,'http://www.wurvoc.org/VAL/959e1111-ba57-4bd0-a876-7e32151ea7e3',ground_truth).%[sediment]
+manual_mapping(literal('Sediment(%)'),skos:broadMatch,om:'MassFraction',ground_truth).%[mass fraction]
+manual_mapping(literal('Sediment(%)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/959e1111-ba57-4bd0-a876-7e32151ea7e3',ground_truth).%[sediment]
+manual_mapping(literal('Sediment(kg)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Sediment(kg)'),skos:relatedMatch,'http://www.wurvoc.org/VAL/959e1111-ba57-4bd0-a876-7e32151ea7e3',ground_truth).%[sediment]
+manual_mapping(literal('Sep'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/autumn',ground_truth).%[autumn]
+manual_mapping(literal('Set'),skos:broadMatch,'http://www.wurvoc.org/VALTO/scenario',ground_truth).%[scenario]
+manual_mapping(literal('Set Aside'),skos:exactMatch,'http://www.wurvoc.org/VAL/b38d71b7-6511-4f2c-a476-a95aef22afa0',ground_truth).%[set aside]
+manual_mapping(literal('Sheep'),skos:exactMatch,'http://www.wurvoc.org/VALTO/sheep',ground_truth).%[sheep]
+manual_mapping(literal('Sheep FYM'),skos:broadMatch,'http://www.wurvoc.org/VALTO/fcf92799-158a-416f-a0d1-22718844bd7b',ground_truth).%[cattle farmyard manure]
+manual_mapping(literal('Sigma'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Sim. Time 0 conc. [mg C m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. Time 0 conc. [mg N m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. Time 1 conc. [mg C m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. Time 1 conc. [mg N m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. Time 2 conc. [mg C m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. Time 2 conc. [mg N m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. pre-deployment conc. [mg_C m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. pre-deployment conc. [mg_N m-3_air]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Sim. pre-deployment conc. [ppm]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('Sim. pre-deployment flux (fo) [mg C m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Sim. pre-deployment flux (fo) [mg N m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('Slurry (t)'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Slurry (t)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/a39b6c93-fd54-49d4-9e52-702680b4bf07',ground_truth).%[slurry]
+manual_mapping(literal('Soft Fruit'),skos:relatedMatch,'http://www.wurvoc.org/VAL/2681544d-e49b-4cd2-ac67-179ea1f4cddc',ground_truth).%[fruit crop]
+manual_mapping(literal('Soil bulk density [g cm-3]'),skos:exactMatch,'http://www.wurvoc.org/VALTO/soil_bulk_density',ground_truth).%[soil bulk density]
+manual_mapping(literal('Soil bulk density [g cm-3]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('Soil gas diffusivity [m3 m-1 h-1]'),skos:relatedMatch,'http://www.wurvoc.org/VAL/ddab5c7a-52e0-4aae-8143-d5f6fadc82be',ground_truth).%[soil]
+manual_mapping(literal('Soil gas diffusivity [m3 m-1 h-1]'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Soil temp [°C]'),skos:closeMatch,'http://www.wurvoc.org/VALTO/soil_temperature',ground_truth).%[soil temperature]
+manual_mapping(literal('Soil temp [°C]'),skos:broadMatch,om:'Temperature',ground_truth).%[temperature]
+manual_mapping(literal('Sows in Pig & Other Sows'),skos:broadMatch,'http://www.wurvoc.org/VALTO/pig',ground_truth).%[pig]
+manual_mapping(literal('Spring Barley'),skos:relatedMatch,'http://www.wurvoc.org/VAL/ec31294b-9f63-4fdf-84f4-a1638ff6b3b0',ground_truth).%[spring barley]
+manual_mapping(literal('StdDevp of N-opn_tot'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/nitrogen_uptake',ground_truth).%[nitrogen uptake]
+manual_mapping(literal('StdDevp of N-opn_tot'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('StdDevp of totaal ORG -N'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/organic_nitrogen',ground_truth).%[organic nitrogen]
+manual_mapping(literal('StdDevp of totaal ORG -N'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('Steng'),skos:closeMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('Stengel'),skos:exactMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('Storage coeff. [m3 gas m-3 bulk_soil]'),skos:broadMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('Sugar Beet'),skos:exactMatch,'http://www.wurvoc.org/VAL/2fc08c25-de5d-47c3-826f-cda719476d47',ground_truth).%[sugar beet]
+manual_mapping(literal('Surface Runoff'),skos:exactMatch, 'http://www.wurvoc.org/VALTO/8cedfb24-30ac-48f1-b358-e6590e9c9d86',ground_truth).%[surface runoff]
+manual_mapping(literal('Surface Runoff'),skos:relatedMatch,om:'VolumetricFlowRate',ground_truth).%[volumetric flow rate]
+manual_mapping(literal('Surface Sediment'),skos:relatedMatch,om:'MassFlow',ground_truth).%[mass flow]
+manual_mapping(literal('Surface Sediment'),skos:broadMatch,'http://www.wurvoc.org/VAL/959e1111-ba57-4bd0-a876-7e32151ea7e3',ground_truth).%[sediment]
+%manual_mapping(literal('T1'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('T2'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('T3'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('TT'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('Tau'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Totaal'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Total'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Total Cost(£)'),skos:broadMatch,om:'Cost',ground_truth).%[cost]
+manual_mapping(literal('Total Drainage'),skos:relatedMatch,'http://www.wurvoc.org/VAL/505fbd68-21fa-427a-84c0-ef6df8fbf8ea',ground_truth).%[drainage]
+manual_mapping(literal('Total Drainage'),skos:relatedMatch,om:'VolumetricFlowRate',ground_truth).%[volumetric flow rate]
+manual_mapping(literal('Totale'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Treatment'),skos:exactMatch,'http://www.wurvoc.org/VAL/abd3ac86-f4aa-4b1a-9ad4-d5b61b402583',ground_truth).%[treatment]
+manual_mapping(literal('Turkeys'),skos:exactMatch,'http://www.wurvoc.org/VALTO/turkey',ground_truth).%[turkey]
+manual_mapping(literal('Underestimation'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('V 12 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 20 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 22 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 26 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 3 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 30 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 5 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 7 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('V 8 Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('Variable Cost(£)'),skos:broadMatch,om:'Cost',ground_truth).%[cost]
+manual_mapping(literal('Vegetables (Brassica)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cabbage',ground_truth).%[cabbage]
+manual_mapping(literal('Vegetables (Brassicas)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/cabbage',ground_truth).%[cabbage]
+manual_mapping(literal('Vegetables (Other)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/vegetable',ground_truth).%[vegtable]
+manual_mapping(literal('Volume to Mass coef [g/m3]'),skos:broadMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('WDVI'),skos:exactMatch, 'http://www.wurvoc.org/VAL#WDVI',ground_truth).%[wdvi]
+manual_mapping(literal('WDVI * 1.966'),skos:closeMatch, 'http://www.wurvoc.org/VAL#WDVI',ground_truth).%[wdvi]
+manual_mapping(literal('Water Use(Score)'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/use_of_water',ground_truth).%[use of water]
+manual_mapping(literal('Water filled porosity [m3 H2O/m3 bulk soil]'),skos:closeMatch,'http://www.wurvoc.org/VAL/d43a5366-e4f4-4c18-af6c-7be69d29f685',ground_truth).%[soil porosity]
+manual_mapping(literal('Water filled porosity [m3 H2O/m3 bulk soil]'),skos:closeMatch,om:'VolumeFraction',ground_truth).%[volume fraction]
+manual_mapping(literal('Winter Barley (Feed)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/7a035e9b-9fee-4f8c-b7dc-a51dc20a4f48',ground_truth).%[winter barley]
+manual_mapping(literal('Winter Barley (Feed)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/7a035e9b-9fee-4f8c-b7dc-a51dc20a4f48',ground_truth).%[feed barley]
+manual_mapping(literal('Winter Barley (Malting)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/7a035e9b-9fee-4f8c-b7dc-a51dc20a4f48',ground_truth).%[winter barley]
+manual_mapping(literal('Winter Barley (Malting)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/fea56392-5106-480c-bcda-9aa0441b5476',ground_truth).%[malting barley]
+manual_mapping(literal('Winter OSR'),skos:closeMatch,'http://www.wurvoc.org/VAL/990e664c-f700-4181-ba3b-8668aabefee1',ground_truth).%[winter oilseed rape]
+manual_mapping(literal('Winter Wheat (Feed)'),skos:broadMatch,'http://www.wurvoc.org/VAL/57ef8e52-5c7b-4930-81d4-895725a496a2',ground_truth).%[winter wheat]
+manual_mapping(literal('Winter Wheat (Feed)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/d7f999aa-61f7-43a9-9959-9cdc1cd4c2e3',ground_truth).%[feed wheat]
+manual_mapping(literal('Winter Wheat (Milling)'),skos:broadMatch,'http://www.wurvoc.org/VAL/57ef8e52-5c7b-4930-81d4-895725a496a2',ground_truth).%[winter wheat]
+manual_mapping(literal('Winter Wheat (Milling)'),skos:broadMatch,'http://www.wurvoc.org/VALTO/034cd7e7-a0b0-4cf7-bf8d-a3cfd0dc7bac',ground_truth).%[milling wheat]
+manual_mapping(literal('WithPriors'),skos:broadMatch,'http://www.wurvoc.org/VALTO/scenario',ground_truth).%[scenario]
+manual_mapping(literal('Wood'),skos:exactMatch,'http://www.wurvoc.org/VALTO/wood',ground_truth).%[wood]
+manual_mapping(literal('Woodland'),skos:exactMatch,'http://www.wurvoc.org/VAL/46ff0116-6492-44ff-90b9-6bea8c08491d',ground_truth).%[woodland]
+manual_mapping(literal('Wortel'),skos:exactMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+manual_mapping(literal('Wortels'),skos:exactMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+%manual_mapping(literal('a'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('a-Calibration'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('a-Calibration-Linear'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('a-Calibration-Quadratic'),skos:broadMatch,om:'Quantity',ground_truth).
+%manual_mapping(literal('b'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('b-Calibration'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('b-Calibration-Linear'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('b-Calibration-Quadratic'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('ber. met'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('ber. met groen'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('berekend'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('bl + st'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('bl + st'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('bl + st'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('bl+st+kn+wo'),skos:relatedMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('bl+st+kn+wo'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('bl+st+kn+wo'),skos:relatedMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+manual_mapping(literal('bl+st+kn+wo'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('bl+st+kn+wo'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('bl.opp/bl.dr.'),skos:relatedMatch,'http://www.wurvoc.org/VAL/7b317342-97d9-4cd6-b5af-c11c3d884cea',ground_truth).%[leaf area index]
+manual_mapping(literal('bl.opp/bl.dr.'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('Blad'),skos:closeMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('blad opp'),skos:broadMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('blad opp'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('blad opp.'),skos:broadMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('blad opp.'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('blad_%ds'),skos:broadMatch,om:'MassFraction',ground_truth).%[Mass Fraction]
+manual_mapping(literal('blad_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('blad_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('blad_dr'),skos:broadMatch,om:'Mass',ground_truth).%[Mass]
+manual_mapping(literal('blad_dr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('blad_dr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('blad_ve'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('blad_ve'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('blade_length'),skos:broadMatch,om:'Length',ground_truth).%[length]
+manual_mapping(literal('blade_width'),skos:broadMatch,om:'Width',ground_truth).%[width]
+manual_mapping(literal('bodem'),skos:exactMatch,'http://www.wurvoc.org/VAL/ddab5c7a-52e0-4aae-8143-d5f6fadc82be',ground_truth).%[soil]
+manual_mapping(literal('bovengr'),skos:relatedMatch,'http://www.wurvoc.org/VAL/7d1187cf-f62d-450b-88be-ca109232d73e',ground_truth).%[above ground biomass]
+manual_mapping(literal('bovengr'),skos:broadMatch,om:'Quantity',ground_truth).
+%manual_mapping(literal('c'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('c-Calibration-Quadratic'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('cm2'),skos:exactMatch,om:squareCentimetre,ground_truth).%[squared prefixed metre]
+manual_mapping(literal('cm2/gr'),skos:relatedMatch,om:squareCentimetre,ground_truth).%[squared prefixed metre]
+manual_mapping(literal('cm2/gr'),skos:relatedMatch,om:gram,ground_truth).%[squared prefixed metre]
+manual_mapping(literal('cm2/m2'),skos:relatedMatch,om:squareCentimetre,ground_truth).%[squared prefixed metre]
+manual_mapping(literal('cm2/m2'),skos:relatedMatch,om:squareMetrePerSquareMetre,ground_truth).%[squared metre per square metre]
+manual_mapping(literal('datetime'),skos:relatedMatch,om:'Date',ground_truth).
+manual_mapping(literal('datum'),skos:exactMatch,om:'Date',ground_truth).
+manual_mapping(literal('density2'),skos:closeMatch,om:'Density',ground_truth).%[density]
+manual_mapping(literal('dln (req\'d to calculate KH)'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('dr gew'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('dr gew'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('ds %'),skos:broadMatch,om:'MassFraction',ground_truth).%[Mass Fraction]
+manual_mapping(literal('ds %'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+%manual_mapping(literal('excl'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('gas accumulatio curve'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('gehele plant'),skos:relatedMatch,'http://www.wurvoc.org/VAL/0cbe7410-d31b-4fac-b6ad-c31e4775aea2',ground_truth).%[crop]
+manual_mapping(literal('gew'),skos:closeMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('gr/kg'),skos:closeMatch,om:gramPerKilogram,ground_truth).%[gramPerKilogram]
+manual_mapping(literal('gr/m2'),skos:closeMatch,om:gramPerSquareMetre,ground_truth).%[gramPerSquareMetre]
+manual_mapping(literal('ha'),skos:exactMatch,om:hectare,ground_truth).%[hectare]
+manual_mapping(literal('herh'),skos:relatedMatch,'http://www.wurvoc.org/VAL/4c12e02e-c00b-44da-8aad-d737ace30bc1',ground_truth).%[experiment]
+manual_mapping(literal('in de bodem'),skos:relatedMatch,'http://www.wurvoc.org/VAL/ddab5c7a-52e0-4aae-8143-d5f6fadc82be',ground_truth).%[soil]
+manual_mapping(literal('in de knol'),skos:relatedMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('in gr'),skos:closeMatch,om:gram,ground_truth).%[gram]
+%manual_mapping(literal('indoor'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('internode_length'),skos:broadMatch,om:'Length',ground_truth).%[length]
+manual_mapping(literal('kg N'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('kg N'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('kg/ha'),skos:exactMatch,om:kilogramPerHectare,ground_truth).%[kilogramPerHectare]
+manual_mapping(literal('knol'),skos:exactMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('knol_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('knol_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('knol_%ds'),skos:broadMatch,om:'MassFraction',ground_truth).%[Mass Fraction]
+manual_mapping(literal('knol_dr'),skos:relatedMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('knol_dr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('knol_dr'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('knol_ve'),skos:relatedMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('knol_ve'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('knollen'),skos:exactMatch,'http://www.wurvoc.org/VAL#tuber',ground_truth).%[tuber]
+manual_mapping(literal('lab getal'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('labda_red'),skos:broadMatch,om:'Wavelength',ground_truth).%[wavelength]
+manual_mapping(literal('lambda [h m4_soil m-6_gas]'),skos:broadMatch,om:'Quantity',ground_truth).%[lambda might be a gas measuring device using infrared]
+%manual_mapping(literal('lup'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('met formule'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('monster'),skos:relatedMatch,'http://www.wurvoc.org/VAL/3c322b5b-f38d-4a87-b737-91bd6c3dbaba',ground_truth).%[sampling]
+manual_mapping(literal('oogst'),skos:exactMatch, 'http://www.wurvoc.org/VAL/07f23bc2-c2b3-4a95-af17-9993edf58cde',ground_truth).%[harvest]
+manual_mapping(literal('opbr kg/ha'),skos:relatedMatch,'http://www.wurvoc.org/VAL/94058531-2fb4-4fe0-b821-725b7016a1ce',ground_truth).%[crop yield]
+manual_mapping(literal('opbr kg/ha'),skos:broadMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('opbrengst'),skos:relatedMatch,'http://www.wurvoc.org/VAL/94058531-2fb4-4fe0-b821-725b7016a1ce',ground_truth).
+manual_mapping(literal('opbrengst'),skos:broadMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('opp'),skos:closeMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('organisch N'),skos:closeMatch,'http://www.wurvoc.org/VALTO/organic_nitrogen',ground_truth).%[organic nitrogen]
+manual_mapping(literal('organisch N'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+%manual_mapping(literal('outdoor'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('pH'),skos:exactMatch,om:'Acidity',ground_truth).%[acidity]
+manual_mapping(literal('phytomer#'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/vegetative_growth',ground_truth).%[vegetative growth]
+manual_mapping(literal('phytomer#'),skos:broadMatch,om:'Number',ground_truth).%[number]
+manual_mapping(literal('poottijd'),skos:broadMatch,om:'Date',ground_truth).
+manual_mapping(literal('poottijdstip'),skos:broadMatch,om:'Date',ground_truth).
+manual_mapping(literal('proef nr'),skos:relatedMatch,'http://www.wurvoc.org/VAL/4c12e02e-c00b-44da-8aad-d737ace30bc1',ground_truth).%[experiment]
+manual_mapping(literal('red edge'),skos:relatedMatch,om:'Wavelength',ground_truth).%[wavelength]
+manual_mapping(literal('sheath_length'),skos:broadMatch,om:'Length',ground_truth).%[length]
+manual_mapping(literal('sheath_length'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('sla'),skos:broadMatch,om:'Area',ground_truth).%[area]
+manual_mapping(literal('sla'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/leaf',ground_truth).%[leaf]
+manual_mapping(literal('slope'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('slope -Flux [mg m-2 h-1]'),skos:relatedMatch, om:'MassFlow',ground_truth).%[mass flow][ask Hajo]
+manual_mapping(literal('steng_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('steng_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('steng_%ds'),skos:broadMatch,om:'MassFraction',ground_truth).%[Mass Fraction]
+manual_mapping(literal('steng_dr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('steng_dr'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('steng_dr'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('steng_ve'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('steng_ve'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('stengel'),skos:exactMatch,'http://www.wurvoc.org/VAL/d6552a23-6cb3-495c-a86a-e241ddae4228',ground_truth).%[stem]
+manual_mapping(literal('sub-monster'),skos:relatedMatch,'http://www.wurvoc.org/VAL/3c322b5b-f38d-4a87-b737-91bd6c3dbaba',ground_truth).%[sampling]
+manual_mapping(literal('t-toed.'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/application_scheduling',ground_truth).%[application scheduling]
+manual_mapping(literal('t-toed.'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d5456747-85d0-4c2e-9494-fbd0e67a19a8',ground_truth).%[fertiliser application]
+manual_mapping(literal('t-toed.'),skos:broadMatch,om:'Date',ground_truth).
+manual_mapping(literal('time 0 [h]'),skos:broadMatch,om:'Duration',ground_truth).%[duration]
+manual_mapping(literal('time 2 [h]'),skos:broadMatch,om:'Duration',ground_truth).%[duration]
+manual_mapping(literal('time1 [h]'),skos:broadMatch,om:'Duration',ground_truth).%[duration]
+manual_mapping(literal('tot N-gift'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/900eb3b1-e7f4-4cfb-b8c7-14c17eb42e45',ground_truth).%[nitrogen]
+manual_mapping(literal('tot N-gift'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('tot N-gift'),skos:relatedMatch,'http://www.wurvoc.org/VAL/d5456747-85d0-4c2e-9494-fbd0e67a19a8',ground_truth).%[fertiliser application]
+manual_mapping(literal('tot_dr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('tot_dr'),skos:relatedMatch,om:'AreaDensity',ground_truth).%[area density]
+manual_mapping(literal('totaal'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('totaal ORG -N'),skos:relatedMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('totaal ORG -N'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/organic_nitrogen',ground_truth).%[organic nitrogen]
+manual_mapping(literal('totale'),skos:broadMatch,om:'Quantity',ground_truth).
+manual_mapping(literal('uit refl.(gr)'),skos:broadMatch,om:'Quantity',ground_truth).
+%manual_mapping(literal('van sub'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('veldnr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/734f90db-2c26-49c2-b0e3-8163bf356926',ground_truth).%[experimental plot]
+manual_mapping(literal('vers'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('vers gew'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('versgew'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+%manual_mapping(literal('voor'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+manual_mapping(literal('wort_%ds'),skos:broadMatch,om:'MassFraction',ground_truth).%[Mass Fraction]
+manual_mapping(literal('wort_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+manual_mapping(literal('wort_%ds'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('wort_dr'),skos:relatedMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+manual_mapping(literal('wort_dr'),skos:relatedMatch,'http://www.wurvoc.org/VALTO/dry_matter',ground_truth).%[dry matter]
+manual_mapping(literal('wort_dr'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('wort_ve'),skos:relatedMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+manual_mapping(literal('wort_ve'),skos:broadMatch,om:'Mass',ground_truth).%[mass]
+manual_mapping(literal('wortels'),skos:exactMatch,'http://www.wurvoc.org/VAL/e490cf00-8230-4d3d-8e23-09905868bdca',ground_truth).%[root]
+%manual_mapping(literal('xxxx'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('xxxxx'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).
+%manual_mapping(literal('xxxxxx'),skos:relatedMatch,sheet:NoMatchFound,ground_truth).

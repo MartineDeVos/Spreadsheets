@@ -3,11 +3,16 @@
 :- ensure_loaded(annotateBlocks).
 :- ensure_loaded(annotateTerms).
 
-annotate_tables(File):-
+
+init_file(File):-
 	retractall(block(_,_,_)),
 	rdf_retractall(_,_,_,sheet_labels),
-	unload_file(File),
-	load(File),
+	rdf_retractall(_,_,_,default1_annotation),
+	rdf_retractall(_,_,_,default2_annotation),
+	load(File).
+
+
+annotate_tables:-
 	segment,
 	forall(sheet(S,_),
 	       (   assert_body(S),
@@ -29,4 +34,13 @@ annotated_term(Sheet,Type,Label,ConceptName):-
 	rdf(Concept,_, literal(Label),sheet_labels),
 	domain_pref_label(Concept,ConceptName).
 
+
+
+		 /***********************************
+	          *  ADDITIONAL ANNOTATION QUANTITIES *
+		  **********************************/
+assert_additional_domain_terms:-
+	forall(term_label(Label,quantity),
+	       forall(label_dist_domainconcept(Label,_,0.85,Concept),
+		    assert_domain_term(Label,Concept))).
 
