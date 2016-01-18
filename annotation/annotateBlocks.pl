@@ -49,7 +49,7 @@ assert_ds(DS, Type) :-
 largest_unit_slice(Block, Slice) :-
 	block(Block,_,_),
 	findall(Size-Slice,
-		(   unit_cell_slice(Block,_,_,Slice),
+		(   unit_cell_slice(Block,Slice),
 		    ds_cell_count(Slice, Size)
 		), Pairs),
 	sort(Pairs, Unique),
@@ -57,63 +57,62 @@ largest_unit_slice(Block, Slice) :-
 	last(BySize, Size-Slice).
 
 % Find unit slices within a block, starting from unit cell candidates
-% A slice is a unit slice when it has more mappings to OM than to the
-% domain ontology. A unit slice is either horizontally or vertically
-% oriented (assumption: unit slice is single row or single column)
-unit_cell_slice(Block,X,Y,ColSlice):-
-	unit_cell(Block,X,Y,_,_),
-	cell_property(Sheet,X,Y, block(Block)),
+% A slice is a unit slice when it has a cetrain amount of unit
+% cells, and more mappings to OM than to the domain ontology. A unit
+% slice is either horizontally or vertically oriented (assumption: unit
+% slice is single row or single column)
+unit_cell_slice(Block,cell_range(Sheet,X,SY, X,EY)):-
 	block(Block,_,DS),
-	ds_column_slice(DS,_,cell_range(Sheet,X,SY, X,EY)),
-	ds_map_check(Block,cell_range(Sheet,X,SY, X,EY)),
-	ColSlice = cell_range(Sheet,X,SY, X,EY).
-
-unit_cell_slice(Block,X,Y,RowSlice):-
-	unit_cell(Block,X,Y,_,_),
-	cell_property(_,X,Y, block(Block)),
+	ColSlice = cell_range(Sheet,X,SY, X,EY),
+	ds_column_slice(DS,_,ColSlice),
+	unit_cell_rate(ColSlice),
+	ds_map_check(ColSlice).
+unit_cell_slice(Block,cell_range(Sheet, SX,Y, EX,Y)):-
 	block(Block,_,DS),
-	ds_row_slice(DS,_,cell_range(Sheet,SX,Y, EX,Y)),
-	ds_map_check(Block,cell_range(Sheet, SX,Y, EX,Y)),
-	RowSlice = cell_range(Sheet, SX,Y, EX,Y).
+	RowSlice = cell_range(Sheet, SX,Y, EX,Y),
+	ds_row_slice(DS,_,RowSlice),
+	unit_cell_rate(RowSlice),
+	ds_map_check(RowSlice).
 
 % Check whether suggested slice contains more mappings to OM than
-% to the domain ontology.The slice may consist of a single unit cell
-ds_map_check(Block,cell_range(Sheet, SX,SY, EX,EY)):-
+% to the domain ontology.
+ds_map_check(cell_range(Sheet, SX,SY, EX,EY)):-
+	Slice = cell_range(Sheet, SX,SY, EX,EY),
 	aggregate_all(count,X-Y,
-		      (ds_inside(cell_range(Sheet, SX,SY, EX,EY),X,Y),
-		       unit_cell(Block,X,Y,_,_)),
+		      (ds_inside(Slice,X,Y),
+		       unit_cell(Slice,X,Y)),
 		      UnitMap),
 	aggregate_all(count,X-Y,
-		      (ds_inside(cell_range(Sheet, SX,SY, EX,EY),X,Y),
-		       text_cell(Block,X,Y,_,_)),
+		      (ds_inside(Slice,X,Y),
+		       text_cell(Slice,X,Y)),
 		      TextMap),
 	UnitMap > TextMap,
 	UnitMap > 1.
 
+% Determine whether number of unit cells relative to total cells in
+% a DS is above a certain (0.3) threshold.
+unit_cell_rate(Slice):-
+	aggregate_all(count,X-Y,
+		      unit_cell(Slice,X,Y),
+		      UnitCount),
+	ds_cell_count(Slice, Cells),
+	UnitCount/Cells > 0.3.
+
+
 % If quantity-unit grammar applies, than the term is not a unit,
 % but a quantity unit
-unit_cell(Block,X,Y,Symbol,OMUnit):-
-	block(Block,_,DS),
-	ds_inside(DS, X, Y),
-	ds_sheet(DS, Sheet),
+unit_cell(Slice,X,Y):-
+	ds_inside(Slice, X, Y),
+	ds_sheet(Slice, Sheet),
 	cell_value(Sheet,X,Y,Label),
-	common_unit(Label,Symbol,OMUnit),
+	unit_label(Label,_,_),
 	\+ quantity_unit_label(Label,_,_).
 
-common_unit(Label,Symbol,Unit):-
-	unit_label(Label,Symbol,Unit),
-	rdf(Quantity,om:commonlyHasUnit,Unit),
-	(   rdf(om:commonApplicationArea, om:usesQuantity, Quantity) ->true
-	;   rdf(om:mechanics, om:usesQuantity, Quantity) ->true
-	;   rdf(om:chemicalPhysics, om:usesQuantity, Quantity) ->true
-	;   rdf(om:economics, om:usesQuantity, Quantity)).
-
-text_cell(Block,X,Y,Label,Concept):-
-	block(Block,_,DS),
-	ds_inside(DS, X, Y),
-	ds_sheet(DS, Sheet),
+text_cell(Slice,X,Y):-
+	ds_inside(Slice, X, Y),
+	ds_sheet(Slice, Sheet),
 	cell_value(Sheet,X,Y,Label),
-	label_dist_domainconcept(Label,_,0.85,Concept).
+	label_dist_domainconcept(Label,_,0.85,_).
 
 
 		 /***********************************************
@@ -211,7 +210,14 @@ get_unit_symbol(Symbol,OMUnit):-
 	\+ atom_number(Symbol,_),
 	(  unit_symbol_match(Symbol,OMUnit)
 	;  unit_description_match(Symbol,OMUnit)
-	).
+	),
+	common_unit(OMUnit).
+
+
+common_unit(Unit):-
+	rdf(om:commonApplicationArea, om:usesQuantity, Quantity),
+	rdf(Quantity,om:commonlyHasUnit,Unit).
+
 
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
@@ -359,12 +365,12 @@ bracketed_unit(UnitSymbol,Unit) -->
 
 unbracketed_unit(UnitSymbol,Unit) -->
 	symbol(UnitSymbol,Unit),
-	(   sep,!
+	(   \+ [_]
 	->  []
 	;   sep(_),
 	    symbol_codes(_),
 	    sep
-	    ).
+	).
 
 %pre_fix(_) -->[].
 %pre_fix(C) --> [C], {pre_fix(C)}.
@@ -372,10 +378,15 @@ unbracketed_unit(UnitSymbol,Unit) -->
 
 symbol(UnitSymbol,Unit)-->
 	skip_symbols,
-	om_symbol(UnitSymbol,Unit).
+	om_symbol(UnitSymbol,Unit),reciprocal(_).
 
 skip_symbols --> [].
 skip_symbols --> symbol_codes_non_greedy([_|_]), sep(_), !, skip_symbols.
+
+reciprocal([]) --> [].
+reciprocal(C) --> "-", reciprocal_code(C).
+
+reciprocal_code(C) --> [C],{code_type(C, digit)}.
 
 om_symbol(UnitSymbol,Unit)-->
 	symbol_codes(Codes),
@@ -387,8 +398,7 @@ sep --> \+ [_], !.
 sep, [C] --> [C], {sep_code(C)}.
 
 sep(C) --> [C], {sep_code(C)}.
-
-sep_code(C) :- \+ code_type(C, alpha).
+sep_code(C) :- \+ code_type(C, alpha), C \== 0'-.
 
 symbol_codes_non_greedy([]) --> [].
 symbol_codes_non_greedy([H|T]) -->[H], symbol_codes_non_greedy(T).
