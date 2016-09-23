@@ -1,0 +1,47 @@
+ANNOTATION OF NATURAL SCIENCE SPREADSHEETS
+
+
+
+DESCRIPTION
+Automatic Annotation of Natural Science Spreadsheets as performed in the paper "Combining Information on Structure and Content to Automatically
+Annotate Natural Science Spreadsheets"  by Martine de Vos, Jan Wielemaker, Hajo Rijgersberg, Guus Schreiber,Bob Wielinga,Jan Top in International
+Journal of Human Computer Studies 2016
+
+
+SOURCE CODE (prolog)
+- initialBlocks.pl
+- annotateBlocks.pl
+- annotateTerms.pl
+- evaluateBlocks.pl
+- evaluateTerms.pl
+
+
+INPUT DATA
+- open document spreadsheets to annotate; we used LiteratureSpreadsheets.ods 
+ (NB: the color markup of the blocks is for our own convenience and not recognized by the automatic annotation)
+- list of manually annotated spreadsheet terms
+- list of manually annotated spreadsheet blocks
+ Two RDF repositories on the server: the OM vocabulary http://www.wurvoc.org/vocabularies/om-1.8/ 
+  and the Valerie vocabulary  http://www.foodvoc.org/page/Valerie
+
+
+OTHER PREREQUISITES
+- Installation of SWI Prolog
+- A semantic web server; we used ClioPatria http://cliopatria.swi-prolog.org/home
+- plsheet library by Jan Wielemaker
+
+
+DEPLOYMENT
+Load a file:
+init_file("PathToSpreadsheet").
+
+Annotate spreadsheet:
+annotate_tables.
+
+Evaluate annotation of terms:
+aggregate_all(count,Term-Concept,term_map_agree(Term,Concept,sheet_labels),Total).
+
+
+AUTHORS
+Jan Wielemaker
+Martine de Vos
