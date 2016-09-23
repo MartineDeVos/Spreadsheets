@@ -1,0 +1,628 @@
+Sheet-X-Y-Term-Concept--
+'Corn_Model'-1-3-'N fertilizer'-'amount of fertiliser to apply'--
+'Corn_Model'-1-3-'N fertilizer'-'nitrogen fertilizer'--
+'Corn_Model'-1-6-'Lime'-lime--
+'Corn_Model'-1-7-'Herbicide'-bioherbicide--
+'Corn_Model'-1-7-'Herbicide'-herbicide--
+'Corn_Model'-1-7-'Herbicide'-'herbicide application'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide efficacy'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide emission'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide programme'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide rate'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide resistance'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide resistance test'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide use reduction'--
+'Corn_Model'-1-7-'Herbicide'-'herbicide-resistant weed'-
+'Corn_Model'-1-8-'Pesticide'-pesticide--
+'Corn_Model'-1-8-'Pesticide'-'pesticide application'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide container'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide emission'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide formulation'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide leaching'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide loss'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide management'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide mixture'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide persistance'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide reliance'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide residue'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide resistance'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide selectivity'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide sequence'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide spraying'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide toxicity'--
+'Corn_Model'-1-8-'Pesticide'-'pesticide use reduction'--
+'Corn_Model'-1-9-'Seed'-seed--
+'Corn_Model'-1-9-'Seed'-'seed bank'--
+'Corn_Model'-1-9-'Seed'-'seed box'--
+'Corn_Model'-1-9-'Seed'-'seed coating'--
+'Corn_Model'-1-9-'Seed'-'seed decay'--
+'Corn_Model'-1-9-'Seed'-'seed drill'--
+'Corn_Model'-1-9-'Seed'-'seed meal'--
+'Corn_Model'-1-9-'Seed'-'seed mix'--
+'Corn_Model'-1-9-'Seed'-'seed mixture'--
+'Corn_Model'-1-9-'Seed'-'seed potato'--
+'Corn_Model'-1-9-'Seed'-'seed rain'--
+'Corn_Model'-1-9-'Seed'-'seed rate'--
+'Corn_Model'-1-9-'Seed'-'seed row'--
+'Corn_Model'-1-14-'Electricity'-electricity--
+'Corn_Model'-1-14-'Electricity'-'electricity production'--
+'Corn_Model'-1-20-'N fertilizer'-'amount of fertiliser to apply'--
+'Corn_Model'-1-20-'N fertilizer'-'nitrogen fertilizer'--
+'Corn_Model'-1-23-'Lime'-lime--
+'Corn_Model'-1-24-'Herbicide'-bioherbicide--
+'Corn_Model'-1-24-'Herbicide'-herbicide--
+'Corn_Model'-1-24-'Herbicide'-'herbicide application'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide efficacy'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide emission'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide programme'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide rate'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide resistance'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide resistance test'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide use reduction'--
+'Corn_Model'-1-24-'Herbicide'-'herbicide-resistant weed'-
+'Corn_Model'-1-25-'Pesticide'-pesticide--
+'Corn_Model'-1-25-'Pesticide'-'pesticide application'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide container'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide emission'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide formulation'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide leaching'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide loss'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide management'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide mixture'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide persistance'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide reliance'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide residue'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide resistance'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide selectivity'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide sequence'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide spraying'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide toxicity'--
+'Corn_Model'-1-25-'Pesticide'-'pesticide use reduction'--
+'Corn_Model'-1-26-'Seed'-seed--
+'Corn_Model'-1-26-'Seed'-'seed bank'--
+'Corn_Model'-1-26-'Seed'-'seed box'--
+'Corn_Model'-1-26-'Seed'-'seed coating'--
+'Corn_Model'-1-26-'Seed'-'seed decay'--
+'Corn_Model'-1-26-'Seed'-'seed drill'--
+'Corn_Model'-1-26-'Seed'-'seed meal'--
+'Corn_Model'-1-26-'Seed'-'seed mix'--
+'Corn_Model'-1-26-'Seed'-'seed mixture'--
+'Corn_Model'-1-26-'Seed'-'seed potato'--
+'Corn_Model'-1-26-'Seed'-'seed rain'--
+'Corn_Model'-1-26-'Seed'-'seed rate'--
+'Corn_Model'-1-26-'Seed'-'seed row'--
+'Corn_Model'-1-31-'Electricity'-electricity--
+'Corn_Model'-1-31-'Electricity'-'electricity production'--
+'Corn_Model'-1-33-'Field CO2 (lime)'-field--
+'Corn_Model'-1-34-'Field CO2 (urea)'-field--
+'Corn_Model'-1-37-'TOTAL'-'total porosity'--
+'Corn_Model'-1-44-'Co-product yield'-'co-product'
+'Corn_Model'-1-44-'Co-product yield'-'yield production'-
+'Corn_Model'-1-46-'Electricity'-electricity--
+'Corn_Model'-1-46-'Electricity'-'electricity production'--
+'Corn_Model'-1-49-'TOTAL'-'total porosity'--
+'Corn_Model'-1-54-'Biorefinery'-biorefinery--
+'Corn_Model'-1-55-'Co-product credit'-'co-product'
+'Corn_Model'-1-56-'TOTAL'-'total porosity'--
+'Corn_Model'-1-69-'TOTAL'-'total porosity'--
+'Corn_Model'-1-90-'CO2'-'carbon dioxide'--
+'Corn_Model'-1-102-'N fertilizer'-'amount of fertiliser to apply'--
+'Corn_Model'-1-102-'N fertilizer'-'nitrogen fertilizer'--
+'Corn_Model'-1-104-'Field CO2 (urea)'-field--
+'Corn_Model'-1-107-'Lime'-lime--
+'Corn_Model'-1-108-'Field CO2 (lime)'-field--
+'Corn_Model'-1-109-'Herbicide'-bioherbicide--
+'Corn_Model'-1-109-'Herbicide'-herbicide--
+'Corn_Model'-1-109-'Herbicide'-'herbicide application'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide efficacy'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide emission'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide programme'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide rate'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide resistance'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide resistance test'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide use reduction'--
+'Corn_Model'-1-109-'Herbicide'-'herbicide-resistant weed'-
+'Corn_Model'-1-110-'Pesticide'-pesticide--
+'Corn_Model'-1-110-'Pesticide'-'pesticide application'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide container'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide emission'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide formulation'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide leaching'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide loss'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide management'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide mixture'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide persistance'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide reliance'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide residue'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide resistance'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide selectivity'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide sequence'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide spraying'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide toxicity'--
+'Corn_Model'-1-110-'Pesticide'-'pesticide use reduction'--
+'Corn_Model'-1-111-'Seed'-seed--
+'Corn_Model'-1-111-'Seed'-'seed bank'--
+'Corn_Model'-1-111-'Seed'-'seed box'--
+'Corn_Model'-1-111-'Seed'-'seed coating'--
+'Corn_Model'-1-111-'Seed'-'seed decay'--
+'Corn_Model'-1-111-'Seed'-'seed drill'--
+'Corn_Model'-1-111-'Seed'-'seed meal'--
+'Corn_Model'-1-111-'Seed'-'seed mix'--
+'Corn_Model'-1-111-'Seed'-'seed mixture'--
+'Corn_Model'-1-111-'Seed'-'seed potato'--
+'Corn_Model'-1-111-'Seed'-'seed rain'--
+'Corn_Model'-1-111-'Seed'-'seed rate'--
+'Corn_Model'-1-111-'Seed'-'seed row'--
+'Corn_Model'-1-113-'Farm diesel'-farm--
+'Corn_Model'-1-114-'Farm LPG'-farm--
+'Corn_Model'-1-115-'Farm natural gas'-'natural farming'--
+'Corn_Model'-1-116-'Farm electricity'-electricity--
+'Corn_Model'-1-117-'Farm equipment'-equipment--
+'Corn_Model'-1-117-'Farm equipment'-'farming equipment'--
+'Corn_Model'-1-118-'Biorefinery natural gas'-biorefinery--
+'Corn_Model'-1-119-'Biorefinery electricity'-biorefinery--
+'Corn_Model'-1-121-'Biorefinery equipment'-biorefinery--
+'Corn_Model'-1-123-'Co-product credit'-'co-product'
+'Corn_Model'-1-124-'Total'-'total porosity'--
+'Corn_Model'-1-128-'Biorefinery equipment'-biorefinery--
+'Corn_Model'-1-129-'Farm natural gas'-'natural farming'--
+'Corn_Model'-1-132-'Farm LPG'-farm--
+'Corn_Model'-1-133-'Farm electricity'-electricity--
+'Corn_Model'-1-134-'Herbicide & pesticide'-herbicide--
+'Corn_Model'-1-135-'Farm equipment'-equipment--
+'Corn_Model'-1-135-'Farm equipment'-'farming equipment'--
+'Corn_Model'-1-138-'Lime'-lime--
+'Corn_Model'-1-139-'Biorefinery electricity'-biorefinery--
+'Corn_Model'-1-140-'N fertilizer'-'amount of fertiliser to apply'--
+'Corn_Model'-1-140-'N fertilizer'-'nitrogen fertilizer'--
+'Corn_Model'-1-141-'Biorefinery natural gas'-biorefinery--
+'Corn_Model'-2-127-'Production and Use'-product--
+'Corn_Model'-2-127-'Production and Use'-production--
+'Corn_Model'-5-127-'Total'-'total porosity'--
+'Corn_Model'-5-145-'TOTAL'-'total porosity'--
+'Corn_Model'-8-8-'Combust\'n'-combustion--
+'Corn_Model'-8-53-'Corn'-corn--
+'Corn_Model'-8-53-'Corn'-'corn disease'--
+'Corn_Model'-8-53-'Corn'-'corn hybrid'--
+'Corn_Model'-8-53-'Corn'-'corn sheller'--
+'Corn_Model'-8-54-'Biorefinery'-biorefinery--
+'Corn_Model'-8-55-'Co-products'-'co-product'
+'Corn_Model'-8-55-'Co-products'-product-
+'Corn_Model'-8-56-'TOTAL'-'total porosity'--
+'Corn_Model'-9-9-'Efficiency'-'cost efficiency'--
+'Corn_Model'-9-9-'Efficiency'-'cost-efficiency'-
+'Corn_Model'-9-9-'Efficiency'-'economic efficiency'--
+'Corn_Model'-9-9-'Efficiency'-efficiency--
+'Corn_Model'-9-9-'Efficiency'-'spraying efficiency'--
+'Corn_Model'-9-9-'Efficiency'-'water efficiency'--
+'Corn_Model'-9-9-'Efficiency'-'water use efficiency'--
+'Corn_Model'-16-20-'Total energy'-energy--
+'Corn_Model'-16-25-'Electricity'-electricity--
+'Corn_Model'-16-25-'Electricity'-'electricity production'--
+'Corn_Model'-16-42-'Total energy'-energy--
+'Corn_Model'-16-44-'Electricity'-electricity--
+'Corn_Model'-16-44-'Electricity'-'electricity production'--
+'Corn_Model'-23-20-'Nitrogen fertilizer---
+ N'-'mineral nitrogen fertilizer'-----
+'Corn_Model'-23-20-'Nitrogen fertilizer---
+ N'-nitrogen-----
+'Corn_Model'-23-20-'Nitrogen fertilizer---
+ N'-'nitrogen fertilisation'-----
+'Corn_Model'-23-20-'Nitrogen fertilizer---
+ N'-'nitrogen fertilizer'-----
+'Corn_Model'-23-20-'Nitrogen fertilizer---
+ N'-'nitrogen fertilizer application'-----
+'Corn_Model'-23-21-'Phosphorus fertilizer---
+ P'-phosphorus-----
+'Corn_Model'-23-22-'Potassium fertilizer---
+ K'-potassium-----
+'Corn_Model'-23-23-'Lime'-lime--
+'Corn_Model'-23-24-'Herbicides'-bioherbicide--
+'Corn_Model'-23-24-'Herbicides'-herbicide--
+'Corn_Model'-23-24-'Herbicides'-'herbicide efficacy'--
+'Corn_Model'-23-24-'Herbicides'-'herbicide emission'--
+'Corn_Model'-23-24-'Herbicides'-'herbicide programme'--
+'Corn_Model'-23-24-'Herbicides'-'herbicide rate'--
+'Corn_Model'-23-24-'Herbicides'-'herbicide resistance'--
+'Corn_Model'-23-25-'Insecticides'-insecticide--
+'Corn_Model'-23-25-'Insecticides'-'insecticide use reduction'--
+'Corn_Model'-23-26-'Seed'-seed--
+'Corn_Model'-23-26-'Seed'-'seed bank'--
+'Corn_Model'-23-26-'Seed'-'seed box'--
+'Corn_Model'-23-26-'Seed'-'seed coating'--
+'Corn_Model'-23-26-'Seed'-'seed decay'--
+'Corn_Model'-23-26-'Seed'-'seed drill'--
+'Corn_Model'-23-26-'Seed'-'seed meal'--
+'Corn_Model'-23-26-'Seed'-'seed mix'--
+'Corn_Model'-23-26-'Seed'-'seed mixture'--
+'Corn_Model'-23-26-'Seed'-'seed potato'--
+'Corn_Model'-23-26-'Seed'-'seed rain'--
+'Corn_Model'-23-26-'Seed'-'seed rate'--
+'Corn_Model'-23-26-'Seed'-'seed row'--
+'Corn_Model'-23-31-'Electricity'-electricity--
+'Corn_Model'-23-31-'Electricity'-'electricity production'--
+'Corn_Model'-23-33-'N2O emissions'-emission--
+'Corn_Model'-23-34-'TOTAL'-'total porosity'--
+'Corn_Model'-23-46-'Electricity Input'-electricity--
+'Corn_Model'-23-49-'TOTAL'-'total porosity'--
+'Emis_Manure&ImportedFeeds'-2-3-'corn silage'-corn--
+'Emis_Manure&ImportedFeeds'-2-3-'corn silage'-silage--
+'Emis_Manure&ImportedFeeds'-2-21-'corn silage'-corn--
+'Emis_Manure&ImportedFeeds'-2-21-'corn silage'-silage--
+'Emis_Manure&ImportedFeeds'-2-42-'Soybean'-soybean--
+'Emis_Manure&ImportedFeeds'-2-50-'Soybean'-soybean--
+'Emis_Manure&ImportedFeeds'-3-3-'rye silage'-silage--
+'Emis_Manure&ImportedFeeds'-3-21-'rye silage'-silage--
+'Emis_Manure&ImportedFeeds'-3-42-'Corn Grain'-corn--
+'Emis_Manure&ImportedFeeds'-3-42-'Corn Grain'-grain--
+'Emis_Manure&ImportedFeeds'-3-50-'Corn Grain'-corn--
+'Emis_Manure&ImportedFeeds'-3-50-'Corn Grain'-grain--
+'Emis_Manure&ImportedFeeds'-4-3-alfalfa-alfalfa--
+'Emis_Manure&ImportedFeeds'-4-21-'corn grain'-corn--
+'Emis_Manure&ImportedFeeds'-4-21-'corn grain'-grain--
+'Emis_Manure&ImportedFeeds'-5-21-soy-'soy bean'--
+'Emis_Manure&ImportedFeeds'-5-42-'Wheat Grain'-wheat--
+'Emis_Manure&ImportedFeeds'-5-50-'Wheat Grain'-wheat--
+'Emis_Manure&ImportedFeeds'-6-21-alfalfa-alfalfa--
+'Emis_Manure&ImportedFeeds'-9-47-'Soybean'-soybean--
+'Emis_Manure&ImportedFeeds'-9-60-'Soybean'-soybean--
+'Emis_Manure&ImportedFeeds'-10-47-'Corn Grain'-corn--
+'Emis_Manure&ImportedFeeds'-10-47-'Corn Grain'-grain--
+'Emis_Manure&ImportedFeeds'-10-60-'Corn Grain'-corn--
+'Emis_Manure&ImportedFeeds'-10-60-'Corn Grain'-grain--
+'Emis_Manure&ImportedFeeds'-13-47-'Total'-'total porosity'--
+'Emis_Manure&ImportedFeeds'-13-60-'Total'-'total porosity'--
+'Emis_Manure&ImportedFeeds'-14-43-'wheat straw'-wheat--
+'Emis_Manure&ImportedFeeds'-14-44-'wheat grain'-wheat--
+'Emis_Manure&ImportedFeeds'-14-47-'Wheat Grain'-wheat--
+'Emis_Manure&ImportedFeeds'-15-47-'Wheat Straw'-wheat--
+'Emis_NESARE vs TypicalFarm'-1-5-'Lime'-lime--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-seed--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed bank'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed box'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed coating'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed decay'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed drill'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed meal'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed mix'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed mixture'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed potato'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed rain'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed rate'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-'seed row'--
+'Emis_NESARE vs TypicalFarm'-1-7-'Herbicide+Pesticide'-herbicide--
+'Emis_NESARE vs TypicalFarm'-1-8-'Input transport'-input--
+'Emis_NESARE vs TypicalFarm'-1-10-'Grain drying'-'dry grain'--
+'Emis_NESARE vs TypicalFarm'-1-10-'Grain drying'-grain--
+'Emis_NESARE vs TypicalFarm'-1-10-'Grain drying'-'grain drying'--
+'Emis_NESARE vs TypicalFarm'-1-15-'Total'-'total porosity'--
+'Emis_NESARE vs TypicalFarm'-1-23-'Lime'-lime--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-seed--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed bank'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed box'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed coating'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed decay'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed drill'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed meal'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed mix'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed mixture'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed potato'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed rain'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed rate'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-'seed row'--
+'Emis_NESARE vs TypicalFarm'-1-25-'Herbicide+Pesticide'-herbicide--
+'Emis_NESARE vs TypicalFarm'-1-26-'Input Transport'-input--
+'Emis_NESARE vs TypicalFarm'-1-28-'Grain Drying'-'dry grain'--
+'Emis_NESARE vs TypicalFarm'-1-28-'Grain Drying'-grain--
+'Emis_NESARE vs TypicalFarm'-1-28-'Grain Drying'-'grain drying'--
+'Emis_NESARE vs TypicalFarm'-1-34-'Total'-'total porosity'--
+'Emis_NESARE vs TypicalFarm'-1-40-'Lime'-lime--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-seed--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed bank'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed box'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed coating'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed decay'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed drill'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed meal'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed mix'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed mixture'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed potato'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed rain'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed rate'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-'seed row'--
+'Emis_NESARE vs TypicalFarm'-1-42-'Herbicide+Pesticide'-herbicide--
+'Emis_NESARE vs TypicalFarm'-1-43-'Input Transport'-input--
+'Emis_NESARE vs TypicalFarm'-1-45-'Grain Drying'-'dry grain'--
+'Emis_NESARE vs TypicalFarm'-1-45-'Grain Drying'-grain--
+'Emis_NESARE vs TypicalFarm'-1-45-'Grain Drying'-'grain drying'--
+'Emis_NESARE vs TypicalFarm'-1-51-'Total'-'total porosity'--
+'Emis_NESARE vs TypicalFarm'-2-33-'Small grain combine harvest'-'combine harvest'--
+'Emis_NESARE vs TypicalFarm'-7-5-'Lime'-lime--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-seed--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed bank'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed box'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed coating'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed decay'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed drill'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed meal'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed mix'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed mixture'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed potato'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed rain'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed rate'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-'seed row'--
+'Emis_NESARE vs TypicalFarm'-7-7-'Herbicide+Pesticide'-herbicide--
+'Emis_NESARE vs TypicalFarm'-7-8-'Input Transport'-input--
+'Emis_NESARE vs TypicalFarm'-7-10-'Grain drying'-'dry grain'--
+'Emis_NESARE vs TypicalFarm'-7-10-'Grain drying'-grain--
+'Emis_NESARE vs TypicalFarm'-7-10-'Grain drying'-'grain drying'--
+'Emis_NESARE vs TypicalFarm'-7-15-'Total'-'total porosity'--
+'Emis_NESARESVO_Farm2011'-2-1-'Main Management'-management--
+'Emis_NESARESVO_Farm2011'-2-1-'Main Management'-'sustainable management'--
+'Emis_NESARESVO_Farm2011'-2-3-'Sub-Management'-management-
+'Emis_NESARESVO_Farm2011'-4-4-rye_s-rye--
+'Emis_NESARESVO_Farm2011'-5-4-'Soy'-'soy bean'--
+'Emis_NESARESVO_Farm2011'-6-4-rye_cg-rye--
+'Emis_NESARESVO_Farm2011'-11-1-'Main Management'-management--
+'Emis_NESARESVO_Farm2011'-11-1-'Main Management'-'sustainable management'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'feed wheat'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'hard wheat'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'soft wheat'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-wheat--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'wheat bug'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'wheat disease'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'wheat quality'--
+'Emis_NESARESVO_Farm2011'-12-4-'Wheat'-'wheat variety'--
+'Emis_NESARESVO_Farm2011'-13-3-'Sub-Management'-management-
+'Emis_SVO_Operations'-1-9-'Corn Grain'-corn--
+'Emis_SVO_Operations'-1-9-'Corn Grain'-grain--
+'Emis_SVO_Operations'-1-98-'Rye'-rye--
+'Emis_SVO_Operations'-1-104-'Rye'-rye--
+'Emis_SVO_Operations'-1-110-'Soybean'-soybean--
+'Emis_SVO_Operations'-1-117-'Wheat'-'feed wheat'--
+'Emis_SVO_Operations'-1-117-'Wheat'-'hard wheat'--
+'Emis_SVO_Operations'-1-117-'Wheat'-'soft wheat'--
+'Emis_SVO_Operations'-1-117-'Wheat'-wheat--
+'Emis_SVO_Operations'-1-117-'Wheat'-'wheat bug'--
+'Emis_SVO_Operations'-1-117-'Wheat'-'wheat disease'--
+'Emis_SVO_Operations'-1-117-'Wheat'-'wheat quality'--
+'Emis_SVO_Operations'-1-117-'Wheat'-'wheat variety'--
+'Emis_SVO_Operations'-2-2-'Inject manure application'-injection--
+'Emis_SVO_Operations'-2-5-'Rotary Harrow (volunteer)'-'rotary harrow'--
+'Emis_SVO_Operations'-2-7-'Fertilizer application - N & S'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-2-7-'Fertilizer application - N & S'-fertilisation-
+'Emis_SVO_Operations'-2-7-'Fertilizer application - N & S'-'fertiliser application'-
+'Emis_SVO_Operations'-2-7-'Fertilizer application - N & S'-'fertiliser application rate'-
+'Emis_SVO_Operations'-2-7-'Fertilizer application - N & S'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-2-9-'Banded herbicide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-14-'Corn Combine Harvest'-'combine harvest'--
+'Emis_SVO_Operations'-2-14-'Corn Combine Harvest'-'combine harvester'--
+'Emis_SVO_Operations'-2-32-'Pesticide application'-'biopesticide application'--
+'Emis_SVO_Operations'-2-32-'Pesticide application'-'fungicide application'--
+'Emis_SVO_Operations'-2-32-'Pesticide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-32-'Pesticide application'-pesticide--
+'Emis_SVO_Operations'-2-32-'Pesticide application'-'pesticide application'--
+'Emis_SVO_Operations'-2-32-'Pesticide application'-'pesticide formulation'--
+'Emis_SVO_Operations'-2-43-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-2-43-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-2-43-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-2-43-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-2-43-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-2-43-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-2-52-'Pesticide application'-'biopesticide application'--
+'Emis_SVO_Operations'-2-52-'Pesticide application'-'fungicide application'--
+'Emis_SVO_Operations'-2-52-'Pesticide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-52-'Pesticide application'-pesticide--
+'Emis_SVO_Operations'-2-52-'Pesticide application'-'pesticide application'--
+'Emis_SVO_Operations'-2-52-'Pesticide application'-'pesticide formulation'--
+'Emis_SVO_Operations'-2-70-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-2-70-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-2-70-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-2-70-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-2-70-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-2-70-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-2-71-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-2-71-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-2-71-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-2-71-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-2-71-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-2-71-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-2-72-'Pesticide application'-'biopesticide application'--
+'Emis_SVO_Operations'-2-72-'Pesticide application'-'fungicide application'--
+'Emis_SVO_Operations'-2-72-'Pesticide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-72-'Pesticide application'-pesticide--
+'Emis_SVO_Operations'-2-72-'Pesticide application'-'pesticide application'--
+'Emis_SVO_Operations'-2-72-'Pesticide application'-'pesticide formulation'--
+'Emis_SVO_Operations'-2-84-'Herbicide application (burndown)'-'herbicide application'--
+'Emis_SVO_Operations'-2-99-'Herbicide application'-'fungicide application'--
+'Emis_SVO_Operations'-2-99-'Herbicide application'-herbicide--
+'Emis_SVO_Operations'-2-99-'Herbicide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-99-'Herbicide application'-'pesticide application'--
+'Emis_SVO_Operations'-2-105-'Herbicide application'-'fungicide application'--
+'Emis_SVO_Operations'-2-105-'Herbicide application'-herbicide--
+'Emis_SVO_Operations'-2-105-'Herbicide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-105-'Herbicide application'-'pesticide application'--
+'Emis_SVO_Operations'-2-110-'Banded herbicide application'-'herbicide application'--
+'Emis_SVO_Operations'-2-114-'Soybean combine harvest'-'combine harvest'--
+'Emis_SVO_Operations'-2-114-'Soybean combine harvest'-'combine harvester'--
+'Emis_SVO_Operations'-5-2-'Inject manure application'-injection--
+'Emis_SVO_Operations'-5-5-'Rotary Harrow (volunteer)'-'rotary harrow'--
+'Emis_SVO_Operations'-5-7-'Fertilizer application - N & S'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-7-'Fertilizer application - N & S'-fertilisation-
+'Emis_SVO_Operations'-5-7-'Fertilizer application - N & S'-'fertiliser application'-
+'Emis_SVO_Operations'-5-7-'Fertilizer application - N & S'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-7-'Fertilizer application - N & S'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-5-17-'Inject manure application'-injection--
+'Emis_SVO_Operations'-5-19-'Herbicide application'-'fungicide application'--
+'Emis_SVO_Operations'-5-19-'Herbicide application'-herbicide--
+'Emis_SVO_Operations'-5-19-'Herbicide application'-'herbicide application'--
+'Emis_SVO_Operations'-5-19-'Herbicide application'-'pesticide application'--
+'Emis_SVO_Operations'-5-22-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-22-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-5-22-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-5-22-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-22-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-5-22-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-5-24-'Inject manure application'-injection--
+'Emis_SVO_Operations'-5-26-'Herbicide application'-'fungicide application'--
+'Emis_SVO_Operations'-5-26-'Herbicide application'-herbicide--
+'Emis_SVO_Operations'-5-26-'Herbicide application'-'herbicide application'--
+'Emis_SVO_Operations'-5-26-'Herbicide application'-'pesticide application'--
+'Emis_SVO_Operations'-5-29-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-29-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-5-29-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-5-29-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-29-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-5-29-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-5-33-'Pesticide application'-'biopesticide application'--
+'Emis_SVO_Operations'-5-33-'Pesticide application'-'fungicide application'--
+'Emis_SVO_Operations'-5-33-'Pesticide application'-'herbicide application'--
+'Emis_SVO_Operations'-5-33-'Pesticide application'-pesticide--
+'Emis_SVO_Operations'-5-33-'Pesticide application'-'pesticide application'--
+'Emis_SVO_Operations'-5-33-'Pesticide application'-'pesticide formulation'--
+'Emis_SVO_Operations'-5-51-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-51-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-5-51-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-5-51-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-51-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-5-51-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-5-52-'Pesticide application'-'biopesticide application'--
+'Emis_SVO_Operations'-5-52-'Pesticide application'-'fungicide application'--
+'Emis_SVO_Operations'-5-52-'Pesticide application'-'herbicide application'--
+'Emis_SVO_Operations'-5-52-'Pesticide application'-pesticide--
+'Emis_SVO_Operations'-5-52-'Pesticide application'-'pesticide application'--
+'Emis_SVO_Operations'-5-52-'Pesticide application'-'pesticide formulation'--
+'Emis_SVO_Operations'-5-70-'Herbicide application (burndown)'-'herbicide application'--
+'Emis_SVO_Operations'-5-71-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-71-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-5-71-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-5-71-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-71-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-5-71-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-5-90-'Herbicide application (burndown)'-'herbicide application'--
+'Emis_SVO_Operations'-5-94-'Herbicide application (burndown)'-'herbicide application'--
+'Emis_SVO_Operations'-5-95-'Mow'-mow--
+'Emis_SVO_Operations'-5-95-'Mow'-mowing--
+'Emis_SVO_Operations'-5-96-'Rake'-'hay rake'--
+'Emis_SVO_Operations'-5-119-'Small grain combine harvest'-'combine harvest'--
+'Emis_SVO_Operations'-5-120-'Fertilizer application - K'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-120-'Fertilizer application - K'-fertilisation-
+'Emis_SVO_Operations'-5-120-'Fertilizer application - K'-'fertiliser application'-
+'Emis_SVO_Operations'-5-120-'Fertilizer application - K'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-120-'Fertilizer application - K'-'fertilization map'-
+'Emis_SVO_Operations'-5-120-'Fertilizer application - K'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-5-121-'Fertilizer application - N & S'-'amount of fertiliser to apply'-
+'Emis_SVO_Operations'-5-121-'Fertilizer application - N & S'-fertilisation-
+'Emis_SVO_Operations'-5-121-'Fertilizer application - N & S'-'fertiliser application'-
+'Emis_SVO_Operations'-5-121-'Fertilizer application - N & S'-'fertiliser application rate'-
+'Emis_SVO_Operations'-5-121-'Fertilizer application - N & S'-'nitrogen fertilizer application'-
+'Emis_SVO_Operations'-12-4-'kg/truck'-truck--
+'Emis_SVO_Operations'-23-20-'Nitrogen fertilizer---
+ N'-'mineral nitrogen fertilizer'-----
+'Emis_SVO_Operations'-23-20-'Nitrogen fertilizer---
+ N'-nitrogen-----
+'Emis_SVO_Operations'-23-20-'Nitrogen fertilizer---
+ N'-'nitrogen fertilisation'-----
+'Emis_SVO_Operations'-23-20-'Nitrogen fertilizer---
+ N'-'nitrogen fertilizer'-----
+'Emis_SVO_Operations'-23-20-'Nitrogen fertilizer---
+ N'-'nitrogen fertilizer application'-----
+'LifeCycle_Feuil1'-3-2-'Total'-'total porosity'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'cull management'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-management--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'soil cover management'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'soil management'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'soil management technology'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'soil pathogen management'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'soil structure management'--
+'LifeCycle_Feuil1'-4-2-'Soil Management'-'soil surface management'--
+'LifeCycle_Feuil1'-5-2-'Canopy management'-canopy--
+'LifeCycle_Feuil1'-5-2-'Canopy management'-management--
+'LifeCycle_Feuil1'-8-2-'Harvest'-harvest--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvest index'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvest residue'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-harvesting--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvesting conditions'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvesting date'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvesting intensity'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvesting technique'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'harvesting wood'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'tree harvest'--
+'LifeCycle_Feuil1'-8-2-'Harvest'-'wood harvest'--
+'Profit_Sheet1'-2-2-'Corn'-corn--
+'Profit_Sheet1'-2-2-'Corn'-'corn disease'--
+'Profit_Sheet1'-2-2-'Corn'-'corn hybrid'--
+'Profit_Sheet1'-2-2-'Corn'-'corn sheller'--
+'Profit_Sheet1'-3-2-'Soybean'-soybean--
+'Profit_Sheet1'-5-2-'Corn'-corn--
+'Profit_Sheet1'-5-2-'Corn'-'corn disease'--
+'Profit_Sheet1'-5-2-'Corn'-'corn hybrid'--
+'Profit_Sheet1'-5-2-'Corn'-'corn sheller'--
+'Profit_Sheet1'-6-2-'Soybean'-soybean--
+'Profit_Sheet1'-8-2-'Alfalfa'-alfalfa--
+'Profit_Sheet2'-2-3-'Corn'-corn--
+'Profit_Sheet2'-2-3-'Corn'-'corn disease'--
+'Profit_Sheet2'-2-3-'Corn'-'corn hybrid'--
+'Profit_Sheet2'-2-3-'Corn'-'corn sheller'--
+'Profit_Sheet2'-2-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-3-3-'Corn'-corn--
+'Profit_Sheet2'-3-3-'Corn'-'corn disease'--
+'Profit_Sheet2'-3-3-'Corn'-'corn hybrid'--
+'Profit_Sheet2'-3-3-'Corn'-'corn sheller'--
+'Profit_Sheet2'-3-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-4-3-'Corn'-corn--
+'Profit_Sheet2'-4-3-'Corn'-'corn disease'--
+'Profit_Sheet2'-4-3-'Corn'-'corn hybrid'--
+'Profit_Sheet2'-4-3-'Corn'-'corn sheller'--
+'Profit_Sheet2'-4-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-6-3-'Soybean'-soybean--
+'Profit_Sheet2'-6-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-7-3-'Soybean'-soybean--
+'Profit_Sheet2'-7-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-8-3-'Soybean'-soybean--
+'Profit_Sheet2'-8-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-10-3-'Corn'-corn--
+'Profit_Sheet2'-10-3-'Corn'-'corn disease'--
+'Profit_Sheet2'-10-3-'Corn'-'corn hybrid'--
+'Profit_Sheet2'-10-3-'Corn'-'corn sheller'--
+'Profit_Sheet2'-10-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-11-3-'Corn'-corn--
+'Profit_Sheet2'-11-3-'Corn'-'corn disease'--
+'Profit_Sheet2'-11-3-'Corn'-'corn hybrid'--
+'Profit_Sheet2'-11-3-'Corn'-'corn sheller'--
+'Profit_Sheet2'-11-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-12-3-'Corn'-corn--
+'Profit_Sheet2'-12-3-'Corn'-'corn disease'--
+'Profit_Sheet2'-12-3-'Corn'-'corn hybrid'--
+'Profit_Sheet2'-12-3-'Corn'-'corn sheller'--
+'Profit_Sheet2'-12-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-14-3-'Soybean'-soybean--
+'Profit_Sheet2'-14-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-15-3-'Soybean'-soybean--
+'Profit_Sheet2'-15-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-16-3-'Soybean'-soybean--
+'Profit_Sheet2'-16-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-18-3-'Oat/Alfalfa'-alfalfa--
+'Profit_Sheet2'-18-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-19-3-'Oat/Alfalfa'-alfalfa--
+'Profit_Sheet2'-19-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-20-3-'Oat/Alfalfa'-alfalfa--
+'Profit_Sheet2'-20-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-22-3-'Alfalfa'-alfalfa--
+'Profit_Sheet2'-22-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-23-3-'Alfalfa'-alfalfa--
+'Profit_Sheet2'-23-4-'Machinery Complement'-machinery--
+'Profit_Sheet2'-24-3-'Alfalfa'-alfalfa--
+'Profit_Sheet2'-24-4-'Machinery Complement'-machinery--
+'Urban_Step 3'-2-4-'Biodiversity value:'-biodiversity--
+'Urban_Step 3'-2-4-'Biodiversity value:'-'biodiversity loss'--
+'Urban_Step 3'-2-5-'Carbon sequestration value:'-'carbon sequestration'--
+'Urban_Step 3'-2-5-'Carbon sequestration value:'-'soil carbon sequestration'--
+'Urban_Step 3'-2-17-'Ecosystem services in cereal crops'-'ecosystem disservice'--
+'Urban_Step 3'-2-17-'Ecosystem services in cereal crops'-'ecosystem service'--
+'Urban_Step 3'-2-18-'Ecosystem services in crops for food and biofuels'-'ecosystem service'--
+'Urban_Step 3'-2-19-'Ecosystem services in grassland'-'ecosystem disservice'--
+'Urban_Step 3'-2-19-'Ecosystem services in grassland'-'ecosystem service'--
+'Urban_Step 3'-2-20-'Ecosystem services in biomass belts'-'ecosystem service'--
+'Urban_Step 3'-2-21-'Ecosystem services in organic crops (lower level)'-'ecosystem service'--
+'Urban_Step 3'-2-22-'Ecosystem services in organic crops (upper level)'-'ecosystem service']--

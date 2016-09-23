@@ -1,0 +1,593 @@
+Sheet-X-Y-Term-Concept--
+'Corn_Factors'-1-3-'Energy'-om:'Energy'--
+'Corn_Factors'-1-8-'PoundPerKg'-om:'Mass'--
+'Corn_Factors'-1-9-'PoundPerWetBu'-om:'Mass'--
+'Corn_Factors'-1-9-'PoundPerWetBu'-om:'Volume'--
+'Corn_Factors'-1-10-'PoundPerDryBu'-om:'Mass'--
+'Corn_Factors'-1-10-'PoundPerDryBu'-om:'Volume'--
+'Corn_Factors'-1-11-'KgPerWetBu'-om:'Mass'--
+'Corn_Factors'-1-11-'KgPerWetBu'-om:'Volume'--
+'Corn_Factors'-1-12-'KgPerDryBu'-om:'Mass'--
+'Corn_Factors'-1-12-'KgPerDryBu'-om:'Volume'--
+'Corn_Factors'-1-15-'PoundPerKg'-om:'Mass'--
+'Corn_Factors'-1-16-'AcrePerHa'-om:'Area'--
+'Corn_Factors'-1-17-'KgPerTon'-om:'Mass'--
+'Corn_Factors'-1-21-'LiterPerGal'-om:'Volume'--
+'Corn_Factors'-1-22-'CuFootPerCuMeter'-om:'Length'--
+'Corn_Factors'-1-30-'Non-road diesel'-om:'Energy'-
+'Corn_Factors'-1-30-'Non-road diesel'-om:'Volume'-
+'Corn_Factors'-1-32-'LPG'-om:'Energy'--
+'Corn_Factors'-1-32-'LPG'-om:'Volume'--
+'Corn_Factors'-1-33-'Natural gas'-om:'Energy'--
+'Corn_Factors'-1-33-'Natural gas'-om:'Mass'--
+'Corn_Factors'-1-33-'Natural gas'-om:'Volume'--
+'Corn_Model'-1-3-'N fertilizer'-om:'Mass'--
+'Corn_Model'-1-4-'P2O5'-om:'Mass'--
+'Corn_Model'-1-5-'K2O'-om:'Mass'--
+'Corn_Model'-1-6-'Lime'-om:'Mass'--
+'Corn_Model'-1-7-'Herbicide'-om:'Mass'--
+'Corn_Model'-1-8-'Pesticide'-om:'Mass'--
+'Corn_Model'-1-9-'Seed'-om:'Energy'--
+'Corn_Model'-1-10-'Gasoline'-om:'Energy'--
+'Corn_Model'-1-10-'Gasoline'-om:'Volume'--
+'Corn_Model'-1-11-'Diesel'-om:'Energy'--
+'Corn_Model'-1-12-'LPG'-om:'Energy'--
+'Corn_Model'-1-12-'LPG'-om:'Volume'--
+'Corn_Model'-1-13-'Natural gas'-om:'Energy'--
+'Corn_Model'-1-13-'Natural gas'-om:'Mass'--
+'Corn_Model'-1-13-'Natural gas'-om:'Volume'--
+'Corn_Model'-1-14-'Electricity'-om:'ElectricChargeDensity'--
+'Corn_Model'-1-15-'Field N2O emissions'-om:'MassFraction'--
+'Corn_Model'-1-20-'N fertilizer'-om:'Mass'--
+'Corn_Model'-1-21-'P2O5'-om:'Mass'--
+'Corn_Model'-1-22-'K2O'-om:'Mass'--
+'Corn_Model'-1-23-'Lime'-om:'Mass'--
+'Corn_Model'-1-24-'Herbicide'-om:'Mass'--
+'Corn_Model'-1-25-'Pesticide'-om:'Mass'--
+'Corn_Model'-1-26-'Seed'-om:'Energy'--
+'Corn_Model'-1-27-'Gasoline'-om:'Energy'--
+'Corn_Model'-1-27-'Gasoline'-om:'Volume'--
+'Corn_Model'-1-28-'Diesel'-om:'Energy'--
+'Corn_Model'-1-29-'LPG'-om:'Energy'--
+'Corn_Model'-1-29-'LPG'-om:'Volume'--
+'Corn_Model'-1-30-'Natural gas'-om:'Energy'--
+'Corn_Model'-1-30-'Natural gas'-om:'Mass'--
+'Corn_Model'-1-30-'Natural gas'-om:'Volume'--
+'Corn_Model'-1-31-'Electricity'-om:'ElectricChargeDensity'--
+'Corn_Model'-1-32-'Field N2O emissions'-om:'MassFraction'--
+'Corn_Model'-1-37-'TOTAL'-om:'Energy'--
+'Corn_Model'-1-37-'TOTAL'-om:'Mass'--
+'Corn_Model'-1-42-'Yield (denatured)'-om:'Mass'--
+'Corn_Model'-1-42-'Yield (denatured)'-om:'Volume'--
+'Corn_Model'-1-43-'Yield (anhydrous)'-om:'Mass'--
+'Corn_Model'-1-43-'Yield (anhydrous)'-om:'Volume'--
+'Corn_Model'-1-44-'Co-product yield'-om:'Mass'-
+'Corn_Model'-1-44-'Co-product yield'-om:'Volume'-
+'Corn_Model'-1-45-'Natural gas'-om:'Energy'--
+'Corn_Model'-1-45-'Natural gas'-om:'Mass'--
+'Corn_Model'-1-45-'Natural gas'-om:'Volume'--
+'Corn_Model'-1-46-'Electricity'-om:'ElectricChargeDensity'--
+'Corn_Model'-1-49-'TOTAL'-om:'Energy'--
+'Corn_Model'-1-49-'TOTAL'-om:'Mass'--
+'Corn_Model'-1-53-'Corn production'-om:'Energy'--
+'Corn_Model'-1-53-'Corn production'-om:'Mass'--
+'Corn_Model'-1-54-'Biorefinery'-om:'Energy'--
+'Corn_Model'-1-54-'Biorefinery'-om:'Mass'--
+'Corn_Model'-1-55-'Co-product credit'-om:'Energy'-
+'Corn_Model'-1-55-'Co-product credit'-om:'Mass'-
+'Corn_Model'-1-56-'TOTAL'-om:'Energy'--
+'Corn_Model'-1-56-'TOTAL'-om:'Mass'--
+'Corn_Model'-1-61-'Ethanol contribution'-om:'Energy'--
+'Corn_Model'-1-61-'Ethanol contribution'-om:'Mass'--
+'Corn_Model'-1-62-'Denaturant contrib.'-om:'Energy'--
+'Corn_Model'-1-62-'Denaturant contrib.'-om:'Mass'--
+'Corn_Model'-1-63-'Denatured EtOH GWI'-om:'Energy'--
+'Corn_Model'-1-63-'Denatured EtOH GWI'-om:'Mass'--
+'Corn_Model'-1-68-'Distribution'-om:'Energy'--
+'Corn_Model'-1-68-'Distribution'-om:'Mass'--
+'Corn_Model'-1-69-'TOTAL'-om:'Energy'--
+'Corn_Model'-1-69-'TOTAL'-om:'Mass'--
+'Corn_Model'-1-74-'Gasoline'-om:'Energy'--
+'Corn_Model'-1-74-'Gasoline'-om:'Volume'--
+'Corn_Model'-1-75-'Non-road diesel'-om:'Energy'-
+'Corn_Model'-1-75-'Non-road diesel'-om:'Volume'-
+'Corn_Model'-1-76-'LPG'-om:'Energy'--
+'Corn_Model'-1-76-'LPG'-om:'Volume'--
+'Corn_Model'-1-77-'Natural gas'-om:'Energy'--
+'Corn_Model'-1-77-'Natural gas'-om:'Mass'--
+'Corn_Model'-1-77-'Natural gas'-om:'Volume'--
+'Corn_Model'-1-78-'Ethanol (anhydrous)'-om:'Energy'--
+'Corn_Model'-1-78-'Ethanol (anhydrous)'-om:'Volume'--
+'Corn_Model'-1-82-'Denaturant GWI'-om:'Energy'--
+'Corn_Model'-1-82-'Denaturant GWI'-om:'Mass'--
+'Corn_Model'-1-83-'Percentage'-om:'Percentage'--
+'Corn_Model'-1-84-'Ethanol volume'-om:'MassFraction'--
+'Corn_Model'-1-85-'Denatured EtOH'-om:'Energy'--
+'Corn_Model'-1-85-'Denatured EtOH'-om:'Volume'--
+'Corn_Model'-1-86-'Denaturant energy'-om:'MassFraction'--
+'Corn_Model'-1-96-'Baseline estimate'-om:'Energy'--
+'Corn_Model'-1-96-'Baseline estimate'-om:'Mass'--
+'Corn_Model'-1-97-'Calculated delta'-om:'Energy'--
+'Corn_Model'-1-97-'Calculated delta'-om:'Mass'--
+'Corn_Model'-1-102-'N fertilizer'-om:'Mass'--
+'Corn_Model'-1-103-'Field N2O emissions'-om:'MassFraction'--
+'Corn_Model'-1-105-'P2O5'-om:'Mass'--
+'Corn_Model'-1-106-'K2O'-om:'Mass'--
+'Corn_Model'-1-107-'Lime'-om:'Mass'--
+'Corn_Model'-1-109-'Herbicide'-om:'Mass'--
+'Corn_Model'-1-110-'Pesticide'-om:'Mass'--
+'Corn_Model'-1-111-'Seed'-om:'Energy'--
+'Corn_Model'-1-123-'Co-product credit'-om:'Energy'-
+'Corn_Model'-1-123-'Co-product credit'-om:'Mass'-
+'Corn_Model'-1-138-'Lime'-om:'Mass'--
+'Corn_Model'-1-140-'N fertilizer'-om:'Mass'--
+'Corn_Model'-2-20-'kg/ha'-om:'Area'--
+'Corn_Model'-2-20-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-21-'kg/ha'-om:'Area'--
+'Corn_Model'-2-21-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-22-'kg/ha'-om:'Area'--
+'Corn_Model'-2-22-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-23-'kg/ha'-om:'Area'--
+'Corn_Model'-2-23-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-24-'kg/ha'-om:'Area'--
+'Corn_Model'-2-24-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-25-'kg/ha'-om:'Area'--
+'Corn_Model'-2-25-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-26-'kg/ha'-om:'Area'--
+'Corn_Model'-2-26-'kg/ha'-om:'Volume'--
+'Corn_Model'-2-36-'kg/ha'-om:'Area'--
+'Corn_Model'-2-36-'kg/ha'-om:'Volume'--
+'Corn_Model'-3-20-163.97556-om:'Area'--
+'Corn_Model'-3-21-58.172282-om:'Area'--
+'Corn_Model'-3-22-67.932732-om:'Area'--
+'Corn_Model'-3-23-469.282436-om:'Area'--
+'Corn_Model'-3-24-3.1623858-om:'Area'--
+'Corn_Model'-3-25-0.26548424-om:'Area'--
+'Corn_Model'-3-36-9917.1768121201-om:'Area'--
+'Corn_Model'-4-20-163.97556-om:'Area'--
+'Corn_Model'-4-21-58.172282-om:'Area'--
+'Corn_Model'-4-22-67.932732-om:'Area'--
+'Corn_Model'-4-23-469.282436-om:'Area'--
+'Corn_Model'-4-24-3.1623858-om:'Area'--
+'Corn_Model'-4-25-0.26548424-om:'Area'--
+'Corn_Model'-4-36-9917.1768121201-om:'Area'--
+'Corn_Model'-5-145-'TOTAL'-om:'Energy'--
+'Corn_Model'-5-145-'TOTAL'-om:'Mass'--
+'Corn_Model'-6-23-469.282436-om:'Area'--
+'Corn_Model'-8-53-'Corn'-om:'Area'--
+'Corn_Model'-8-53-'Corn'-om:'Mass'--
+'Corn_Model'-8-54-'Biorefinery'-om:'Energy'--
+'Corn_Model'-8-54-'Biorefinery'-om:'Mass'--
+'Corn_Model'-8-56-'TOTAL'-om:'Energy'--
+'Corn_Model'-8-56-'TOTAL'-om:'Mass'--
+'Corn_Model'-13-20-420-om:'Area'--
+'Corn_Model'-13-20-420-om:'Volume'--
+'Corn_Model'-13-21-149-om:'Area'--
+'Corn_Model'-13-21-149-om:'Volume'--
+'Corn_Model'-13-22-174-om:'Area'--
+'Corn_Model'-13-22-174-om:'Volume'--
+'Corn_Model'-13-23-1202-om:'Area'--
+'Corn_Model'-13-23-1202-om:'Volume'--
+'Corn_Model'-13-24-8.1-om:'Area'--
+'Corn_Model'-13-24-8.1-om:'Volume'--
+'Corn_Model'-13-25-0.68-om:'Area'--
+'Corn_Model'-13-25-0.68-om:'Volume'--
+'Corn_Model'-13-28-'bu/acre'-om:'Area'--
+'Corn_Model'-13-28-'bu/acre'-om:'Volume'--
+'Corn_Model'-13-29-158-om:'Area'--
+'Corn_Model'-13-29-158-om:'Volume'--
+'Corn_Model'-13-32-'bu/acre'-om:'Area'--
+'Corn_Model'-13-32-'bu/acre'-om:'Volume'--
+'Corn_Model'-14-19-'kg/ha'-om:'Area'--
+'Corn_Model'-14-19-'kg/ha'-om:'Volume'--
+'Corn_Model'-14-20-163.97556-om:'Area'--
+'Corn_Model'-14-21-58.172282-om:'Area'--
+'Corn_Model'-14-22-67.932732-om:'Area'--
+'Corn_Model'-14-23-469.282436-om:'Area'--
+'Corn_Model'-14-24-3.1623858-om:'Area'--
+'Corn_Model'-14-25-0.26548424-om:'Area'--
+'Corn_Model'-14-28-'kg/ha'-om:'Area'--
+'Corn_Model'-14-28-'kg/ha'-om:'Volume'--
+'Corn_Model'-14-29-9917.1768121201-om:'Area'--
+'Corn_Model'-14-32-'kg/ha'-om:'Area'--
+'Corn_Model'-14-32-'kg/ha'-om:'Volume'--
+'Corn_Model'-14-36-'kg/ha'-om:'Area'--
+'Corn_Model'-14-36-'kg/ha'-om:'Volume'--
+'Corn_Model'-16-21-'Gasoline'-om:'Energy'--
+'Corn_Model'-16-21-'Gasoline'-om:'Volume'--
+'Corn_Model'-16-23-'LPG'-om:'Energy'--
+'Corn_Model'-16-23-'LPG'-om:'Volume'--
+'Corn_Model'-16-24-'Natural gas'-om:'Energy'--
+'Corn_Model'-16-24-'Natural gas'-om:'Mass'--
+'Corn_Model'-16-24-'Natural gas'-om:'Volume'--
+'Corn_Model'-16-25-'Electricity'-om:'ElectricChargeDensity'--
+'Corn_Model'-16-43-'Natural gas'-om:'Energy'--
+'Corn_Model'-16-43-'Natural gas'-om:'Mass'--
+'Corn_Model'-16-43-'Natural gas'-om:'Volume'--
+'Corn_Model'-16-44-'Electricity'-om:'ElectricChargeDensity'--
+'Corn_Model'-16-55-'P2O5'-om:'Mass'--
+'Corn_Model'-16-56-'K2O'-om:'Mass'--
+'Corn_Model'-17-19-'Fraction'-om:'AreaFraction'--
+'Corn_Model'-17-41-'Fraction'-om:'AreaFraction'--
+'Corn_Model'-21-53-'kg/ha'-om:'Area'--
+'Corn_Model'-21-53-'kg/ha'-om:'Volume'--
+'Corn_Model'-23-23-'Lime'-om:'Mass'--
+'Corn_Model'-23-26-'Seed'-om:'Energy'--
+'Corn_Model'-23-27-'Gasoline'-om:'Energy'--
+'Corn_Model'-23-27-'Gasoline'-om:'Volume'--
+'Corn_Model'-23-28-'Diesel'-om:'Energy'--
+'Corn_Model'-23-29-'LPG'-om:'Energy'--
+'Corn_Model'-23-29-'LPG'-om:'Volume'--
+'Corn_Model'-23-30-'Natural gas'-om:'Energy'--
+'Corn_Model'-23-30-'Natural gas'-om:'Mass'--
+'Corn_Model'-23-30-'Natural gas'-om:'Volume'--
+'Corn_Model'-23-31-'Electricity'-om:'ElectricChargeDensity'--
+'Corn_Model'-23-34-'TOTAL'-om:'Energy'--
+'Corn_Model'-23-34-'TOTAL'-om:'Mass'--
+'Corn_Model'-23-49-'TOTAL'-om:'Energy'--
+'Corn_Model'-23-49-'TOTAL'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-5-'required N from FEAT (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-5-'required N from FEAT (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-5-'required N from FEAT (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-6-'N from manure (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-6-'N from manure (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-6-'N from manure (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-7-'Residual N from rye manure (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-7-'Residual N from rye manure (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-7-'Residual N from rye manure (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-8-'Residual N from freq manure (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-8-'Residual N from freq manure (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-8-'Residual N from freq manure (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-10-'N fert needed (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-10-'N fert needed (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-10-'N fert needed (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-11-'required P for crop (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-11-'required P for crop (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-12-'P from manure (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-12-'P from manure (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-14-'P added as starter (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-14-'P added as starter (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-15-'P fert needed (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-15-'P fert needed (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-16-'required K from FEAT (kg K/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-16-'required K from FEAT (kg K/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-16-'required K from FEAT (kg K/ha)'-om:'Temperature'--
+'Emis_Manure&ImportedFeeds'-1-17-'K from manure (kg K/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-17-'K from manure (kg K/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-17-'K from manure (kg K/ha)'-om:'Temperature'--
+'Emis_Manure&ImportedFeeds'-1-19-'K fert needed (kg K/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-19-'K fert needed (kg K/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-19-'K fert needed (kg K/ha)'-om:'Temperature'--
+'Emis_Manure&ImportedFeeds'-1-23-'required N from FEAT (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-23-'required N from FEAT (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-23-'required N from FEAT (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-24-'N from manure (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-24-'N from manure (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-24-'N from manure (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-25-'Residual N from rye manure (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-25-'Residual N from rye manure (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-25-'Residual N from rye manure (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-26-'Residual N from freq manure (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-26-'Residual N from freq manure (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-26-'Residual N from freq manure (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-29-'N fert needed (kg N/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-29-'N fert needed (kg N/ha)'-om:'Force'--
+'Emis_Manure&ImportedFeeds'-1-29-'N fert needed (kg N/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-30-'required P from FEAT (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-30-'required P from FEAT (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-31-'P from manure (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-31-'P from manure (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-33-'P added as starter (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-33-'P added as starter (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-34-'P fert needed (kg P/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-34-'P fert needed (kg P/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-35-'required K from FEAT (kg K/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-35-'required K from FEAT (kg K/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-35-'required K from FEAT (kg K/ha)'-om:'Temperature'--
+'Emis_Manure&ImportedFeeds'-1-36-'K from manure (kg K/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-36-'K from manure (kg K/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-36-'K from manure (kg K/ha)'-om:'Temperature'--
+'Emis_Manure&ImportedFeeds'-1-38-'K fert needed (kg K/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-38-'K fert needed (kg K/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-38-'K fert needed (kg K/ha)'-om:'Temperature'--
+'Emis_Manure&ImportedFeeds'-1-44-'Energy for crop production/FEAT (MJ/ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-1-44-'Energy for crop production/FEAT (MJ/ha)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-1-45-'Energy for crop production/FEAT (MJ/kg)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-1-45-'Energy for crop production/FEAT (MJ/kg)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-46-'Energy to press crop (MJ/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-1-46-'Energy to press crop (MJ/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-1-51-'GHG for crop production/FEAT (kg CO2/ha)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-52-'GHG for crop production/FEAT (kg CO2/kg)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-1-53-'GHG to press crop (kg CO2/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-2-42-'Soybean'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-2-42-'Soybean'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-2-50-'Soybean'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-2-50-'Soybean'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-4-22-8.1-om:'Area'--
+'Emis_Manure&ImportedFeeds'-4-22-8.1-om:'Volume'--
+'Emis_Manure&ImportedFeeds'-5-22-8.1-om:'Area'--
+'Emis_Manure&ImportedFeeds'-5-22-8.1-om:'Volume'--
+'Emis_Manure&ImportedFeeds'-8-40-'NESARE (ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-41-'193 Acre (ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-42-'120 Acre (ha)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-52-'NESARE crop production (MJ/ha/yr)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-52-'NESARE crop production (MJ/ha/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-8-52-'NESARE crop production (MJ/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-53-'161 Acre crop production (MJ/ha/yr)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-53-'161 Acre crop production (MJ/ha/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-8-53-'161 Acre crop production (MJ/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-54-'120 Acre crop production (MJ/ha/yr)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-54-'120 Acre crop production (MJ/ha/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-8-54-'120 Acre crop production (MJ/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-56-'NESARE shipping (MJ/ha/yr)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-56-'NESARE shipping (MJ/ha/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-8-56-'NESARE shipping (MJ/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-57-'161 Acre shipping (MJ/ha/yr)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-57-'161 Acre shipping (MJ/ha/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-8-57-'161 Acre shipping (MJ/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-58-'120 Acre shipping (MJ/ha/yr)'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-8-58-'120 Acre shipping (MJ/ha/yr)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-8-58-'120 Acre shipping (MJ/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-61-'NESARE crop production (kg CO2/ha/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-8-61-'NESARE crop production (kg CO2/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-62-'161 Acre crop production (kg CO2/ha/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-8-62-'161 Acre crop production (kg CO2/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-63-'120 Acre crop production (kg CO2/ha/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-8-63-'120 Acre crop production (kg CO2/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-65-'NESARE shipping (kg CO2/ha/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-8-65-'NESARE shipping (kg CO2/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-66-'161 Acre shipping (kg CO2/ha/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-8-66-'161 Acre shipping (kg CO2/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-8-67-'120 Acre shipping (kg CO2/ha/yr)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-8-67-'120 Acre shipping (kg CO2/ha/yr)'-om:'Time'--
+'Emis_Manure&ImportedFeeds'-9-47-'Soybean'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-9-47-'Soybean'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-9-60-'Soybean'-om:'Area'--
+'Emis_Manure&ImportedFeeds'-9-60-'Soybean'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-11-43-'Canola Meal Energy Content (MJ/kg)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-11-43-'Canola Meal Energy Content (MJ/kg)'-om:'Mass'--
+'Emis_Manure&ImportedFeeds'-11-44-'Canola Oil Energy Content (MJ/kg)'-om:'Energy'--
+'Emis_Manure&ImportedFeeds'-11-44-'Canola Oil Energy Content (MJ/kg)'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-1-5-'Lime'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-1-6-'Seed'-om:'Energy'--
+'Emis_NESARE vs TypicalFarm'-1-23-'Lime'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-1-24-'Seed'-om:'Energy'--
+'Emis_NESARE vs TypicalFarm'-1-40-'Lime'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-1-41-'Seed'-om:'Energy'--
+'Emis_NESARE vs TypicalFarm'-1-64-'GHG Output (kg CO2 ha-1 yr-1)'-om:'Mass'
+'Emis_NESARE vs TypicalFarm'-1-65-'GHG Intensity (kg CO2/MJout)'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-1-66-'GHG Ratio (kg CO2 ha-1 yr-1/MgDM)'-om:'Mass'
+'Emis_NESARE vs TypicalFarm'-1-67-'GHG Output (kg CO2e/1000 kg milk/yr)'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-1-67-'GHG Output (kg CO2e/1000 kg milk/yr)'-om:'Time'--
+'Emis_NESARE vs TypicalFarm'-7-5-'Lime'-om:'Mass'--
+'Emis_NESARE vs TypicalFarm'-7-6-'Seed'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-5-'Field area (ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-6-'Yield (Mg DM/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-6-'Yield (Mg DM/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-7-'Yield (Mg Agron Moisture/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-7-'Yield (Mg Agron Moisture/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-8-'Yield (kg Field Moist)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-9-'Field Moisture (%)'-om:'MassFraction'--
+'Emis_NESARESVO_Farm2011'-1-10-'Storing Moisture (%)'-om:'MassFraction'--
+'Emis_NESARESVO_Farm2011'-1-11-'N rate (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-12-'P2O5 rate (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-13-'K2O rate (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-14-'Manure (kg WM/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-14-'Manure (kg WM/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-15-'Manure N (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-16-'Lime (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-17-'Seed rate (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-18-'Seed rate 2 (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-19-'Seed rate 3 (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-20-'Seed rate 4 (kg/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-21-'Herbicide+Pesticide rate (kg /ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-22-'Diesel fuel (L/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-22-'Diesel fuel (L/ha)'-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-1-23-'Energy'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-24-'N (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-24-'N (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-25-'P2O5 (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-25-'P2O5 (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-26-'K2O (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-26-'K2O (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-27-'Lime (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-27-'Lime (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-28-'Seed (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-28-'Seed (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-32-'Herbicide(MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-32-'Herbicide(MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-33-'Transportation of inputs (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-33-'Transportation of inputs (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-34-'Diesel fuel (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-34-'Diesel fuel (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-35-'Transport of Grain To Bank/Mill (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-35-'Transport of Grain To Bank/Mill (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-36-'Drying (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-36-'Drying (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-37-'Canola Processing (MJ/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-37-'Canola Processing (MJ/ha)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-38-'Total energy (MJ/ha*yr)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-38-'Total energy (MJ/ha*yr)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-38-'Total energy (MJ/ha*yr)'-om:'Time'--
+'Emis_NESARESVO_Farm2011'-1-39-'Output energy (MJ/ha/yr)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-39-'Output energy (MJ/ha/yr)'-om:'Energy'--
+'Emis_NESARESVO_Farm2011'-1-39-'Output energy (MJ/ha/yr)'-om:'Time'--
+'Emis_NESARESVO_Farm2011'-1-42-'N (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-42-'N (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-43-'P2O5 (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-43-'P2O5 (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-44-'K2O (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-44-'K2O (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-45-'Lime (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-45-'Lime (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-46-'Seed (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-46-'Seed (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-47-'Herbicide (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-47-'Herbicide (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-48-'Transportation of inputs (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-48-'Transportation of inputs (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-49-'Drying (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-49-'Drying (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-50-'Diesel fuel (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-50-'Diesel fuel (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-51-'Transport Grain to Bank (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-51-'Transport Grain to Bank (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-52-'N2O from synthetic fertilizer (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-52-'N2O from synthetic fertilizer (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-53-'N2O from manure app (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-53-'N2O from manure app (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-54-'N2O from crop residue (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-54-'N2O from crop residue (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-55-'Canola Pressing (kg CO2e/ha)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-55-'Canola Pressing (kg CO2e/ha)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-56-'Total GHG (kg CO2e/ha/yr)'-om:'Area'--
+'Emis_NESARESVO_Farm2011'-1-56-'Total GHG (kg CO2e/ha/yr)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-1-56-'Total GHG (kg CO2e/ha/yr)'-om:'Time'--
+'Emis_NESARESVO_Farm2011'-1-57-'GHG Sink Intensity (kg CO2e/MJoutput)'-om:'Mass'--
+'Emis_NESARESVO_Farm2011'-2-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-2-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-5-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-5-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-7-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-7-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-8-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-8-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-9-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-9-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-10-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-10-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-11-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-11-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-12-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-12-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-15-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-15-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-16-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-16-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-17-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-17-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-18-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-18-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-19-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-19-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-20-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-20-5-8.1-om:'Volume'--
+'Emis_NESARESVO_Farm2011'-21-5-8.1-om:'Area'--
+'Emis_NESARESVO_Farm2011'-21-5-8.1-om:'Volume'--
+'Emis_SVO_Operations'-1-110-'Soybean'-om:'Area'--
+'Emis_SVO_Operations'-1-110-'Soybean'-om:'Mass'--
+'Emis_SVO_Operations'-2-129-'Crop Fuel Ops (MJ/ha/yr)'-om:'Area'--
+'Emis_SVO_Operations'-2-129-'Crop Fuel Ops (MJ/ha/yr)'-om:'Energy'--
+'Emis_SVO_Operations'-2-129-'Crop Fuel Ops (MJ/ha/yr)'-om:'Time'--
+'Emis_SVO_Operations'-3-1-'Diesel Fuel (l/ha)'-om:'Area'--
+'Emis_SVO_Operations'-3-126-'Diesel'-om:'Energy'--
+'Emis_SVO_Operations'-4-1-'Canola Fuel (l/ha)'-om:'Area'--
+'Emis_SVO_Operations'-5-129-'Crop Fuel Ops (MJ/ha/yr)'-om:'Area'--
+'Emis_SVO_Operations'-5-129-'Crop Fuel Ops (MJ/ha/yr)'-om:'Energy'--
+'Emis_SVO_Operations'-5-129-'Crop Fuel Ops (MJ/ha/yr)'-om:'Time'--
+'Emis_SVO_Operations'-6-1-'Diesel Fuel (l/ha)'-om:'Area'--
+'Emis_SVO_Operations'-6-126-'Diesel'-om:'Energy'--
+'Emis_SVO_Operations'-7-1-'Canola Fuel (l/ha)'-om:'Area'--
+'Emis_SVO_Operations'-10-4-'Fuel Economy of Tractor Trailer'-om:'Mass'--
+'Emis_SVO_Operations'-10-5-'Weight Grain Transported'-om:'Length'--
+'Emis_SVO_Operations'-10-6-'Average Distance to Grain Bank'-om:'Mass'--
+'Emis_SVO_Operations'-10-7-'Total Corn Grain Yield'-om:'Mass'--
+'Emis_SVO_Operations'-10-9-'Total Soy Yield'-om:'Mass'--
+'Emis_SVO_Operations'-10-11-'Canola Yield RH'-om:'Mass'--
+'Emis_SVO_Operations'-10-12-'Canola Yield IM'-om:'Mass'--
+'Emis_SVO_Operations'-10-16-'# Trucks Needed For Wheat'-om:'Length'--
+'Emis_SVO_Operations'-10-16-'# Trucks Needed For Wheat'-om:'Mass'--
+'Emis_SVO_Operations'-10-16-'# Trucks Needed For Wheat'-om:'Volume'--
+'LifeCycle_Feuil1'-1-3-'Climate change'-om:'Mass'--
+'LifeCycle_Feuil1'-1-5-'Terrestrial acidification'-om:'Mass'--
+'LifeCycle_Feuil1'-1-6-'Freshwater eutrophication'-om:'Mass'--
+'LifeCycle_Feuil1'-1-7-'Marine eutrophication'-om:'Force'--
+'LifeCycle_Feuil1'-1-7-'Marine eutrophication'-om:'Mass'--
+'LifeCycle_Feuil1'-1-9-'Photochemical oxidant formation'-om:'Mass'--
+'LifeCycle_Feuil1'-1-10-'Particulate matter formation'-om:'Mass'--
+'LifeCycle_Feuil1'-1-14-'Ionising radiation'-om:'Mass'--
+'LifeCycle_Feuil1'-1-17-'Natural land transformation'-om:'Area'--
+'LifeCycle_Feuil1'-1-18-'Water depletion'-om:'Volume'--
+'LifeCycle_Feuil1'-1-19-'Metal depletion'-om:'Mass'--
+'LifeCycle_Feuil1'-1-20-'Fossil depletion'-om:'Mass'--
+'Profit_Sheet1'-2-1-'CI 2-yr crop rotation'-om:'Area'-
+'Profit_Sheet1'-2-1-'CI 2-yr crop rotation'-om:'Mass'-
+'Profit_Sheet1'-2-2-'Corn'-om:'Area'--
+'Profit_Sheet1'-2-2-'Corn'-om:'Mass'--
+'Profit_Sheet1'-3-1-'CI 2-yr crop rotation'-om:'Area'-
+'Profit_Sheet1'-3-1-'CI 2-yr crop rotation'-om:'Mass'-
+'Profit_Sheet1'-3-2-'Soybean'-om:'Area'--
+'Profit_Sheet1'-3-2-'Soybean'-om:'Mass'--
+'Profit_Sheet1'-5-1-'OI 4-yr crop rotation'-om:'Area'-
+'Profit_Sheet1'-5-1-'OI 4-yr crop rotation'-om:'Mass'-
+'Profit_Sheet1'-5-2-'Corn'-om:'Area'--
+'Profit_Sheet1'-5-2-'Corn'-om:'Mass'--
+'Profit_Sheet1'-6-1-'OI 4-yr crop rotation'-om:'Area'-
+'Profit_Sheet1'-6-1-'OI 4-yr crop rotation'-om:'Mass'-
+'Profit_Sheet1'-6-2-'Soybean'-om:'Area'--
+'Profit_Sheet1'-6-2-'Soybean'-om:'Mass'--
+'Profit_Sheet1'-7-1-'OI 4-yr crop rotation'-om:'Area'-
+'Profit_Sheet1'-7-1-'OI 4-yr crop rotation'-om:'Mass'-
+'Profit_Sheet1'-7-2-'Oat'-om:'Area'--
+'Profit_Sheet1'-7-2-'Oat'-om:'Mass'--
+'Profit_Sheet1'-8-1-'OI 4-yr crop rotation'-om:'Area'-
+'Profit_Sheet1'-8-1-'OI 4-yr crop rotation'-om:'Mass'-
+'Profit_Sheet1'-8-2-'Alfalfa'-om:'Area'--
+'Profit_Sheet1'-8-2-'Alfalfa'-om:'Mass'--
+'Profit_Sheet2'-2-3-'Corn'-om:'Area'--
+'Profit_Sheet2'-2-3-'Corn'-om:'Mass'--
+'Profit_Sheet2'-3-3-'Corn'-om:'Area'--
+'Profit_Sheet2'-3-3-'Corn'-om:'Mass'--
+'Profit_Sheet2'-4-3-'Corn'-om:'Area'--
+'Profit_Sheet2'-4-3-'Corn'-om:'Mass'--
+'Profit_Sheet2'-6-3-'Soybean'-om:'Area'--
+'Profit_Sheet2'-6-3-'Soybean'-om:'Mass'--
+'Profit_Sheet2'-7-3-'Soybean'-om:'Area'--
+'Profit_Sheet2'-7-3-'Soybean'-om:'Mass'--
+'Profit_Sheet2'-8-3-'Soybean'-om:'Area'--
+'Profit_Sheet2'-8-3-'Soybean'-om:'Mass'--
+'Profit_Sheet2'-10-3-'Corn'-om:'Area'--
+'Profit_Sheet2'-10-3-'Corn'-om:'Mass'--
+'Profit_Sheet2'-11-3-'Corn'-om:'Area'--
+'Profit_Sheet2'-11-3-'Corn'-om:'Mass'--
+'Profit_Sheet2'-12-3-'Corn'-om:'Area'--
+'Profit_Sheet2'-12-3-'Corn'-om:'Mass'--
+'Profit_Sheet2'-14-3-'Soybean'-om:'Area'--
+'Profit_Sheet2'-14-3-'Soybean'-om:'Mass'--
+'Profit_Sheet2'-15-3-'Soybean'-om:'Area'--
+'Profit_Sheet2'-15-3-'Soybean'-om:'Mass'--
+'Profit_Sheet2'-16-3-'Soybean'-om:'Area'--
+'Profit_Sheet2'-16-3-'Soybean'-om:'Mass'--
+'Profit_Sheet2'-22-3-'Alfalfa'-om:'Area'--
+'Profit_Sheet2'-22-3-'Alfalfa'-om:'Mass'--
+'Profit_Sheet2'-23-3-'Alfalfa'-om:'Area'--
+'Profit_Sheet2'-23-3-'Alfalfa'-om:'Mass'--
+'Profit_Sheet2'-24-3-'Alfalfa'-om:'Area'--
+'Profit_Sheet2'-24-3-'Alfalfa'-om:'Mass'--
+'Urban_Step 1a'-1-13-'length (l)'-om:'Length'--
+'Urban_Step 1a'-1-20-'length (l)'-om:'Length'--
+'Urban_Step 1a'-1-26-'length (l)'-om:'Length'--
+'Urban_Step 1a'-2-2-'length (l)'-om:'Length'--
+'Urban_Step 1a'-2-13-'Width (a)'-om:'Width'--
+'Urban_Step 1a'-2-20-'Width (a)'-om:'Width'--
+'Urban_Step 1a'-2-26-'Width (a)'-om:'Width'--
+'Urban_Step 1a'-3-2-'Width (a)'-om:'Width'--
+'Urban_Step 1a'-3-13-'Depth (h)'-om:'Depth'--
+'Urban_Step 1a'-3-20-'Depth (h)'-om:'Depth'--
+'Urban_Step 1a'-3-26-'Depth (h)'-om:'Depth'--
+'Urban_Step 1a'-4-2-'Height (h)'-om:'Height'--
+'Urban_Step 1a'-4-13-'AREA'-om:'Area'--
+'Urban_Step 1a'-4-20-'AREA'-om:'Area'--
+'Urban_Step 1a'-4-26-'AREA'-om:'Area'--
+'Urban_Step 1a'-5-2-'AREA'-om:'Area'--
+'Urban_Step 1a'-6-2-'AREA'-om:'Area'--
+'Urban_Step 1a'-7-2-'AREA'-om:'Area'--
+'Urban_Step 1b'-1-2-'Total area (without adjacent channels):'-om:'Area'--
+'Urban_Step 1b'-1-4-'Surface of water bodies inside the plot (trenches):'-om:'Area'--
+'Urban_Step 1b'-1-6-'Agricultural area (includes composting facilities) :'-om:'Area'--
+'Urban_Step 1b'-1-8-'Cultivation area'-om:'Area'--
+'Urban_Step 1b'-1-11-'Area of adjacent channels'-om:'Area'--
+'Urban_Step 1b'-1-12-'Total surface of water bodies (both trenches and adjacent channels)'-om:'Area'--
+'Urban_Step 1b'-1-15-'Volume of water bodies within the plot (trenches):'-om:'Volume'--
+'Urban_Step 1b'-1-16-'Volume of adjacent channels'-om:'Volume'--
+'Urban_Step 1b'-1-17-'Total volume'-om:'Volume'--
