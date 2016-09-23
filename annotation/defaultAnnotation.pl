@@ -13,6 +13,15 @@ unique_string_label(S,X,Y,Unique) :-
 	sort(Labels, Set),
 	member(Unique, Set).
 
+quantity_grammar_label(Unique):-
+	findall(Label,
+		(unique_string_label(_,_,_,Label),
+		 quantity_unit_label(Label,_,_),
+		 \+unit_label(Label,_,_)),
+		 Labels),
+	sort(Labels, Set),
+	member(Unique, Set).
+
 
 		 /********************************
 	          *   DEFAULT II: ANNOTATE TERMS *
@@ -23,26 +32,28 @@ unique_string_label(S,X,Y,Unique) :-
 % between the vocs is negligible, so terms are either annotated with a
 % set of OM or a set of Valerie concepts.
 
-assert_default2_units:-
+assert_grammar_units:-
 	forall(unique_string_label(_,_,_,Label),
 		forall((unit_label(Label,_,Unit)),
-		       assert_default2_unit(Label,Unit))).
-assert_default2_unit(Label,Unit):-
-	rdf(Unit, sheet:unitOf, literal(Label),default2_annotation), !.
-assert_default2_unit(Label,Unit):-
-	rdf_assert(Unit, sheet:unitOf, literal(Label),default2_annotation).
+		       assert_grammar_unit(Label,Unit))).
+assert_grammar_unit(Label,Unit):-
+	rdf(Unit, sheet:unitOf, literal(Label),grammar), !.
+assert_grammar_unit(Label,Unit):-
+	rdf_assert(Unit, sheet:unitOf, literal(Label),grammar).
 
 
-assert_default2_quantities:-
-	forall(unique_string_label(_,_,_,Label),
-		forall((quantity_unit_label(Label,_,_),\+unit_label(Label,_,_),
-			unique_label_quantity(Label,OMQuantity,0.85)),
-		       assert_default2_quantity(Label,OMQuantity))).
+assert_grammar_quantities:-
+	forall(quantity_grammar_label(Label),
+		forall(find_label_quantity(Label,OMQuantity),
+		       assert_grammar_quantity(Label,OMQuantity))).
 
-assert_default2_quantity(Label,OMQuantity):-
-	rdf(OMQuantity, sheet:quantityOf, literal(Label),default2_annotation), !.
-assert_default2_quantity(Label,OMQuantity):-
-	rdf_assert(OMQuantity, sheet:quantityOf, literal(Label),default2_annotation).
+
+
+
+assert_grammar_quantity(Label,OMQuantity):-
+	rdf(OMQuantity, sheet:quantityOf, literal(Label),grammar), !.
+assert_grammar_quantity(Label,OMQuantity):-
+	rdf_assert(OMQuantity, sheet:quantityOf, literal(Label),grammar).
 
 unique_label_quantity(Label,Quantity,Threshold):-
 	findall(Q,label_quantity_concept(Label,_,Threshold,Q),QList),
@@ -65,7 +76,7 @@ assert_default2_domainterm(Label,Concept):-
 
 
 		 /********************************
-	          *   DEFAULT I: ANNOTATE TERMS *
+	          *  BASELINE: ANNOTATE TERMS *
 		  *******************************/
 % Annotate all (NB: also comments) spreadsheet terms by using
 % string matching. Terms are annotated with sets of concepts. assumption
@@ -73,26 +84,26 @@ assert_default2_domainterm(Label,Concept):-
 % either annotated with a set of OM or a set of Valerie concepts.
 % Isub threshold is set at 0.85
 
-assert_default1_domain:-
+assert_baseline_domain:-
 	forall(unique_string_label(_,_,_,Label),
 	       forall(label_dist_domainconcept(Label,_,0.85,Concept),
-		    assert_default1_domainconcept(Label,Concept))).
+		    assert_baseline_domainconcept(Label,Concept))).
 
-assert_default1_domainconcept(Label,Concept):-
-	rdf(Concept, sheet:domainConceptOf, literal(Label),default1_annotation), !.
-assert_default1_domainconcept(Label,Concept):-
-	rdf_assert(Concept, sheet:domainConceptOf, literal(Label), default1_annotation).
+assert_baseline_domainconcept(Label,Concept):-
+	rdf(Concept, sheet:domainConceptOf, literal(Label),baseline), !.
+assert_baseline_domainconcept(Label,Concept):-
+	rdf_assert(Concept, sheet:domainConceptOf, literal(Label),baseline).
 
 
-assert_default1_om:-
+assert_baseline_om:-
 	forall(unique_string_label(_,_,_,Label),
 	       forall(label_dist_omconcept(Label,_,0.85,Concept),
-		    assert_default1_omconcept(Label,Concept))).
+		    assert_baseline_omconcept(Label,Concept))).
 
-assert_default1_omconcept(Label,Concept):-
-	rdf(Concept, sheet:omConceptOf, literal(Label),default1_annotation), !.
-assert_default1_omconcept(Label,Concept):-
-	rdf_assert(Concept, sheet:omConceptOf, literal(Label), default1_annotation).
+assert_baseline_omconcept(Label,Concept):-
+	rdf(Concept, sheet:omConceptOf, literal(Label),baseline), !.
+assert_baseline_omconcept(Label,Concept):-
+	rdf_assert(Concept, sheet:omConceptOf, literal(Label), baseline).
 
 
 
@@ -140,7 +151,7 @@ label_om_concept(Label,Concept):-
 	omVoc(OM),
         (   rdf(Concept,rdfs:label,literal(lang(en,Label)),OM)
 	;   rdf(Concept,om:symbol,literal(Label),OM)
-	;   rdf(Concept,om:alternative_symbol,literal(Label),OM)
+	;   rdf(Concept,om:alternativeSymbol,literal(Label),OM)
 	;   rdf(Concept,om:unofficialAbbreviation,literal(Label),OM)
 	;   rdf(Concept,om:unofficialLabel,literal(Label),OM))
 	.
@@ -163,29 +174,33 @@ annotate_blocks:-
 	 assert_quantity_phenomenon_blocks.
 
 
-assert_default1b_domain:-
+assert_baseline1b_domain:-
 	forall(term_label(Label,phenomenon),
 	       forall(label_dist_domainconcept(Label,_,0.85,Concept),
-		    assert_default1b_domainconcept(Label,Concept))).
-
-assert_default1b_domainconcept(Label,Concept):-
-	rdf(Concept, sheet:domainConceptOf, literal(Label),default1b_annotation), !.
-assert_default1b_domainconcept(Label,Concept):-
-	rdf_assert(Concept, sheet:domainConceptOf, literal(Label), default1b_annotation).
+		    assert_baseline1b_domainconcept(Label,Concept))),
+	forall(term_label(Label,quantity),
+	       forall(label_dist_domainconcept(Label,_,0.85,Concept),
+		    assert_baseline1b_domainconcept(Label,Concept))).
 
 
-assert_default1b_om:-
+assert_baseline1b_domainconcept(Label,Concept):-
+	rdf(Concept, sheet:domainConceptOf, literal(Label),baseline1b), !.
+assert_baseline1b_domainconcept(Label,Concept):-
+	rdf_assert(Concept, sheet:domainConceptOf, literal(Label), baseline1b).
+
+
+assert_baseline1b_om:-
 	forall(term_label(Label,unit),
 	       forall(label_dist_omconcept(Label,_,0.85,Concept),
-		    assert_default1b_omconcept(Label,Concept))),
+		    assert_baseline1b_omconcept(Label,Concept))),
 	forall(term_label(Label,quantity),
 	       forall(label_dist_omconcept(Label,_,0.85,Concept),
-		    assert_default1b_omconcept(Label,Concept))).
+		    assert_baseline1b_omconcept(Label,Concept))).
 
-assert_default1b_omconcept(Label,Concept):-
-	rdf(Concept, sheet:omConceptOf, literal(Label),default1b_annotation), !.
-assert_default1b_omconcept(Label,Concept):-
-	rdf_assert(Concept, sheet:omConceptOf, literal(Label), default1b_annotation).
+assert_baseline1b_omconcept(Label,Concept):-
+	rdf(Concept, sheet:omConceptOf, literal(Label),baseline1b), !.
+assert_baseline1b_omconcept(Label,Concept):-
+	rdf_assert(Concept, sheet:omConceptOf, literal(Label), baseline1b).
 
 
 

@@ -7,8 +7,8 @@
 init_file(File):-
 	retractall(block(_,_,_)),
 	rdf_retractall(_,_,_,sheet_labels),
-	rdf_retractall(_,_,_,default1_annotation),
-	rdf_retractall(_,_,_,default2_annotation),
+	rdf_retractall(_,_,_,baseline),
+	rdf_retractall(_,_,_,grammar),
 	load(File).
 
 

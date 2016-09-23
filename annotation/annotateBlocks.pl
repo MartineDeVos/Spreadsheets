@@ -105,8 +105,9 @@ unit_cell(Slice,X,Y):-
 	ds_inside(Slice, X, Y),
 	ds_sheet(Slice, Sheet),
 	cell_value(Sheet,X,Y,Label),
-	unit_label(Label,_,_),
-	\+ quantity_unit_label(Label,_,_).
+	unit_label(Label,_,Unit),
+	\+ quantity_unit_label(Label,_,_),
+	common_unit(Unit).
 
 text_cell(Slice,X,Y):-
 	ds_inside(Slice, X, Y),
@@ -167,7 +168,7 @@ quantity_ds(QuantityDS):-
 aligned_unit_ds(BodyDS,UnitDS,QuantityDS):-
 	block(_,body,BodyDS),
 	block(_,unit,UnitDS),
-	block(_,context,QuantityDS),
+	block(_,_,QuantityDS),
 	(   (ds_top_aligned(Sheet,UnitDS,QuantityDS),
 	     ds_top_aligned(Sheet,BodyDS,UnitDS))
 	;   (ds_right_aligned(Sheet,BodyDS,UnitDS),
@@ -205,19 +206,16 @@ quantity_cell(DS,X,Y):-
 omVoc('file:///home/mvs246/Dropbox/WORK/Analyses/Vocabularies/OM-2.0.rdf').
 
 % A unit symbol may match with either the preferred symbol of an OMUnit,
-% the alternative symbol or the description.
+% the alternative symbol or the description. NB Only the most commonly
+% used units are considered
 get_unit_symbol(Symbol,OMUnit):-
 	\+ atom_number(Symbol,_),
 	(  unit_symbol_match(Symbol,OMUnit)
 	;  unit_description_match(Symbol,OMUnit)
-	),
-	common_unit(OMUnit).
+	).
 
-
-common_unit(Unit):-
-	rdf(om:commonApplicationArea, om:usesQuantity, Quantity),
-	rdf(Quantity,om:commonlyHasUnit,Unit).
-
+common_unit(OMUnit):-
+	rdf(om:commonApplicationArea,om:usesUnit,OMUnit).
 
 unit_symbol_match(Symbol,OMUnit):-
 	omVoc(OM),
@@ -238,7 +236,7 @@ unit_symbol_match(Symbol,OMUnit):-
 
 unit_description_match(Symbol,OMUnit):-
 	omVoc(OM),
-        rdf(OMUnit,rdfs:label,literal(lang(en,Symbol)),OM),
+        rdf(OMUnit,rdfs:label,literal(Symbol),OM),
 	rdf(OMUnit,rdf:type,Type,OM),
 	rdf_reachable(Type, rdfs:subClassOf, om:'Unit').
 unit_description_match(Symbol,OMUnit):-
